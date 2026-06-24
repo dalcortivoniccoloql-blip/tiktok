@@ -1,0 +1,39 @@
+name: Genera nuove curiosita'
+
+# Una volta a settimana (lunedi' alle 06:00 UTC). Genera nuovi script
+# solo se quelli rimasti stanno per finire E se ANTHROPIC_API_KEY e' impostata.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  topup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa anthropic
+        run: pip install anthropic
+
+      - name: Genera nuovi script se servono
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python pipeline/generate_scripts.py
+
+      - name: Committa i nuovi script
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pipeline/english_scripts_*.json
+          git diff --staged --quiet || git commit -m "Nuove curiosita' generate [skip ci]"
+          git push
