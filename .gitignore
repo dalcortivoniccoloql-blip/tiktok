@@ -4,7 +4,7 @@ client_secrets.json
 client_secrets*.json
 
 # File grandi non necessari al cloud (rigenerati al volo)
-_da caricare/
+output/
 audio/
 logs/
 

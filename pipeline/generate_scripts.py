@@ -101,7 +101,7 @@ def generate(force: bool = False) -> int:
 
     resp = client.messages.create(
         model=MODEL,
-        max_tokens=4096,
+        max_tokens=8192,   # 30 gruppi x 5 fatti possono superare i 4096 token
         messages=[{"role": "user", "content": prompt}],
     )
     text = resp.content[0].text.strip()

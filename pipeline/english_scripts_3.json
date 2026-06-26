@@ -1,0 +1,842 @@
+[
+  {"number": 80, "facts": [
+    "There are more trees on Earth than stars in the Milky Way.",
+    "Sharks are older than Saturn's rings.",
+    "A chicken is the closest living relative to the Tyrannosaurus rex.",
+    "Horseshoe crab blood is blue and used to test medical vaccines.",
+    "The platypus is one of the few venomous mammals, with spurs on its legs."
+  ]},
+  {"number": 81, "facts": [
+    "Babies are born with about 300 bones, but adults have only 206.",
+    "Your left lung is smaller than the right to make room for the heart.",
+    "Red blood cells travel through your whole body in about 20 seconds.",
+    "The cornea is the only part of the body with no blood supply.",
+    "Your ears and nose never stop growing throughout your life."
+  ]},
+  {"number": 82, "facts": [
+    "Jupiter is so big that all the other planets could fit inside it.",
+    "The Sun makes up about 99.8% of the mass of the entire solar system.",
+    "Uranus rotates on its side, almost rolling around the Sun.",
+    "A teaspoon of soil holds more microbes than there are people on Earth.",
+    "The first photograph of a black hole was released in 2019."
+  ]},
+  {"number": 83, "facts": [
+    "A group of jellyfish is called a smack.",
+    "A group of porcupines is called a prickle.",
+    "A group of rhinos is called a crash.",
+    "A group of pugs is called a grumble.",
+    "A baby platypus is called a puggle."
+  ]},
+  {"number": 84, "facts": [
+    "The Eiffel Tower can grow about 15 cm taller in summer from the heat.",
+    "The Statue of Liberty was originally brown and turned green over time.",
+    "The Leaning Tower of Pisa was never actually straight.",
+    "The guillotine was still used in France until 1977.",
+    "Napoleon was once attacked by a horde of rabbits."
+  ]},
+  {"number": 85, "facts": [
+    "Bananas are slightly radioactive because of the potassium they contain.",
+    "Nutmeg can be poisonous if eaten in large amounts.",
+    "White chocolate contains no cocoa solids at all.",
+    "Rhubarb leaves are toxic, even though the stalks are safe to eat.",
+    "Brazil nuts are mildly radioactive."
+  ]},
+  {"number": 86, "facts": [
+    "Sloths can take up to a month to digest a single leaf.",
+    "A sloth only comes down from its tree to poop about once a week.",
+    "Sloth fur grows algae, giving them a faint greenish tint.",
+    "Anteaters have no teeth at all.",
+    "An anteater's tongue can flick up to 150 times a minute."
+  ]},
+  {"number": 87, "facts": [
+    "The observable universe is about 93 billion light-years across.",
+    "The Andromeda galaxy is on a slow collision course with the Milky Way.",
+    "Olympus Mons on Mars is the tallest volcano in the solar system.",
+    "Voyager 1 is the farthest human-made object from Earth.",
+    "Fire burns in a round, sphere-like shape in zero gravity."
+  ]},
+  {"number": 88, "facts": [
+    "Polar bear fur is not white but transparent and hollow.",
+    "A polar bear's skin is actually black under its fur.",
+    "Reindeer can see ultraviolet light.",
+    "Hippos secrete a natural red fluid that acts like sunscreen.",
+    "A hippo can run faster than a human over short distances."
+  ]},
+  {"number": 89, "facts": [
+    "The acid in your stomach is strong enough to dissolve metal.",
+    "The liver is the only human organ that can fully regenerate itself.",
+    "The smallest bone in your body is inside your ear.",
+    "You have about 100,000 km of blood vessels in your body.",
+    "Earwax is actually a special type of sweat."
+  ]},
+  {"number": 90, "facts": [
+    "The longest word in major dictionaries has 45 letters.",
+    "There is no common English word that perfectly rhymes with 'orange'.",
+    "The symbol # is officially called an octothorpe.",
+    "'Goodbye' originally comes from the phrase 'God be with you'.",
+    "'Uncopyrightable' is the longest English word with no repeated letter."
+  ]},
+  {"number": 91, "facts": [
+    "Lake Baikal holds about 20% of the world's unfrozen fresh water.",
+    "The Caspian Sea is the largest lake in the world.",
+    "Vatican City is the smallest country on Earth.",
+    "Istanbul is a city that sits on two continents at once.",
+    "Russia and the United States are less than 4 km apart at one point."
+  ]},
+  {"number": 92, "facts": [
+    "The Venus flytrap can count the touches on its trap before closing.",
+    "Sunflowers were used to help clean radioactive soil after Chernobyl.",
+    "The largest living organism on Earth is a fungus in Oregon.",
+    "A baobab tree can store over 100,000 liters of water in its trunk.",
+    "A saguaro cactus can take 10 years to grow just a few centimeters."
+  ]},
+  {"number": 93, "facts": [
+    "The first ever text message simply said 'Merry Christmas'.",
+    "The Firefox logo is actually a red panda, not a fox.",
+    "The Bluetooth symbol is made from two Norse runes.",
+    "Nintendo was founded in 1889 as a playing card company.",
+    "The world's first computer programmer was Ada Lovelace."
+  ]},
+  {"number": 94, "facts": [
+    "A scallop can have up to 200 eyes around the edge of its shell.",
+    "A box jellyfish has 24 eyes.",
+    "Catfish can have over 100,000 taste buds all over their bodies.",
+    "Sea stars have tiny eyes at the tips of their arms.",
+    "Snakes smell the air using their forked tongues."
+  ]},
+  {"number": 95, "facts": [
+    "Romans once used urine as a mouthwash to whiten their teeth.",
+    "The fork was once considered scandalous and sinful in Europe.",
+    "The first Olympic athletes competed completely naked.",
+    "Coca-Cola once contained small amounts of cocaine.",
+    "Carrots were used in WWII propaganda to hide the secret of radar."
+  ]},
+  {"number": 96, "facts": [
+    "A pistol shrimp's snap creates a bubble briefly hotter than the Sun's surface.",
+    "The inland taipan is the most venomous snake in the world.",
+    "A blue-ringed octopus carries enough venom to kill a human in minutes.",
+    "Komodo dragons have venom in their bite.",
+    "The slow loris is the only known venomous primate."
+  ]},
+  {"number": 97, "facts": [
+    "A standard pencil can draw a line about 56 km long.",
+    "A single pencil can write roughly 45,000 words.",
+    "LEGO is one of the world's largest tire makers by number produced.",
+    "Coins have ridges on the edge to stop people shaving off the metal.",
+    "The Slinky was invented by accident by a naval engineer."
+  ]},
+  {"number": 98, "facts": [
+    "Australia is wider than the diameter of the Moon.",
+    "The center of the Earth is roughly as hot as the surface of the Sun.",
+    "About 90% of the world's population lives in the Northern Hemisphere.",
+    "There is a huge freshwater lake hidden under Antarctica's ice.",
+    "About 16 million thunderstorms happen on Earth every year."
+  ]},
+  {"number": 99, "facts": [
+    "A woodpecker can peck about 20 times per second.",
+    "Owls have tube-shaped eyes that cannot move in their sockets.",
+    "Ostriches can run up to 70 km per hour.",
+    "Penguins can leap about 2 meters out of the water onto ice.",
+    "Chickens can recognize and remember over 100 different faces."
+  ]},
+  {"number": 100, "facts": [
+    "Cranberries bounce when they are ripe.",
+    "The holes in Swiss cheese are made by bacteria releasing gas.",
+    "Lemons float in water, but limes sink.",
+    "Cucumbers are about 96% water.",
+    "It takes around 150,000 crocus flowers to make one kilogram of saffron."
+  ]},
+  {"number": 101, "facts": [
+    "Mushrooms are more closely related to animals than to plants.",
+    "Bamboo is technically a type of grass, not a tree.",
+    "Cashews grow attached to a fruit called the cashew apple.",
+    "Vanilla is the second most expensive spice in the world after saffron.",
+    "Pinecones open and close depending on the humidity in the air."
+  ]},
+  {"number": 102, "facts": [
+    "The hyoid bone in your throat is the only bone not joined to another.",
+    "A human sneeze can shoot out at over 150 km per hour.",
+    "Your taste buds are replaced roughly every 10 days.",
+    "The femur is the longest and strongest bone in your body.",
+    "Humans glow faintly, but the light is far too weak to see."
+  ]},
+  {"number": 103, "facts": [
+    "Mercury has ice at its poles despite being close to the Sun.",
+    "Venus is hot enough on its surface to melt lead.",
+    "Saturn's rings are made mostly of ice.",
+    "Halley's Comet passes near Earth only about every 76 years.",
+    "A comet's tail always points away from the Sun."
+  ]},
+  {"number": 104, "facts": [
+    "A kangaroo uses its strong tail like a third leg.",
+    "Wombats can run up to 40 km per hour.",
+    "Cows have nearly 360-degree vision around them.",
+    "Goats have been found to have regional accents.",
+    "Sea cucumbers can expel their own organs and grow them back."
+  ]},
+  {"number": 105, "facts": [
+    "The oldest known hotel in the world has run since 705 AD in Japan.",
+    "The Hundred Years' War actually lasted 116 years.",
+    "Einstein was once offered the presidency of Israel.",
+    "The fax machine was invented before the telephone.",
+    "The world's oldest university is in Fez, Morocco, founded in 859 AD."
+  ]},
+  {"number": 106, "facts": [
+    "A baby puffin is called a puffling.",
+    "A baby hedgehog is called a hoglet.",
+    "A group of ferrets is called a business.",
+    "Cats have a third eyelid to protect and moisten their eyes.",
+    "Every cat's nose print is unique, like a human fingerprint."
+  ]},
+  {"number": 107, "facts": [
+    "Sound travels about four times faster in water than in air.",
+    "Light travels about 300,000 km every single second.",
+    "The Empire State Building is struck by lightning about 25 times a year.",
+    "Some metals have a 'memory' and snap back to shape when heated.",
+    "Glass is not a slow liquid; it is an amorphous solid."
+  ]},
+  {"number": 108, "facts": [
+    "A python can go up to a year without eating.",
+    "Tarantulas can survive for months without food.",
+    "The Goliath birdeater is the largest spider in the world.",
+    "Mosquitoes are the deadliest animals to humans on Earth.",
+    "A blue whale calf can gain about 90 kg of weight every day."
+  ]},
+  {"number": 109, "facts": [
+    "The Mona Lisa has no visible eyebrows.",
+    "The Mona Lisa only became world-famous after it was stolen in 1911.",
+    "Vincent van Gogh sold only one painting during his lifetime.",
+    "The 'Happy Birthday' song was under copyright until 2016.",
+    "The wreck of the Titanic was not found until 1985."
+  ]},
+  {"number": 110, "facts": [
+    "Pneumonoultramicroscopicsilicovolcanoconiosis is a real 45-letter word.",
+    "The word 'set' has one of the most definitions in the English language.",
+    "'Strengths' is one of the longest one-syllable words in English.",
+    "The infinity symbol is properly called a lemniscate.",
+    "The word 'nerd' was first coined by Dr. Seuss."
+  ]},
+  {"number": 111, "facts": [
+    "Emperor penguins can dive more than 500 meters deep.",
+    "A giraffe's tongue can be about 50 cm long and is dark to avoid sunburn.",
+    "Manatees use gas in their gut to help control how they float.",
+    "Caterpillars have around 4,000 muscles in their tiny bodies.",
+    "Pigeons can fly at speeds of up to 100 km per hour."
+  ]},
+  {"number": 112, "facts": [
+    "Pistachios can spontaneously catch fire if stored in large amounts.",
+    "Tomatoes were once feared as poisonous by wealthy Europeans.",
+    "Watermelon counts as both a fruit and a vegetable.",
+    "Most fortune cookies were actually popularized in the United States.",
+    "Pound cake got its name from using a pound of each ingredient."
+  ]},
+  {"number": 113, "facts": [
+    "The first YouTube video ever uploaded was about elephants at a zoo.",
+    "Email is older than the World Wide Web.",
+    "The QWERTY keyboard was designed to stop old typewriters from jamming.",
+    "The most common password in the world is still '123456'.",
+    "A group of 4 bits is called a 'nibble', half of a byte."
+  ]},
+  {"number": 114, "facts": [
+    "The chainsaw was originally invented to help with childbirth.",
+    "High heels were first worn by men, not women.",
+    "Velcro was inspired by burrs sticking to a dog's fur.",
+    "The Super Soaker water gun was invented by a NASA engineer.",
+    "The frisbee was named after the Frisbie Pie Company."
+  ]},
+  {"number": 115, "facts": [
+    "Lake Natron in Africa can turn dead animals into stone-like mummies.",
+    "Point Nemo is so remote the nearest humans are often astronauts above.",
+    "Monaco is smaller than New York City's Central Park.",
+    "France has the most time zones of any country, with twelve.",
+    "Mount Everest's rocks once lay at the bottom of an ancient sea."
+  ]},
+  {"number": 116, "facts": [
+    "The smell of old books has a name: bibliosmia.",
+    "A 'moment' was historically a unit of about 90 seconds.",
+    "The Hawaiian alphabet has only 13 letters.",
+    "Coins were given ridged edges centuries ago to prevent fraud.",
+    "Las Vegas casinos are famously built without clocks or windows."
+  ]},
+  {"number": 117, "facts": [
+    "Your body hosts roughly as many bacterial cells as human cells.",
+    "Your body holds enough fat to make about seven bars of soap.",
+    "Your hair and nails do not actually keep growing after death.",
+    "A full bladder can be the size of a softball.",
+    "The strongest muscle for its size is the one in your jaw."
+  ]},
+  {"number": 118, "facts": [
+    "The Boomerang Nebula is the coldest known place in the universe.",
+    "Neutron stars can spin hundreds of times every second.",
+    "Pluto has not completed one orbit since its discovery in 1930.",
+    "Uranus was the first planet discovered using a telescope.",
+    "The International Space Station travels at about 28,000 km per hour."
+  ]},
+  {"number": 119, "facts": [
+    "A blue-tongued skink scares predators by flashing its bright tongue.",
+    "A snail can regrow its eyes if they are lost.",
+    "Octopuses can edit their own genetic instructions on the fly.",
+    "A flamingo can sleep while standing on just one leg.",
+    "Some geckos can run across water for short distances."
+  ]},
+  {"number": 120, "facts": [
+    "A pencil and the word 'pencil' both come from the Latin for 'little tail'.",
+    "The dollar sign's exact origin is still debated by historians.",
+    "The first product ever sold via barcode was a pack of chewing gum.",
+    "'OK' is one of the most widely understood words on the planet.",
+    "One of the most common surnames in the world is Wang."
+  ]},
+  {"number": 121, "facts": [
+    "A jumping spider can leap many times its own body length.",
+    "Some ants farm fungus for food underground.",
+    "Leafcutter ants can carry leaves 50 times their own weight.",
+    "A single honeybee makes only about a twelfth of a teaspoon of honey.",
+    "Wasps can recognize each other's individual faces."
+  ]},
+  {"number": 122, "facts": [
+    "Antarctica was once warm and covered in forests.",
+    "The Atlantic Ocean is slowly getting wider every year.",
+    "There are around 1,500 potentially active volcanoes on Earth.",
+    "The Grand Canyon is large enough to create its own weather.",
+    "The Dead Sea's shore is the lowest point on dry land on Earth."
+  ]},
+  {"number": 123, "facts": [
+    "Otters have a loose pouch of skin to store their favorite rocks.",
+    "A narwhal's tusk is packed with millions of nerve endings.",
+    "Beavers' teeth are orange because of iron in the enamel.",
+    "Squirrels plant thousands of trees by forgetting where they buried nuts.",
+    "A skunk can spray its scent accurately up to about 3 meters."
+  ]},
+  {"number": 124, "facts": [
+    "The Wright brothers' first flight was shorter than a jumbo jet's length.",
+    "Bubble gum is pink mostly because that was the only dye left at first.",
+    "The first alarm clock could only ring at 4 in the morning.",
+    "Pineapples were once so rare that people rented them just for display.",
+    "Tea bags were first created by accident as sample packaging."
+  ]},
+  {"number": 125, "facts": [
+    "Your fingernails grow faster than your toenails.",
+    "Yawns may help cool down an overheated brain.",
+    "Goosebumps are a leftover reflex from our hairier ancestors.",
+    "You can survive without food far longer than without sleep.",
+    "Your stomach gets a new inner lining every few days."
+  ]},
+  {"number": 126, "facts": [
+    "A day on Venus is longer than its entire year.",
+    "It would take roughly 9 years to walk to the Moon.",
+    "The Moon experiences quakes, just like the Earth.",
+    "Space has a faint background temperature of about -270 degrees Celsius.",
+    "There are rogue planets drifting through space with no star at all."
+  ]},
+  {"number": 127, "facts": [
+    "Crocodiles have survived on Earth for over 200 million years.",
+    "A frog absorbs water through its skin instead of drinking it.",
+    "The axolotl keeps its baby features for its entire life.",
+    "Some salamanders breathe entirely through their skin, having no lungs.",
+    "A chameleon's eyes can look in two directions at the same time."
+  ]},
+  {"number": 128, "facts": [
+    "The longest English word with no repeated letters is 'uncopyrightable'.",
+    "'Bookkeeper' has three pairs of double letters in a row.",
+    "The exclamation mark is nicknamed a 'bang' by programmers.",
+    "The most common letter to start English words is the letter 'T'.",
+    "The word 'queue' is just a 'Q' followed by four silent letters."
+  ]},
+  {"number": 129, "facts": [
+    "A group of crows can hold what looks like a funeral for a dead crow.",
+    "Magpies are among the few animals that recognize themselves in mirrors.",
+    "Ravens can plan for the future, a skill once thought to be human.",
+    "Pigeons can learn to tell apart paintings by different artists.",
+    "Parrots can grasp the concept of zero."
+  ]},
+  {"number": 130, "facts": [
+    "The longest movie ever made runs for over 85 hours.",
+    "The 'silent' k in 'knife' used to be pronounced centuries ago.",
+    "Shakespeare gave many characters insults still funny today.",
+    "The world's shortest commercial scheduled flight lasts under 2 minutes.",
+    "The longest place name on Earth has 85 letters and is in New Zealand."
+  ]},
+  {"number": 131, "facts": [
+    "A jaguar's bite is strong enough to crack a turtle's shell.",
+    "Cheetahs can't roar, but they can purr like a house cat.",
+    "A tiger's roar can paralyze with fear for a moment, even other animals.",
+    "Lions can sleep for up to 20 hours a day.",
+    "A snow leopard can leap up to 15 meters in a single bound."
+  ]},
+  {"number": 132, "facts": [
+    "Honey is the only food that includes all the substances to sustain life.",
+    "Apples float because around a quarter of their volume is air.",
+    "Carrots were once mainly purple before orange ones became common.",
+    "Peanuts are not nuts at all; they grow underground as legumes.",
+    "Eating spicy food doesn't burn you; it just tricks your nerves."
+  ]},
+  {"number": 133, "facts": [
+    "The Sun loses about 4 million tons of mass every second.",
+    "Jupiter's Great Red Spot is a storm larger than the whole Earth.",
+    "A year on Neptune lasts about 165 Earth years.",
+    "Saturn would float if you could find an ocean big enough.",
+    "There is a giant cloud of alcohol drifting in our galaxy."
+  ]},
+  {"number": 134, "facts": [
+    "A flea can accelerate faster than a space shuttle taking off.",
+    "Dragonflies are among the deadliest hunters, catching most of their prey.",
+    "A ladybug can eat thousands of aphids in its lifetime.",
+    "Some cicadas stay underground for 17 years before emerging.",
+    "Male crickets chirp faster when the weather is warmer."
+  ]},
+  {"number": 135, "facts": [
+    "Your eyes can distinguish about 10 million different colors.",
+    "You blink less when staring at a screen, which dries your eyes.",
+    "The eye muscles are the fastest and busiest muscles in your body.",
+    "Each eye has a natural blind spot you never normally notice.",
+    "Newborn babies cannot make tears for the first few weeks of life."
+  ]},
+  {"number": 136, "facts": [
+    "Greenland appears huge on maps but is far smaller than it looks.",
+    "The Pacific Ocean is bigger than all the land on Earth combined.",
+    "Canada has the longest coastline of any country in the world.",
+    "Alaska is the most northern, western, and eastern US state at once.",
+    "The Sahara desert occasionally gets snow."
+  ]},
+  {"number": 137, "facts": [
+    "Dolphins have been seen giving each other names with unique whistles.",
+    "Orcas have distinct cultures and dialects between different pods.",
+    "A sperm whale's click is loud enough to be deadly up close.",
+    "Sea otters have the densest fur of any animal.",
+    "Whales can pass down songs that spread across entire oceans."
+  ]},
+  {"number": 138, "facts": [
+    "The hottest chili peppers are measured using the Scoville scale.",
+    "Mushrooms can create their own breeze to spread their spores.",
+    "A single coffee plant can keep producing cherries for decades.",
+    "Dark chocolate was once used as currency by ancient civilizations.",
+    "Avocados are toxic to many animals, including birds and horses."
+  ]},
+  {"number": 139, "facts": [
+    "Wombat droppings are cube-shaped to stop them rolling away.",
+    "A koala's brain is small and smooth compared to its body.",
+    "Tasmanian devils have one of the strongest bites for their size.",
+    "Quokkas are often called the happiest animals because they seem to smile.",
+    "A kangaroo cannot move its legs independently while hopping."
+  ]},
+  {"number": 140, "facts": [
+    "More than half of all internet traffic is generated by bots, not humans.",
+    "The first 1-gigabyte hard drive weighed over 200 kilograms.",
+    "A modern smartphone is millions of times more powerful than Apollo's computer.",
+    "The world's data is now measured in trillions of gigabytes.",
+    "The first computer mouse was carved out of wood."
+  ]},
+  {"number": 141, "facts": [
+    "Some turtles can live for more than 150 years.",
+    "A box turtle can survive being frozen partly solid in winter.",
+    "Sea turtles return to the exact beach where they were born to lay eggs.",
+    "Leatherback turtles can dive deeper than 1,000 meters.",
+    "A tortoise can recognize its own name over time."
+  ]},
+  {"number": 142, "facts": [
+    "Your brain can survive only a few minutes without oxygen.",
+    "Your brain has no pain receptors, so it can't feel pain itself.",
+    "The brain stays surprisingly active even while you sleep.",
+    "Adults' brains finish developing only in their mid-twenties.",
+    "Laughing engages multiple regions of the brain at once."
+  ]},
+  {"number": 143, "facts": [
+    "Snails breathe through a single lung-like opening in their body.",
+    "A garden snail can travel about one meter per hour.",
+    "Some sea slugs can photosynthesize like plants after eating algae.",
+    "Slugs use slime to glide safely over sharp surfaces.",
+    "A banana slug can grow up to 25 cm long."
+  ]},
+  {"number": 144, "facts": [
+    "A bolt of lightning can heat the surrounding air to incredible temperatures.",
+    "Thunder is the sound of air exploding outward after lightning.",
+    "Ball lightning is a rare glowing sphere scientists still struggle to explain.",
+    "Snow can fall even when the ground temperature is above freezing.",
+    "Hailstones can grow as big as grapefruits in strong storms."
+  ]},
+  {"number": 145, "facts": [
+    "The first vending machines were built in ancient Greece to sell holy water.",
+    "Ancient Egyptians used dried slabs as some of the first toothpaste.",
+    "Roman concrete grows stronger when exposed to seawater over time.",
+    "The oldest known musical instrument is a flute over 40,000 years old.",
+    "Ancient Romans had heated floors in their wealthier homes."
+  ]},
+  {"number": 146, "facts": [
+    "Hummingbirds are the only birds that can hover in place for long.",
+    "A hummingbird may visit over a thousand flowers in a single day.",
+    "Swifts can stay in the air for months without ever landing.",
+    "The wandering albatross has the largest wingspan of any living bird.",
+    "Some birds sleep while flying by resting half their brain at a time."
+  ]},
+  {"number": 147, "facts": [
+    "Octopuses have eight arms but can also taste with each of them.",
+    "A cuttlefish can hypnotize prey with shifting patterns on its skin.",
+    "The mimic octopus can imitate the look of other sea creatures.",
+    "Squid are among the fastest swimmers in the ocean using jet propulsion.",
+    "The colossal squid has the largest eyes of any known animal."
+  ]},
+  {"number": 148, "facts": [
+    "A single cloud can weigh hundreds of tons yet still float.",
+    "Raindrops fall at different speeds depending on their size.",
+    "Fog is simply a cloud that forms at ground level.",
+    "Snow is not actually white; the crystals are clear and scatter light.",
+    "A double rainbow has its colors reversed in the second arc."
+  ]},
+  {"number": 149, "facts": [
+    "Cats can't taste sweet flavors due to a missing taste gene.",
+    "A cat spends a large part of its waking time grooming itself.",
+    "Cats can rotate their ears nearly 180 degrees.",
+    "A house cat can sprint at around 48 km per hour.",
+    "Cats almost always land on their feet thanks to a built-in reflex."
+  ]},
+  {"number": 150, "facts": [
+    "The deepest part of the ocean is deeper than Mount Everest is tall.",
+    "Sunlight cannot reach below about 1,000 meters in the ocean.",
+    "Many deep-sea creatures make their own light to survive.",
+    "The pressure in the deep ocean could crush a submarine instantly.",
+    "There are mountains taller than Everest hidden under the sea."
+  ]},
+  {"number": 151, "facts": [
+    "Bees must collectively fly a huge distance to make a single jar of honey.",
+    "A bee's wings beat over 200 times per second.",
+    "Honeybees can sense the electric field of a flower.",
+    "A bee colony can have tens of thousands of workers in summer.",
+    "Bees keep their hive at a steady warm temperature year-round."
+  ]},
+  {"number": 152, "facts": [
+    "The human heart creates enough pressure to squirt blood several meters.",
+    "Your heart will beat roughly 3 billion times in an average lifetime.",
+    "A broken heart can cause real physical chest pain, called a syndrome.",
+    "The heart has its own electrical system that keeps it beating.",
+    "A newborn's heart beats almost twice as fast as an adult's."
+  ]},
+  {"number": 153, "facts": [
+    "Some fish can change sex during their lifetime.",
+    "A pufferfish builds elaborate sand patterns to attract a mate.",
+    "Flying fish can glide above the water for over 100 meters.",
+    "An electric eel can produce a shock of hundreds of volts.",
+    "The anglerfish lures prey with a glowing fishing rod on its head."
+  ]},
+  {"number": 154, "facts": [
+    "Maps were once printed with fake towns to catch copycats.",
+    "The Earth is not a perfect sphere; it bulges around the equator.",
+    "Mount Chimborazo's peak is the farthest point from Earth's center.",
+    "Two countries in the world are doubly landlocked.",
+    "The shortest border between two countries is only a few hundred meters."
+  ]},
+  {"number": 155, "facts": [
+    "A group of flamingos wades and feeds with their heads upside down.",
+    "Peacocks' tail feathers can be over a meter long.",
+    "A kiwi bird lays one of the largest eggs relative to its body size.",
+    "Some ducklings can imprint on the first thing they see when hatched.",
+    "An owl can turn its head about 270 degrees to look around."
+  ]},
+  {"number": 156, "facts": [
+    "Sound cannot travel through the vacuum of outer space.",
+    "There is a planet that may rain glass sideways in its winds.",
+    "Some stars are cool enough to touch without burning, in theory.",
+    "Black holes can slow down time around them.",
+    "Light from the Andromeda galaxy left it about 2.5 million years ago."
+  ]},
+  {"number": 157, "facts": [
+    "A dog's nose print is as unique as a human fingerprint.",
+    "Dogs sweat mainly through their paw pads.",
+    "A puppy is born blind, deaf, and toothless.",
+    "Dogs can learn to associate hundreds of words with objects.",
+    "A dog curls up to sleep to protect itself and stay warm."
+  ]},
+  {"number": 158, "facts": [
+    "The strongest natural material ever measured is spider silk for its weight.",
+    "Diamonds are not actually that rare compared to other gemstones.",
+    "Gold is so soft it can be hammered into sheets thinner than paper.",
+    "Helium is the only element first discovered in space, not on Earth.",
+    "Mercury is the only metal that stays liquid at room temperature."
+  ]},
+  {"number": 159, "facts": [
+    "The smell after rain is caused by oils and bacteria in the soil.",
+    "Lightning can fuse sand into glassy tubes called fulgurites.",
+    "A tornado's winds can exceed 480 km per hour.",
+    "The eye of a hurricane is eerily calm and clear.",
+    "Snowflakes form around a tiny speck of dust in the clouds."
+  ]},
+  {"number": 160, "facts": [
+    "A blue whale's call can be heard hundreds of kilometers away.",
+    "Elephants comfort each other when one is distressed.",
+    "Prairie dogs have one of the most complex animal languages known.",
+    "Whales and dolphins can suffer the equivalent of sunburn.",
+    "Naked mole rats barely age and almost never get cancer."
+  ]},
+  {"number": 161, "facts": [
+    "There are more possible ways to shuffle a deck than atoms on Earth.",
+    "A standard deck has 52 cards, matching the weeks in a year.",
+    "The four kings in a deck once represented historical rulers.",
+    "Rolling a die has been a game for over 5,000 years.",
+    "Chess likely originated in India over 1,500 years ago."
+  ]},
+  {"number": 162, "facts": [
+    "Honeybees can be trained to detect explosives by smell.",
+    "Rats have been trained to sniff out landmines safely.",
+    "Dogs can be trained to detect certain diseases by smell.",
+    "Pigeons were once trained to spot life rafts at sea.",
+    "Ferrets were historically used to run cables through tight pipes."
+  ]},
+  {"number": 163, "facts": [
+    "Your sense of smell is closely tied to memory and emotion.",
+    "Humans can detect over a trillion different scents.",
+    "Smell is the only sense that bypasses the brain's relay station.",
+    "Newborns can recognize their mother by scent within days.",
+    "Losing your sense of smell can also dull your sense of taste."
+  ]},
+  {"number": 164, "facts": [
+    "The wood frog can stop its heart and freeze through the winter.",
+    "Some beetles can survive being run over by a car.",
+    "A tardigrade can survive boiling, freezing, and the vacuum of space.",
+    "Certain bacteria thrive in near-boiling hot springs.",
+    "Some fish produce a natural antifreeze to survive icy seas."
+  ]},
+  {"number": 165, "facts": [
+    "The Great Pyramid was the tallest human structure for nearly 4,000 years.",
+    "Ancient Romans used a form of concrete that still stands today.",
+    "The Colosseum could be flooded to stage mock sea battles.",
+    "Hadrian's Wall stretched across the width of northern Britain.",
+    "Some Roman roads are still in use after 2,000 years."
+  ]},
+  {"number": 166, "facts": [
+    "A giraffe's heart can weigh over 11 kilograms to pump blood up its neck.",
+    "Giraffes only need about 30 minutes of sleep per day.",
+    "A giraffe is born by dropping about 2 meters to the ground.",
+    "Giraffes use their long necks to fight by swinging their heads.",
+    "No two giraffes have exactly the same coat pattern."
+  ]},
+  {"number": 167, "facts": [
+    "The total length of your DNA, uncoiled, could stretch to the Sun and back many times.",
+    "Almost all your cells are replaced over the course of several years.",
+    "You produce about 25 million new cells every second.",
+    "Your body generates enough heat in 30 minutes to boil water, in theory.",
+    "Identical twins have different fingerprints."
+  ]},
+  {"number": 168, "facts": [
+    "Sea horses mate for life in some species.",
+    "A male seahorse can give birth to hundreds of babies at once.",
+    "Seahorses have no stomach, so they must eat almost constantly.",
+    "Seahorses are among the slowest fish in the ocean.",
+    "A seahorse anchors itself by wrapping its tail around plants."
+  ]},
+  {"number": 169, "facts": [
+    "Some volcanoes erupt with lava that glows bright blue from burning gas.",
+    "There are more than a thousand volcanoes hidden under the oceans.",
+    "Lava can flow faster than a person can run in rare cases.",
+    "A supervolcano lies beneath Yellowstone National Park.",
+    "Volcanic ash can travel thousands of kilometers through the air."
+  ]},
+  {"number": 170, "facts": [
+    "An octopus has nine brains in total: one central and one per arm.",
+    "Octopuses can squeeze through any gap bigger than their beak.",
+    "An octopus can regrow a lost arm.",
+    "Octopuses have been seen using coconut shells as portable shelters.",
+    "Some octopuses throw debris at each other."
+  ]},
+  {"number": 171, "facts": [
+    "A bolt of lightning is hotter than the surface of the Sun.",
+    "St. Elmo's fire is a glowing plasma seen on ships in storms.",
+    "The driest desert on Earth still has microbial life.",
+    "Some places on Earth have not seen rain in centuries.",
+    "Rain on Venus is made of sulfuric acid that evaporates before landing."
+  ]},
+  {"number": 172, "facts": [
+    "The fingerprints of a koala can confuse crime scene investigators.",
+    "Koalas sleep up to 22 hours a day to save energy.",
+    "A koala eats only a few types of eucalyptus leaves.",
+    "Koalas are not bears; they are marsupials.",
+    "Baby koalas eat a special food from their mother to digest leaves."
+  ]},
+  {"number": 173, "facts": [
+    "The number zero was a surprisingly late invention in mathematics.",
+    "The equals sign was invented to avoid repeating 'is equal to'.",
+    "The plus and minus signs first appeared in print in the 1400s.",
+    "A 'googol' is the number 1 followed by 100 zeros.",
+    "Pi has been calculated to trillions of digits with no end in sight."
+  ]},
+  {"number": 174, "facts": [
+    "A starfish can turn its stomach inside out to digest prey outside its body.",
+    "Some starfish have up to 40 arms.",
+    "A starfish has no brain and no blood.",
+    "Sea urchins move using hundreds of tiny tube feet.",
+    "A sea cucumber breathes partly through its rear end."
+  ]},
+  {"number": 175, "facts": [
+    "Elephants can communicate over kilometers using rumbles we can't hear.",
+    "An elephant's trunk has tens of thousands of muscles.",
+    "Elephants can recognize themselves in a mirror.",
+    "Baby elephants sometimes suck their trunks for comfort.",
+    "Elephants are afraid of bees and avoid their buzzing."
+  ]},
+  {"number": 176, "facts": [
+    "The shortest war in history lasted under 40 minutes.",
+    "Ancient Olympic winners were given a crown of olive leaves.",
+    "The first recorded marathon runner inspired the modern race.",
+    "Vikings navigated using the position of the Sun and special crystals.",
+    "Medieval people believed the heart, not the brain, did the thinking."
+  ]},
+  {"number": 177, "facts": [
+    "A spider's web can be stronger than a steel thread of the same weight.",
+    "Some spiders balloon through the air on strands of silk.",
+    "A jumping spider can see in more colors than humans in some cases.",
+    "Female spiders are often much larger than the males.",
+    "The Darwin's bark spider weaves the largest webs of any spider."
+  ]},
+  {"number": 178, "facts": [
+    "Pluto is smaller than the United States is wide.",
+    "There may be more planets in our galaxy than stars.",
+    "A spoonful of a neutron star would weigh billions of tons.",
+    "The largest known star could swallow billions of Suns.",
+    "Some galaxies are billions of times more massive than the Milky Way."
+  ]},
+  {"number": 179, "facts": [
+    "Penguins propose to a mate by offering a carefully chosen pebble.",
+    "Emperor penguins huddle together to survive Antarctic winters.",
+    "A penguin can drink seawater and filter out the salt.",
+    "Penguins can leap out of the water like dolphins to breathe.",
+    "Some penguins mate with the same partner year after year."
+  ]},
+  {"number": 180, "facts": [
+    "Your body produces about 1.5 liters of saliva every day.",
+    "The strongest acid in your body is in your stomach.",
+    "You are slightly taller in the morning than at night.",
+    "Humans are the only animals known to blush.",
+    "A full set of adult teeth has 32 teeth."
+  ]},
+  {"number": 181, "facts": [
+    "Bats account for about a fifth of all mammal species.",
+    "Some bats can eat thousands of insects in a single night.",
+    "Vampire bats share food by regurgitating blood for hungry friends.",
+    "A bat can detect an object as fine as a human hair using sound.",
+    "The largest bats have wingspans of well over a meter."
+  ]},
+  {"number": 182, "facts": [
+    "The aurora is caused by solar particles hitting our atmosphere.",
+    "Auroras also occur on other planets like Jupiter and Saturn.",
+    "The aurora can appear in green, red, purple, and blue.",
+    "Earth's magnetic field protects us from harmful solar radiation.",
+    "Earth's magnetic poles slowly wander and can even flip over time."
+  ]},
+  {"number": 183, "facts": [
+    "Crows can hold grudges against specific humans for years.",
+    "Crows can use cars to crack nuts by dropping them on roads.",
+    "A crow can bend a wire into a hook to fetch food.",
+    "Crows can recognize and remember individual human faces.",
+    "Crows have been seen sliding down snowy roofs, seemingly for fun."
+  ]},
+  {"number": 184, "facts": [
+    "Bananas, blueberries, and tomatoes are all technically berries.",
+    "A pineapple is actually a cluster of many berries fused together.",
+    "Figs are pollinated by tiny wasps that crawl inside them.",
+    "Strawberries are not true berries, botanically speaking.",
+    "An apple can keep you alert because of its natural sugars."
+  ]},
+  {"number": 185, "facts": [
+    "Some frogs are so toxic that touching them can be dangerous.",
+    "The glass frog has see-through skin showing its organs.",
+    "A frog's eyes help it swallow by pushing food down its throat.",
+    "The goliath frog can grow as large as a house cat.",
+    "Some frogs can glide between trees using their webbed feet."
+  ]},
+  {"number": 186, "facts": [
+    "The Earth's day is gradually getting longer over millions of years.",
+    "A year is not exactly 365 days, which is why we add leap years.",
+    "The seasons happen because of Earth's tilt, not its distance from the Sun.",
+    "There are two days a year when the Sun rises due east everywhere.",
+    "Earth travels around the Sun at about 107,000 km per hour."
+  ]},
+  {"number": 187, "facts": [
+    "A shark must keep water moving over its gills to breathe.",
+    "Some sharks glow in the dark deep underwater.",
+    "The whale shark is the largest fish in the ocean.",
+    "A great white can detect tiny electrical signals from prey.",
+    "Sharks can lose and regrow thousands of teeth in a lifetime."
+  ]},
+  {"number": 188, "facts": [
+    "The human eye can spot a single candle flame from kilometers away in the dark.",
+    "Your nose can remember about 50,000 different scents.",
+    "Your ears keep working for a short time even as you fall asleep.",
+    "The skin is the body's largest organ.",
+    "You shed and regrow your outer skin layer about once a month."
+  ]},
+  {"number": 189, "facts": [
+    "A cheetah can go from standstill to highway speed in a few seconds.",
+    "A cheetah's tail works like a rudder for sharp turns.",
+    "Cheetahs cannot fully retract their claws, unlike other big cats.",
+    "A cheetah can only sprint at top speed for a short burst.",
+    "Cheetahs communicate with a chirp similar to a bird's."
+  ]},
+  {"number": 190, "facts": [
+    "Antarctica holds about 70% of the world's fresh water as ice.",
+    "Icebergs are made of fresh water, not salty seawater.",
+    "Only about a tenth of an iceberg is visible above the water.",
+    "Some icebergs are streaked with blue or even green stripes.",
+    "The largest iceberg ever recorded was bigger than some countries."
+  ]},
+  {"number": 191, "facts": [
+    "Some ants can swim and even form living rafts to survive floods.",
+    "An ant colony can act almost like a single super-organism.",
+    "Certain ants take 'slaves' from other ant species.",
+    "Ants leave scent trails so others can find food.",
+    "There are estimated to be millions of ants for every human on Earth."
+  ]},
+  {"number": 192, "facts": [
+    "The first photograph ever taken needed about 8 hours of exposure.",
+    "Early color photos were made by combining three separate images.",
+    "The first selfie was taken back in 1839.",
+    "Film cameras capture images using light-sensitive chemicals.",
+    "The most expensive photo ever sold went for millions of dollars."
+  ]},
+  {"number": 193, "facts": [
+    "Some plants release chemicals to warn their neighbors of danger.",
+    "A sunflower head can contain over a thousand tiny flowers.",
+    "Certain seeds can survive for centuries and still sprout.",
+    "Moss can survive being completely dried out for long periods.",
+    "A single tree can release hundreds of liters of water vapor a day."
+  ]},
+  {"number": 194, "facts": [
+    "Dolphins can recognize themselves in a mirror.",
+    "Dolphins sometimes play by blowing and chasing rings of air.",
+    "A dolphin sleeps by resting one half of its brain at a time.",
+    "Dolphins use clicks and echoes to 'see' with sound.",
+    "Some dolphins use sea sponges as tools to protect their snouts."
+  ]},
+  {"number": 195, "facts": [
+    "The total weight of all ants may rival the weight of all humans.",
+    "There are more microbes in your gut than stars in the galaxy.",
+    "A single gram of soil can hold billions of bacteria.",
+    "Viruses outnumber every other life form on Earth.",
+    "Most of the cells you call 'you' are actually microbes."
+  ]},
+  {"number": 196, "facts": [
+    "A rainbow is actually a full circle, but the ground hides the lower half.",
+    "You can sometimes see a faint rainbow at night from the Moon.",
+    "No two people see exactly the same rainbow.",
+    "Rainbows form because light bends and splits inside raindrops.",
+    "A third and fourth rainbow can appear around the Sun, but are rare."
+  ]},
+  {"number": 197, "facts": [
+    "Camels store fat, not water, in their humps.",
+    "A camel can lose a quarter of its body weight and survive.",
+    "Camels have a third clear eyelid to see in sandstorms.",
+    "A camel's mouth is tough enough to chew thorny plants.",
+    "Camels can close their nostrils to keep out blowing sand."
+  ]},
+  {"number": 198, "facts": [
+    "The longest recorded flight of a chicken is just 13 seconds.",
+    "A hen can lay an egg almost every day.",
+    "Chickens experience a form of REM sleep and may dream.",
+    "Roosters have a built-in earplug that protects them from their own crowing.",
+    "Chickens prefer to fall asleep at the highest perch available."
+  ]},
+  {"number": 199, "facts": [
+    "Some moths drink the tears of sleeping animals for salt.",
+    "A moth can smell a mate from kilometers away.",
+    "The Atlas moth is one of the largest insects by wing area.",
+    "Some moths have no mouth and never eat as adults.",
+    "Moths navigate by keeping a constant angle to the Moon."
+  ]}
+]

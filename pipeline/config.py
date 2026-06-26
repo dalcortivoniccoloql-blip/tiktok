@@ -3,14 +3,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent.parent
 
 AUDIO_DIR  = BASE_DIR / "audio"
-OUTPUT_DIR = BASE_DIR / "_da caricare"
-BACKGROUNDS_DIR = BASE_DIR / "backgrounds"
+OUTPUT_DIR = BASE_DIR / "output"
+BACKGROUNDS_DIR = BASE_DIR / "assets" / "backgrounds"
 
 # Sorgente contenuti
 ENGLISH_SCRIPTS = Path(__file__).parent / "english_scripts.json"
 SCRIPTS_DOCX = [
-    BASE_DIR / "00_curiosita_tiktok_reali.docx",
-    BASE_DIR / "Curiosita_Virali_TikTok_100_Script.docx",
+    BASE_DIR / "archive" / "legacy_it" / "00_curiosita_tiktok_reali.docx",
+    BASE_DIR / "archive" / "legacy_it" / "Curiosita_Virali_TikTok_100_Script.docx",
 ]
 
 # Lingua: "en" usa english_scripts.json, "it" usa i docx

@@ -6,3 +6,5 @@ numpy
 google-api-python-client
 google-auth-oauthlib
 google-auth-httplib2
+# Opzionale: solo per l'auto-generazione di nuove curiosita' (generate_scripts.py)
+anthropic

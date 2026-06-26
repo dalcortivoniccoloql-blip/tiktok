@@ -2,10 +2,10 @@
 # Esegui UNA VOLTA come Amministratore:
 #   Tasto destro su PowerShell > "Esegui come amministratore"
 #   cd "C:\Users\nicco\Desktop\tiktok"
-#   .\setup_scheduler.ps1
+#   .\local\setup_scheduler.ps1
 
 $TaskName   = "TikTok-Pipeline-3xDay"
-$ScriptPath = "C:\Users\nicco\Desktop\tiktok\auto_run.bat"
+$ScriptPath = "C:\Users\nicco\Desktop\tiktok\local\auto_run.bat"
 $WorkDir    = "C:\Users\nicco\Desktop\tiktok"
 
 # Tre orari di pubblicazione al giorno (modificabili)
