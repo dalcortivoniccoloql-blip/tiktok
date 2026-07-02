@@ -88,3 +88,26 @@ Senza questa chiave, il sistema funziona comunque fino all'esaurimento degli scr
 ## Per cambiare gli orari
 - Modifica `.github/workflows/publish.yml` (righe `cron:`). Gli orari sono in UTC
   (ora italiana estiva = UTC + 2). Esempio: `0 7 * * *` = 09:00 italiane.
+
+---
+
+## PROBLEMA: gli Short smettono di pubblicarsi dopo ~7 giorni (`invalid_grant`)
+
+**Causa:** se il consent screen OAuth è in modalità **"Testing"**, Google fa scadere
+il refresh token ogni **7 giorni** → l'upload fallisce con
+`invalid_grant: Token has been expired or revoked.`
+
+**Fix PERMANENTE (una volta sola):**
+1. Vai su [console.cloud.google.com/auth/overview](https://console.cloud.google.com/auth/overview)
+2. Nella schermata consenso OAuth clicca **"Pubblica app" / "In produzione"**
+   → da ora i token non scadono più (salvo revoca o 6 mesi di inutilizzo).
+
+**Rigenerare il token (dopo il fix, o quando serve):**
+1. `py pipeline\auth_youtube.py` → segui i passi nel browser → copia il refresh token
+2. `py pipeline\auth_youtube.py --token "IL_TUO_TOKEN"`
+   → aggiorna `yt_token.json` **e stampa il valore pronto per il secret**
+3. Aggiorna il secret **YT_TOKEN** su GitHub con quel valore
+   ([settings/secrets/actions](https://github.com/NdC171/tiktok/settings/secrets/actions))
+4. Test: scheda **Actions** → **Publish YouTube Short** → **Run workflow**
+
+> La pubblicazione riprende dallo `state.json` corrente: nessun doppione, nessun buco.
