@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import random
 from pathlib import Path
 
 import numpy as np
@@ -45,8 +46,12 @@ def _font(size: int) -> ImageFont.FreeTypeFont:
 
 # ── background video ──────────────────────────────────────────────────────────
 
-def load_bg_clip() -> VideoFileClip | None:
-    """Carica il primo video in backgrounds/. Ritorna None se vuota."""
+def load_bg_clip(rng: random.Random | None = None) -> VideoFileClip | None:
+    """Carica un video di sfondo da backgrounds/.
+
+    Se sono presenti piu' file, ne sceglie uno (a caso se `rng` e' fornito),
+    cosi' aggiungendo altri spezzoni la varieta' aumenta automaticamente.
+    """
     if not BACKGROUNDS_DIR.exists():
         return None
     videos = sorted(
@@ -56,8 +61,9 @@ def load_bg_clip() -> VideoFileClip | None:
     )
     if not videos:
         return None
-    print(f"    Background: {videos[0].name}")
-    return VideoFileClip(str(videos[0]))
+    choice = rng.choice(videos) if rng else videos[0]
+    print(f"    Background: {choice.name}")
+    return VideoFileClip(str(choice))
 
 
 def _crop_fill(img: Image.Image, w: int, h: int) -> Image.Image:
@@ -117,7 +123,7 @@ def _draw_caption(draw: ImageDraw.Draw, text: str, font: ImageFont.FreeTypeFont,
 # ── frame renderer ────────────────────────────────────────────────────────────
 
 def _make_frame(t: float, facts: list[str], audio_duration: float,
-                bg_clip: VideoFileClip | None) -> np.ndarray:
+                bg_clip: VideoFileClip | None, bg_start: float = 0.0) -> np.ndarray:
 
     # ── timing ──
     intro_dur = 2.8
@@ -135,7 +141,7 @@ def _make_frame(t: float, facts: list[str], audio_duration: float,
 
     # ── background a tutto schermo ──
     if bg_clip is not None:
-        loop_t = t % bg_clip.duration
+        loop_t = (bg_start + t) % bg_clip.duration
         frame  = Image.fromarray(bg_clip.get_frame(loop_t))
         frame  = _crop_fill(frame, WIDTH, HEIGHT)
         if BG_DARKEN < 1.0:
@@ -180,12 +186,22 @@ def create_video(script: dict, audio_path: Path, output_path: Path,
     audio    = AudioFileClip(str(audio_path))
     duration = audio.duration
     facts    = script["facts"]
-    bg_clip  = load_bg_clip()
+
+    # RNG deterministico per script: spezzone di sfondo diverso per ogni Short,
+    # ma riproducibile se lo stesso script viene ri-renderizzato.
+    rng      = random.Random(script.get("number", 0))
+    bg_clip  = load_bg_clip(rng)
+
+    # Parte da un punto casuale del video di sfondo (il modulo gestisce il loop).
+    bg_start = 0.0
+    if bg_clip is not None and bg_clip.duration > duration:
+        bg_start = rng.uniform(0, bg_clip.duration - duration)
+        print(f"    Spezzone sfondo: da ~{bg_start:.0f}s")
 
     print(f"    Rendering {'(full-screen + caption)' if bg_clip else '(no background!)'}...")
 
     video = VideoClip(
-        lambda t: _make_frame(t, facts, duration, bg_clip),
+        lambda t: _make_frame(t, facts, duration, bg_clip, bg_start),
         duration=duration,
     ).with_fps(FPS).with_audio(audio)
 

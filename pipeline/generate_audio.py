@@ -3,17 +3,16 @@ from pathlib import Path
 
 import edge_tts
 
-from config import DEFAULT_VOICE, INTRO_TEXT, OUTRO_TEXT, LANGUAGE
-
-_NUMBER_WORD = "Number" if LANGUAGE == "en" else "Numero"
+from config import DEFAULT_VOICE, INTRO_TEXT, OUTRO_TEXT
 
 
 def script_to_narration(script: dict, voice: str = DEFAULT_VOICE) -> str:
-    """Costruisce il testo di narrazione completo dallo script."""
-    parts = [INTRO_TEXT]
-    for i, fact in enumerate(script["facts"], 1):
-        parts.append(f"{_NUMBER_WORD} {i}. {fact}")
-    parts.append(OUTRO_TEXT)
+    """Costruisce il testo di narrazione completo dallo script.
+
+    I fatti vengono letti di fila, senza 'Number 1/2/3', per una resa piu' fluida.
+    La doppia spaziatura tra le frasi da' una piccola pausa naturale.
+    """
+    parts = [INTRO_TEXT, *script["facts"], OUTRO_TEXT]
     return "  ".join(parts)
 
 
