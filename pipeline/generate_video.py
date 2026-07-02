@@ -11,7 +11,7 @@ from config import (
     WIDTH, HEIGHT, FPS,
     BACKGROUNDS_DIR,
     CAPTION_FILL, CAPTION_STROKE, STROKE_WIDTH, CAPTION_FONT_SIZE,
-    BG_DARKEN, INTRO_TEXT, OUTRO_TEXT, USERNAME,
+    BG_DARKEN, OUTRO_TEXT, USERNAME,
 )
 
 # ── font ─────────────────────────────────────────────────────────────────────
@@ -125,18 +125,15 @@ def _draw_caption(draw: ImageDraw.Draw, text: str, font: ImageFont.FreeTypeFont,
 def _make_frame(t: float, facts: list[str], audio_duration: float,
                 bg_clip: VideoFileClip | None, bg_start: float = 0.0) -> np.ndarray:
 
-    # ── timing ──
-    intro_dur = 2.8
+    # ── timing (HOOK A FREDDO: i fatti partono da t=0, CTA in coda) ──
     outro_dur = 2.2
-    facts_dur = max(audio_duration - intro_dur - outro_dur, len(facts) * 2.0)
+    facts_dur = max(audio_duration - outro_dur, len(facts) * 2.0)
     per_fact  = facts_dur / len(facts)
 
-    if t < intro_dur:
-        caption = INTRO_TEXT
-    elif t >= audio_duration - outro_dur:
+    if t >= audio_duration - outro_dur:
         caption = OUTRO_TEXT
     else:
-        idx = min(int((t - intro_dur) / per_fact), len(facts) - 1)
+        idx = min(int(t / per_fact), len(facts) - 1)
         caption = facts[idx]
 
     # ── background a tutto schermo ──

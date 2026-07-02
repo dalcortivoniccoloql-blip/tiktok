@@ -3,16 +3,17 @@ from pathlib import Path
 
 import edge_tts
 
-from config import DEFAULT_VOICE, INTRO_TEXT, OUTRO_TEXT
+from config import DEFAULT_VOICE, OUTRO_TEXT
 
 
 def script_to_narration(script: dict, voice: str = DEFAULT_VOICE) -> str:
     """Costruisce il testo di narrazione completo dallo script.
 
-    I fatti vengono letti di fila, senza 'Number 1/2/3', per una resa piu' fluida.
-    La doppia spaziatura tra le frasi da' una piccola pausa naturale.
+    HOOK A FREDDO: si parte subito dal primo fatto (niente intro parlata), per dare
+    valore nei primi secondi. I fatti sono letti di fila (niente 'Number 1/2/3') e la
+    CTA finale chiude il video. La doppia spaziatura da' una piccola pausa naturale.
     """
-    parts = [INTRO_TEXT, *script["facts"], OUTRO_TEXT]
+    parts = [*script["facts"], OUTRO_TEXT]
     return "  ".join(parts)
 
 

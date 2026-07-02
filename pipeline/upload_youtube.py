@@ -92,17 +92,26 @@ def build_service():
 # ── metadata helpers ──────────────────────────────────────────────────────────
 
 def build_title(script: dict) -> str:
-    """Genera il titolo YouTube Shorts."""
-    # #Shorts nel titolo e meno di 100 caratteri = classificazione garantita come Short
-    return "5 ABSURD facts that will leave you SPEECHLESS! #Shorts"
+    """Titolo per-video: usa il primo fatto (l'hook) per un titolo UNICO e curioso.
+
+    Titoli diversi per ogni Short = meno "templato" (policy) + CTR migliore.
+    #Shorts nel titolo garantisce la classificazione come Short. Limite 100 caratteri.
+    """
+    hook   = script["facts"][0].strip().rstrip(".")
+    suffix = " \U0001F92F #Shorts"
+    max_len = 100 - len(suffix)
+    if len(hook) > max_len:
+        hook = hook[: max_len - 1].rstrip() + "…"
+    return hook + suffix
 
 
 def build_description(script: dict) -> str:
-    """Genera la descrizione YouTube Shorts (base: Description_tiktok.txt)."""
+    """Descrizione per-video: elenca i fatti dello script (testo unico) + hashtag."""
+    facts = "\n".join(f"• {f}" for f in script["facts"])
     return (
-        "5 ABSURD facts that will leave you SPEECHLESS!\U0001F636\U0001F636"
-        "... the last one will blow your mind!\U0001F92F\n\n"
-        "#Shorts #fyp #curiosity #facts #minecraft #viral #shorts #amazingfacts"
+        "Absurd but TRUE facts \U0001F92F Which one surprised you most?\n\n"
+        f"{facts}\n\n"
+        "#Shorts #facts #didyouknow #curiosity #viral #amazingfacts"
     )
 
 
