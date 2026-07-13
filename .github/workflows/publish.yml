@@ -1,11 +1,15 @@
 name: Publish YouTube Short
 
-# 3 volte al giorno (orari UTC = 09/14/19 ora italiana in estate)
+# ⏸️ CRON SOSPESO il 2026-07-13: gli upload via API vengono bloccati come
+# privati finché il progetto Google Cloud non supera il Compliance Audit
+# YouTube (form inviato, in attesa di esito). Ogni run consumava uno script
+# in un video invisibile. Riattivare togliendo i commenti dopo l'approvazione.
+# Orari originali (UTC = 09/14/19 ora italiana in estate):
 on:
-  schedule:
-    - cron: "0 7 * * *"
-    - cron: "0 12 * * *"
-    - cron: "0 17 * * *"
+  # schedule:
+  #   - cron: "0 7 * * *"
+  #   - cron: "0 12 * * *"
+  #   - cron: "0 17 * * *"
   workflow_dispatch:   # permette di lanciarlo a mano dal sito GitHub
 
 permissions:
