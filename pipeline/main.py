@@ -1,3 +1,4 @@
+# Durata: LEGATO-A:P09
 """
 Pipeline TikTok - genera audio, video e carica su YouTube Shorts.
 
@@ -77,6 +78,7 @@ def run(
     overwrite: bool,
     voice: str,
     publish_now: bool = False,
+    upload_instagram: bool = False,
 ) -> None:
     print("\nCaricamento script...")
     scripts = load_scripts()
@@ -148,6 +150,19 @@ def run(
             except Exception as e:
                 print(f"  ERRORE upload YouTube: {e}")
 
+        # 4. Upload Instagram Reels (immediato: l'API IG non programma nel futuro;
+        #    per pubblicare a orario si lancia il comando all'orario giusto o si usa il cron cloud)
+        if upload_instagram and not audio_only:
+            if not video_p.exists():
+                print(f"  SKIP Instagram upload: video non trovato")
+                continue
+            print(f"  Caricamento su Instagram...")
+            try:
+                from upload_instagram import upload_script_reel
+                upload_script_reel(script, video_p)
+            except Exception as e:
+                print(f"  ERRORE upload Instagram: {e}")
+
     print(f"\nCompletato: {produced}/{count} video prodotti")
     if upload_youtube:
         print(f"YouTube upload: {uploaded}/{produced}")
@@ -188,6 +203,7 @@ def main() -> None:
     parser.add_argument("--audio-only",      action="store_true",             help="Solo audio, salta video")
     parser.add_argument("--video-only",      action="store_true",             help="Solo video, audio deve esistere")
     parser.add_argument("--upload-youtube",  action="store_true",             help="Carica su YouTube Shorts dopo la generazione")
+    parser.add_argument("--upload-instagram", action="store_true",            help="Pubblica anche su Instagram Reels (serve env IG_* — vedi docs/SETUP_INSTAGRAM.md)")
     parser.add_argument("--from-date",       type=str,  default=None,         help="Data primo upload YYYY-MM-DD (default: oggi)")
     parser.add_argument("--publish-now",     action="store_true",             help="Pubblica subito invece di programmare")
     parser.add_argument("--overwrite",       action="store_true",             help="Sovrascrive file esistenti")
@@ -221,6 +237,7 @@ def main() -> None:
         overwrite      = args.overwrite,
         voice          = args.voice,
         publish_now    = args.publish_now,
+        upload_instagram = args.upload_instagram,
     )
 
 

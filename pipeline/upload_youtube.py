@@ -1,3 +1,4 @@
+# Durata: LEGATO-A:P09
 """
 Upload automatico su YouTube Shorts.
 
@@ -17,6 +18,8 @@ from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
+
+from config import USERNAME, BG_CREDIT_LINE
 
 # ── path ──────────────────────────────────────────────────────────────────────
 
@@ -91,33 +94,54 @@ def build_service():
 
 # ── metadata helpers ──────────────────────────────────────────────────────────
 
-def build_title(script: dict) -> str:
-    """Titolo per-video: usa il primo fatto (l'hook) per un titolo UNICO e curioso.
+def _hook_from_fact(fact: str, max_len: int) -> str:
+    """Accorcia il primo fatto a un hook da titolo, tagliando su un confine di parola."""
+    hook = fact.strip().rstrip(".!?")
+    if len(hook) <= max_len:
+        return hook
+    cut = hook[:max_len].rsplit(" ", 1)[0]
+    return cut.rstrip(",;:") + "..."
 
-    Titoli diversi per ogni Short = meno "templato" (policy) + CTR migliore.
-    #Shorts nel titolo garantisce la classificazione come Short. Limite 100 caratteri.
-    """
-    hook   = script["facts"][0].strip().rstrip(".")
-    suffix = " \U0001F92F #Shorts"
-    max_len = 100 - len(suffix)
-    if len(hook) > max_len:
-        hook = hook[: max_len - 1].rstrip() + "…"
-    return hook + suffix
+
+# Rotazione per numero di script: mai due video con lo stesso titolo
+# (il titolo statico uguale per tutti era pessimo per ricerca e sembrava spam).
+_TITLE_TEMPLATES = [
+    "{hook} - and 4 more ABSURD facts #Shorts",
+    "Did you know? {hook} #Shorts",
+    "{hook}... wait for the LAST one #Shorts",
+]
+
+
+def build_title(script: dict) -> str:
+    """Titolo YouTube dinamico: hook dal primo fatto + template a rotazione.
+    #Shorts nel titolo e meno di 100 caratteri = classificazione garantita come Short."""
+    template = _TITLE_TEMPLATES[script.get("number", 0) % len(_TITLE_TEMPLATES)]
+    room = 100 - len(template.format(hook=""))
+    hook = _hook_from_fact(script["facts"][0], room)
+    return template.format(hook=hook)
 
 
 def build_description(script: dict) -> str:
-    """Descrizione per-video: elenca i fatti dello script (testo unico) + hashtag."""
-    facts = "\n".join(f"• {f}" for f in script["facts"])
+    """Descrizione YouTube dinamica: hook + i 5 fatti del video (keyword reali per il SEO)
+    + hashtag puliti (niente doppioni, niente #fyp che su YouTube non serve)
+    + CREDITO CC-BY obbligatorio dello sfondo (vedi docs/SFONDI-DIRITTI.md)."""
+    facts = "\n".join(f"{i}) {fact}" for i, fact in enumerate(script["facts"], 1))
     return (
-        "Absurd but TRUE facts \U0001F92F Which one surprised you most?\n\n"
+        "5 ABSURD facts that will leave you SPEECHLESS\U0001F636"
+        " ... the last one will blow your mind!\U0001F92F\n\n"
+        "In this Short:\n"
         f"{facts}\n\n"
-        "#Shorts #facts #didyouknow #curiosity #viral #amazingfacts"
+        f"Follow {USERNAME} for daily absurd facts!\n\n"
+        "#shorts #facts #didyouknow #amazingfacts #funfacts\n\n"
+        f"{BG_CREDIT_LINE}"
     )
 
 
 TAGS = [
-    "curiosita", "fatti assurdi", "facts", "scienza", "natura",
-    "animali", "spazio", "storia", "shorts", "viral",
+    "absurd facts", "amazing facts", "fun facts", "did you know",
+    "random facts", "interesting facts", "mind blowing facts",
+    "facts shorts", "science facts", "animal facts", "space facts",
+    "history facts",
 ]
 
 # ── uploader ──────────────────────────────────────────────────────────────────

@@ -1,6 +1,8 @@
+# Durata: LEGATO-A:P09
 from __future__ import annotations
 
-import random
+import json
+from bisect import bisect_right
 from pathlib import Path
 
 import numpy as np
@@ -11,7 +13,8 @@ from config import (
     WIDTH, HEIGHT, FPS,
     BACKGROUNDS_DIR,
     CAPTION_FILL, CAPTION_STROKE, STROKE_WIDTH, CAPTION_FONT_SIZE,
-    BG_DARKEN, OUTRO_TEXT, USERNAME,
+    CAPTION_MODE, CAPTION_CHUNK_WORDS, CAPTION_CHUNK_FONT_SIZE, CAPTION_UPPERCASE,
+    BG_DARKEN, INTRO_TEXT, OUTRO_TEXT, USERNAME,
 )
 
 # ── font ─────────────────────────────────────────────────────────────────────
@@ -46,11 +49,14 @@ def _font(size: int) -> ImageFont.FreeTypeFont:
 
 # ── background video ──────────────────────────────────────────────────────────
 
-def load_bg_clip(rng: random.Random | None = None) -> VideoFileClip | None:
-    """Carica un video di sfondo da backgrounds/.
+def load_bg_clip(script_number: int = 0) -> VideoFileClip | None:
+    """Sceglie lo sfondo per QUESTO script.
 
-    Se sono presenti piu' file, ne sceglie uno (a caso se `rng` e' fornito),
-    cosi' aggiungendo altri spezzoni la varieta' aumenta automaticamente.
+    v2: rotazione deterministica su TUTTI i video presenti in backgrounds/
+    (script 1 -> video A, script 2 -> video B, ...): basta mettere piu' file
+    nella cartella e ogni Short ha uno sfondo diverso, senza config.
+    Deterministica = rigenerare lo stesso script rida' lo stesso sfondo.
+    Con un solo file si comporta come prima. Ritorna None se la cartella e' vuota.
     """
     if not BACKGROUNDS_DIR.exists():
         return None
@@ -61,9 +67,9 @@ def load_bg_clip(rng: random.Random | None = None) -> VideoFileClip | None:
     )
     if not videos:
         return None
-    choice = rng.choice(videos) if rng else videos[0]
-    print(f"    Background: {choice.name}")
-    return VideoFileClip(str(choice))
+    chosen = videos[script_number % len(videos)]
+    print(f"    Background: {chosen.name} ({len(videos)} disponibili)")
+    return VideoFileClip(str(chosen))
 
 
 def _crop_fill(img: Image.Image, w: int, h: int) -> Image.Image:
@@ -120,25 +126,79 @@ def _draw_caption(draw: ImageDraw.Draw, text: str, font: ImageFont.FreeTypeFont,
         y += line_h
 
 
+# ── sottotitoli sincronizzati (sidecar .timings.json scritto da generate_audio) ──
+
+def _load_timeline(audio_path: Path, facts: list[str]) -> list[tuple[float, str]] | None:
+    """Costruisce la timeline [(inizio_sec, testo), ...] dai tempi parola-per-parola.
+    Ogni sottotitolo resta visibile fino all'inizio del successivo (mai schermo vuoto).
+    Ritorna None se il sidecar manca o non e' valido -> il video usa il fallback a stima."""
+    timings_p = audio_path.parent / (audio_path.stem + ".timings.json")
+    if not timings_p.exists():
+        return None
+    try:
+        parts = json.loads(timings_p.read_text(encoding="utf-8"))["parts"]
+    except (ValueError, KeyError, OSError):
+        return None
+    if len(parts) != len(facts) + 2 or not all(p.get("words") for p in parts):
+        return None  # sidecar incoerente con lo script corrente
+
+    timeline: list[tuple[float, str]] = []
+    for part in parts:
+        words = part["words"]
+        if CAPTION_MODE == "chunks":
+            chunks = [words[i:i + CAPTION_CHUNK_WORDS]
+                      for i in range(0, len(words), CAPTION_CHUNK_WORDS)]
+            # niente chunk orfano da 1 parola: si accorpa al precedente
+            if len(chunks) > 1 and len(chunks[-1]) == 1:
+                chunks[-2].extend(chunks.pop())
+            for chunk in chunks:
+                text = " ".join(w["w"] for w in chunk)
+                if CAPTION_UPPERCASE:
+                    text = text.upper()
+                timeline.append((chunk[0]["t"], text))
+        else:  # "fact": la parte intera, ma sincronizzata sul suo vero inizio
+            timeline.append((words[0]["t"], part["text"]))
+
+    if not timeline:
+        return None
+    timeline[0] = (0.0, timeline[0][1])  # il primo sottotitolo parte subito
+    return timeline
+
+
 # ── frame renderer ────────────────────────────────────────────────────────────
 
 def _make_frame(t: float, facts: list[str], audio_duration: float,
-                bg_clip: VideoFileClip | None, bg_start: float = 0.0) -> np.ndarray:
+                bg_clip: VideoFileClip | None,
+                timeline: list[tuple[float, str]] | None = None,
+                starts: list[float] | None = None,
+                font_size: int = CAPTION_FONT_SIZE,
+                bg_offset: float = 0.0) -> np.ndarray:
 
-    # ── timing (HOOK A FREDDO: i fatti partono da t=0, CTA in coda) ──
-    outro_dur = 2.2
-    facts_dur = max(audio_duration - outro_dur, len(facts) * 2.0)
-    per_fact  = facts_dur / len(facts)
-
-    if t >= audio_duration - outro_dur:
-        caption = OUTRO_TEXT
+    # ── timing ──
+    if timeline is not None and starts is not None:
+        # sincronizzato: il sottotitolo attivo e' l'ultimo iniziato prima di t
+        idx = max(bisect_right(starts, t) - 1, 0)
+        caption = timeline[idx][1]
     else:
-        idx = min(int(t / per_fact), len(facts) - 1)
-        caption = facts[idx]
+        # fallback a stima (nessun sidecar tempi): distribuzione uniforme dei fatti
+        intro_dur = 2.8
+        outro_dur = 1.2
+        facts_dur = max(audio_duration - intro_dur - outro_dur, len(facts) * 2.0)
+        per_fact  = facts_dur / len(facts)
+
+        if t < intro_dur:
+            caption = INTRO_TEXT
+        elif t >= audio_duration - outro_dur:
+            caption = OUTRO_TEXT
+        else:
+            idx = min(int((t - intro_dur) / per_fact), len(facts) - 1)
+            caption = facts[idx]
 
     # ── background a tutto schermo ──
     if bg_clip is not None:
-        loop_t = (bg_start + t) % bg_clip.duration
+        # bg_offset varia il punto di partenza per script: anche con lo stesso
+        # video di sfondo, due Short non mostrano mai lo stesso spezzone
+        loop_t = (t + bg_offset) % bg_clip.duration
         frame  = Image.fromarray(bg_clip.get_frame(loop_t))
         frame  = _crop_fill(frame, WIDTH, HEIGHT)
         if BG_DARKEN < 1.0:
@@ -150,7 +210,7 @@ def _make_frame(t: float, facts: list[str], audio_duration: float,
     draw = ImageDraw.Draw(img)
 
     # ── caption centrata ──
-    _draw_caption(draw, caption, _font(CAPTION_FONT_SIZE), center_y=HEIGHT // 2)
+    _draw_caption(draw, caption, _font(font_size), center_y=HEIGHT // 2)
 
     # ── username in basso ──
     foot_font = _font(40)
@@ -183,22 +243,24 @@ def create_video(script: dict, audio_path: Path, output_path: Path,
     audio    = AudioFileClip(str(audio_path))
     duration = audio.duration
     facts    = script["facts"]
+    script_n = script.get("number", 0)
+    bg_clip  = load_bg_clip(script_n)
 
-    # RNG deterministico per script: spezzone di sfondo diverso per ogni Short,
-    # ma riproducibile se lo stesso script viene ri-renderizzato.
-    rng      = random.Random(script.get("number", 0))
-    bg_clip  = load_bg_clip(rng)
+    # punto di partenza dello sfondo diverso per ogni script (37s = passo fisso
+    # che sparpaglia bene i punti di inizio dentro il loop del video di sfondo)
+    bg_offset = 0.0
+    if bg_clip is not None and bg_clip.duration:
+        bg_offset = (script_n * 37.0) % bg_clip.duration
 
-    # Parte da un punto casuale del video di sfondo (il modulo gestisce il loop).
-    bg_start = 0.0
-    if bg_clip is not None and bg_clip.duration > duration:
-        bg_start = rng.uniform(0, bg_clip.duration - duration)
-        print(f"    Spezzone sfondo: da ~{bg_start:.0f}s")
+    timeline  = _load_timeline(audio_path, facts)
+    starts    = [s for s, _ in timeline] if timeline else None
+    font_size = CAPTION_CHUNK_FONT_SIZE if (timeline and CAPTION_MODE == "chunks") else CAPTION_FONT_SIZE
+    sync_mode = "sincronizzati" if timeline else "a stima (nessun sidecar tempi)"
 
-    print(f"    Rendering {'(full-screen + caption)' if bg_clip else '(no background!)'}...")
+    print(f"    Rendering {'(full-screen + caption)' if bg_clip else '(no background!)'} - sottotitoli {sync_mode}...")
 
     video = VideoClip(
-        lambda t: _make_frame(t, facts, duration, bg_clip, bg_start),
+        lambda t: _make_frame(t, facts, duration, bg_clip, timeline, starts, font_size, bg_offset),
         duration=duration,
     ).with_fps(FPS).with_audio(audio)
 

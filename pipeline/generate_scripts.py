@@ -1,3 +1,4 @@
+# Durata: LEGATO-A:P09
 """
 Genera automaticamente nuovi script di curiosita' con l'API di Claude,
 quando quelli esistenti stanno per finire.
@@ -22,7 +23,7 @@ PIPE = Path(__file__).parent
 NEW_SCRIPTS   = 30     # quanti script generare per volta (30 = 10 giorni a 3/giorno)
 FACTS_EACH    = 5
 LOW_THRESHOLD = 12     # genera se restano meno di N script non ancora usati
-MODEL         = "claude-sonnet-4-6"   # accurato sui fatti
+MODEL         = "claude-opus-4-8"   # massima accuratezza sui fatti (costo comunque irrisorio: ~30 script/settimana)
 
 
 def _all_script_files() -> list[Path]:
@@ -88,10 +89,18 @@ def generate(force: bool = False) -> int:
 
     prompt = (
         f"Generate exactly {NEW_SCRIPTS} groups of {FACTS_EACH} short, surprising, "
-        "TRUE facts each, for a 'absurd facts' YouTube Shorts channel.\n"
+        "TRUE facts each, for an 'absurd facts' YouTube Shorts channel.\n"
+        "The facts are read aloud by a TTS voice over on-screen captions, so write for the ear.\n"
         "Rules:\n"
-        "- Each fact must be a single sentence, under 110 characters, in English.\n"
-        "- Facts must be genuinely true and verifiable, surprising, and easy to understand.\n"
+        "- Each fact must be a single sentence, 60-110 characters, in English.\n"
+        "- Facts must be genuinely true and verifiable. NO popular myths (e.g. goldfish "
+        "3-second memory, humans use 10% of the brain, Great Wall visible from space).\n"
+        "- Conversational and punchy: contractions are fine; prefer concrete numbers.\n"
+        "- Spell out units so the voice reads them naturally: 'kilometers', 'degrees Celsius', "
+        "'percent' (never 'km', 'C', '%').\n"
+        "- Vary sentence openers: within a group, no two facts start with the same word.\n"
+        "- Order each group so the most jaw-dropping fact is LAST (the video promises "
+        "'you won't believe the last one').\n"
         "- Cover varied topics: animals, space, human body, history, food, geography, science.\n"
         "- Do NOT repeat or paraphrase any of the existing facts listed below.\n"
         "- Output ONLY a JSON array, no commentary. Format:\n"
@@ -101,10 +110,12 @@ def generate(force: bool = False) -> int:
 
     resp = client.messages.create(
         model=MODEL,
-        max_tokens=8192,   # 30 gruppi x 5 fatti possono superare i 4096 token
+        max_tokens=16000,  # 30 gruppi x 5 fatti + margine per il thinking
+        thinking={"type": "adaptive"},  # ragiona sulla veridicita' prima di scrivere
         messages=[{"role": "user", "content": prompt}],
     )
-    text = resp.content[0].text.strip()
+    # con l'adaptive thinking il primo blocco puo' essere di tipo "thinking": prendi solo il testo
+    text = "".join(b.text for b in resp.content if b.type == "text").strip()
 
     # estrai il JSON anche se incapsulato in ```json ... ```
     m = re.search(r"\[.*\]", text, re.DOTALL)

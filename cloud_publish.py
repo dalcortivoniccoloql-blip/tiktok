@@ -64,6 +64,16 @@ def main() -> int:
     video_id = upload_script_video(script, video_p, publish_at=None)
     print(f"PUBBLICATO: https://youtu.be/{video_id}")
 
+    # 3b. Instagram Reels — best-effort: se i secret IG non sono configurati salta
+    # con un messaggio; se fallisce logga ma NON blocca il run (YouTube e' gia' ok).
+    try:
+        from upload_instagram import upload_script_reel
+        media_id = upload_script_reel(script, video_p)
+        if media_id:
+            print(f"PUBBLICATO SU INSTAGRAM: media {media_id}")
+    except Exception as e:  # noqa: BLE001
+        print(f"ATTENZIONE: upload Instagram fallito (YouTube ok): {e}")
+
     # 4. avanza lo stato
     state["next"] = nxt + 1
     save_state(state)

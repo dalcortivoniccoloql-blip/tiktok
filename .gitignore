@@ -2,6 +2,15 @@
 yt_token.json
 client_secrets.json
 client_secrets*.json
+*.env
+secrets.env
+
+# Log di chat / trascrizioni di sessione lasciati nella cartella di lavoro.
+# Regola aggiunta il 2026-07-29: un log del 13/07 era untracked ma NON ignorato,
+# quindi un "git add ." lo avrebbe pubblicato. Le credenziali di questo progetto
+# sono già state ruotate una volta proprio perché finite in una chat.
+*-chat-*.md
+*chat-P09*.md
 
 # File grandi non necessari al cloud (rigenerati al volo)
 output/
