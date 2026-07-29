@@ -2,8 +2,17 @@ name: Publish YouTube Short
 
 # ⏸️ CRON SOSPESO il 2026-07-13: gli upload via API vengono bloccati come
 # privati finché il progetto Google Cloud non supera il Compliance Audit
-# YouTube (form inviato, in attesa di esito). Ogni run consumava uno script
-# in un video invisibile. Riattivare togliendo i commenti dopo l'approvazione.
+# YouTube. Ogni run consumava uno script in un video invisibile.
+#
+# ⚠️ CORREZIONE 2026-07-29: il commento originale diceva "form inviato, in
+# attesa di esito" — NON è vero, il form non è mai stato inviato. Mancano
+# ancora le evidenze obbligatorie (screenshot E1/E2/E4a/E4b/E4c) e il check
+# del ramo individual/organization. Vedi la guida su Drive:
+# idee/elenco/P09-.../faceless-shorts/audit-youtube-api/guida-compilazione-audit.md
+#
+# ⛔ NON togliere i commenti al cron finché l'audit non è APPROVATO: ogni run
+# schedulato brucia uno script in un video locked-private irrecuperabile
+# (i video bloccati non si sbloccano, vanno ricaricati da zero).
 # Orari originali (UTC = 09/14/19 ora italiana in estate):
 on:
   # schedule:
@@ -44,6 +53,12 @@ jobs:
         run: printf '%s' "$YT_TOKEN" > yt_token.json
 
       - name: Genera e pubblica il prossimo Short
+        env:
+          # Instagram Reels (opzionali: senza questi secret l'upload IG viene saltato)
+          IG_USER_ID:      ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TRANSFER_REPO:   ${{ secrets.TRANSFER_REPO }}
+          TRANSFER_TOKEN:  ${{ secrets.TRANSFER_TOKEN }}
         run: python cloud_publish.py
 
       - name: Salva lo stato aggiornato
