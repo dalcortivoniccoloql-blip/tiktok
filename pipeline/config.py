@@ -59,7 +59,12 @@ INTRO_TEXT = INTRO_TEXT_EN if LANGUAGE == "en" else INTRO_TEXT_IT
 OUTRO_TEXT = OUTRO_TEXT_EN if LANGUAGE == "en" else OUTRO_TEXT_IT
 
 # Account
-USERNAME = "@5absurdfacts"
+# Handle REALE del canale: ha il suffisso `-n5g`. `@5absurdfacts` nudo e' un ALTRO
+# canale (UC_iHL7XJY4Wnes8BFycPuCQ, vuoto, 2 iscritti); il nostro target di upload
+# e' UC98nOdXD_giA-xqs5CuBBLA. Questa costante finisce (a) impressa nel frame del
+# video e (b) in descrizione YouTube / caption IG come "Follow {USERNAME}": con
+# l'handle nudo YouTube auto-linkava all'altro canale. Corretto il 2026-08-01.
+USERNAME = "@5AbsurdFacts-n5g"
 
 # ── Attribuzione CC-BY degli sfondi (OBBLIGATORIA) ──
 # I clip di sfondo sono CC-BY (vedi docs/SFONDI-DIRITTI.md): la licenza richiede

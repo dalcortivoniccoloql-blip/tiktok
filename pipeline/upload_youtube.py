@@ -29,6 +29,15 @@ YT_TOKEN_PATH    = _BASE / "yt_token.json"   # refresh token da OAuth Playground
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
+# Canale su cui DEVE atterrare l'upload: "5AbsurdFacts - Shorts" (@5AbsurdFacts-n5g).
+# Sotto lo stesso login Google esiste un secondo canale omonimo (@5absurdfacts,
+# UC_iHL7XJY4Wnes8BFycPuCQ): se il token OAuth e' legato a quello, l'upload riesce
+# lo stesso e NON c'e' alcun errore — lo scope youtube.upload non permette
+# channels.list, quindi il canale di destinazione non e' leggibile prima dell'upload.
+# L'unico punto in cui la verita' e' disponibile e' la risposta di videos.insert.
+# Da cloud (GitHub Actions) questo verdetto finisce nel log del run.
+EXPECTED_CHANNEL_ID = "UC98nOdXD_giA-xqs5CuBBLA"
+
 # ── auth ──────────────────────────────────────────────────────────────────────
 
 def _get_credentials() -> Credentials:
@@ -248,6 +257,27 @@ def _resumable_upload(request, filename: str) -> str:
     video_id = response["id"]
     url = f"https://youtu.be/{video_id}"
     print(f"\n    Caricato: {url}")
+
+    # ── verifica esplicita di DOVE e' atterrato (vedi EXPECTED_CHANNEL_ID) ──
+    snip = response.get("snippet") or {}
+    st   = response.get("status") or {}
+    ch_id = snip.get("channelId") or "?"
+    print(f"    Canale destinazione: {snip.get('channelTitle') or '(titolo non restituito)'} [{ch_id}]")
+    if ch_id == EXPECTED_CHANNEL_ID:
+        print("    VERDETTO: MATCH - e' il canale giusto (@5AbsurdFacts-n5g)")
+    else:
+        print(f"    VERDETTO: *** MISMATCH *** - atteso {EXPECTED_CHANNEL_ID}")
+        print("    Il token OAuth e' legato a un ALTRO canale. Rifare il consenso")
+        print("    scegliendo il Brand Account '5AbsurdFacts - Shorts', e rigenerare")
+        print("    anche il secret YT_TOKEN del repo deployed.")
+
+    stato = f"    Stato: privacyStatus={st.get('privacyStatus')} uploadStatus={st.get('uploadStatus')}"
+    if st.get("publishAt"):
+        stato += f" publishAt={st['publishAt']}"
+    if st.get("rejectionReason"):
+        stato += f" rejectionReason={st['rejectionReason']}"
+    print(stato)
+
     return video_id
 
 
