@@ -270,6 +270,10 @@ def _resumable_upload(request, filename: str) -> str:
         print("    Il token OAuth e' legato a un ALTRO canale. Rifare il consenso")
         print("    scegliendo il Brand Account '5AbsurdFacts - Shorts', e rigenerare")
         print("    anche il secret YT_TOKEN del repo deployed.")
+        print(f"    ATTENZIONE: questo video ({video_id}) e' GIA' stato caricato sul")
+        print("    canale sbagliato. Annota l'URL qui sopra e cancellalo da YouTube")
+        print("    Studio prima di procedere: il verdetto arriva DOPO l'upload, non")
+        print("    lo impedisce.")
 
     stato = f"    Stato: privacyStatus={st.get('privacyStatus')} uploadStatus={st.get('uploadStatus')}"
     if st.get("publishAt"):
