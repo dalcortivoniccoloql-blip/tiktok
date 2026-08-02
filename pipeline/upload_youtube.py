@@ -38,6 +38,10 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 # Da cloud (GitHub Actions) questo verdetto finisce nel log del run.
 EXPECTED_CHANNEL_ID = "UC98nOdXD_giA-xqs5CuBBLA"
 
+
+class WrongChannelError(RuntimeError):
+    """L'upload e' riuscito, ma su un canale diverso da EXPECTED_CHANNEL_ID."""
+
 # ── auth ──────────────────────────────────────────────────────────────────────
 
 def _get_credentials() -> Credentials:
@@ -263,18 +267,6 @@ def _resumable_upload(request, filename: str) -> str:
     st   = response.get("status") or {}
     ch_id = snip.get("channelId") or "?"
     print(f"    Canale destinazione: {snip.get('channelTitle') or '(titolo non restituito)'} [{ch_id}]")
-    if ch_id == EXPECTED_CHANNEL_ID:
-        print("    VERDETTO: MATCH - e' il canale giusto (@5AbsurdFacts-n5g)")
-    else:
-        print(f"    VERDETTO: *** MISMATCH *** - atteso {EXPECTED_CHANNEL_ID}")
-        print("    Il token OAuth e' legato a un ALTRO canale. Rifare il consenso")
-        print("    scegliendo il Brand Account '5AbsurdFacts - Shorts', e rigenerare")
-        print("    anche il secret YT_TOKEN del repo deployed.")
-        print(f"    ATTENZIONE: questo video ({video_id}) e' GIA' stato caricato sul")
-        print("    canale sbagliato. Annota l'URL qui sopra e cancellalo da YouTube")
-        print("    Studio prima di procedere: il verdetto arriva DOPO l'upload, non")
-        print("    lo impedisce.")
-
     stato = f"    Stato: privacyStatus={st.get('privacyStatus')} uploadStatus={st.get('uploadStatus')}"
     if st.get("publishAt"):
         stato += f" publishAt={st['publishAt']}"
@@ -282,7 +274,25 @@ def _resumable_upload(request, filename: str) -> str:
         stato += f" rejectionReason={st['rejectionReason']}"
     print(stato)
 
-    return video_id
+    if ch_id == EXPECTED_CHANNEL_ID:
+        print("    VERDETTO: MATCH - e' il canale giusto (@5AbsurdFacts-n5g)")
+        return video_id
+
+    # MISMATCH. Il video e' GIA' caricato: il verdetto arriva dopo videos.insert,
+    # non lo impedisce. Si solleva di proposito un'eccezione invece di limitarsi a
+    # stampare: da GitHub Actions fa fallire il job (rosso) e lascia state.json
+    # FERMO, invece di un run "verde" che pubblica sul canale sbagliato 3 volte al
+    # giorno bruciando uno script a ogni giro. "Verde" non vuol dire "funziona".
+    print(f"    VERDETTO: *** MISMATCH *** - atteso {EXPECTED_CHANNEL_ID}")
+    print("    Il token OAuth e' legato a un ALTRO canale. Rifare il consenso")
+    print("    scegliendo il Brand Account '5AbsurdFacts - Shorts', e rigenerare")
+    print("    anche il secret YT_TOKEN del repo deployed.")
+    print(f"    ATTENZIONE: questo video ({video_id}) e' GIA' stato caricato sul")
+    print("    canale sbagliato: annota l'URL qui sopra e cancellalo da Studio.")
+    raise WrongChannelError(
+        f"caricato su {ch_id} invece di {EXPECTED_CHANNEL_ID} "
+        f"(video da cancellare: {url})"
+    )
 
 
 # ── batch upload ──────────────────────────────────────────────────────────────

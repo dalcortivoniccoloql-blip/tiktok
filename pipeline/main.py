@@ -91,10 +91,12 @@ def run(
 
     # importa uploader solo se serve (evita errori se google non installato)
     uploader = None
+    WrongChannel = ()   # tuple vuota = nessuna eccezione da ri-sollevare
     if upload_youtube:
         try:
-            from upload_youtube import upload_script_video
+            from upload_youtube import upload_script_video, WrongChannelError
             uploader = upload_script_video
+            WrongChannel = (WrongChannelError,)
         except ImportError as e:
             print(f"Errore import uploader YouTube: {e}")
             print("Esegui: py -m pip install google-api-python-client google-auth-oauthlib")
@@ -147,6 +149,11 @@ def run(
                 video_id = uploader(script, video_p, publish_at=publish_at)
                 yt_results.append((script_num, video_id, publish_at))
                 uploaded += 1
+            except WrongChannel:
+                # Canale sbagliato: NON si continua col batch, altrimenti si
+                # riempirebbe il canale sbagliato di video uno dopo l'altro.
+                print("\n  STOP: canale di destinazione sbagliato, batch interrotto.")
+                raise
             except Exception as e:
                 print(f"  ERRORE upload YouTube: {e}")
 
