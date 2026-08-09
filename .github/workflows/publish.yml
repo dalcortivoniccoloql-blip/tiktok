@@ -18,8 +18,9 @@ name: Publish YouTube Short
 #     niente push, nessuno scope 'workflow' richiesto.
 #
 # ⛔ NON impostare PUBLISH_ENABLED finché non arriva l'EMAIL di approvazione
-# dell'audit. Il form è stato compilato il 2026-08-02; l'esito arriva da giorni
-# a settimane. Guida e stato su Drive:
+# dell'audit. Stato dell'invio: DA CONFERMARE con l'owner (il form era
+# in compilazione il 2026-08-02). Una volta inviato davvero, l'esito arriva
+# da giorni a settimane. Guida e stato su Drive:
 # idee/elenco/P09-.../faceless-shorts/audit-youtube-api/guida-compilazione-audit.md
 #
 # Orari UTC = 09/14/19 ora italiana in estate:
