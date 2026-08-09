@@ -1,24 +1,33 @@
 name: Publish YouTube Short
 
-# ⏸️ CRON SOSPESO il 2026-07-13: gli upload via API vengono bloccati come
-# privati finché il progetto Google Cloud non supera il Compliance Audit
-# YouTube. Ogni run consumava uno script in un video invisibile.
+# ▶️ CRON RIACCESO il 2026-08-02 — ma la PUBBLICAZIONE resta spenta.
 #
-# ⚠️ CORREZIONE 2026-07-29: il commento originale diceva "form inviato, in
-# attesa di esito" — NON è vero, il form non è mai stato inviato. Mancano
-# ancora le evidenze obbligatorie (screenshot E1/E2/E4a/E4b/E4c) e il check
-# del ramo individual/organization. Vedi la guida su Drive:
+# Storia breve: il cron era sospeso dal 2026-07-13 perché senza l'approvazione
+# del Compliance Audit YouTube ogni upload viene bloccato come privato e BRUCIA
+# uno script (il contatore avanza, il video resta invisibile e va ricaricato da
+# zero). Tenerlo spento era giusto — ma aveva un costo nascosto: nessuno aveva
+# mai visto questa automazione girare davvero nel cloud.
+#
+# Ora le due cose sono separate:
+#   - la SCHEDULAZIONE è attiva → ogni run è un CONTROLLO DI SALUTE (checkout,
+#     dipendenze, ffmpeg, caricamento script). Non pubblica, non tocca le
+#     credenziali, non muove state.json.
+#   - la PUBBLICAZIONE si accende con la variabile di repository
+#     PUBLISH_ENABLED=true (Settings > Secrets and variables > Actions >
+#     Variables). Il giorno dell'approvazione basta quella: niente commit,
+#     niente push, nessuno scope 'workflow' richiesto.
+#
+# ⛔ NON impostare PUBLISH_ENABLED finché non arriva l'EMAIL di approvazione
+# dell'audit. Il form è stato compilato il 2026-08-02; l'esito arriva da giorni
+# a settimane. Guida e stato su Drive:
 # idee/elenco/P09-.../faceless-shorts/audit-youtube-api/guida-compilazione-audit.md
 #
-# ⛔ NON togliere i commenti al cron finché l'audit non è APPROVATO: ogni run
-# schedulato brucia uno script in un video locked-private irrecuperabile
-# (i video bloccati non si sbloccano, vanno ricaricati da zero).
-# Orari originali (UTC = 09/14/19 ora italiana in estate):
+# Orari UTC = 09/14/19 ora italiana in estate:
 on:
-  # schedule:
-  #   - cron: "0 7 * * *"
-  #   - cron: "0 12 * * *"
-  #   - cron: "0 17 * * *"
+  schedule:
+    - cron: "0 7 * * *"
+    - cron: "0 12 * * *"
+    - cron: "0 17 * * *"
   workflow_dispatch:   # permette di lanciarlo a mano dal sito GitHub
 
 permissions:
@@ -54,6 +63,9 @@ jobs:
 
       - name: Genera e pubblica il prossimo Short
         env:
+          # Interruttore di pubblicazione. Se non e' "true" il run e' un semplice
+          # controllo di salute: non pubblica e non muove state.json.
+          PUBLISH_ENABLED: ${{ vars.PUBLISH_ENABLED }}
           # Instagram Reels (opzionali: senza questi secret l'upload IG viene saltato)
           IG_USER_ID:      ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}

@@ -7,6 +7,7 @@ committato di nuovo nel repo dopo ogni esecuzione.
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -19,6 +20,26 @@ from generate_audio import generate_audio_for_script  # noqa: E402
 from generate_video import create_video              # noqa: E402
 
 STATE_PATH = BASE / "state.json"
+
+# ── interruttore di pubblicazione ─────────────────────────────────────────────
+# Il cron e' ACCESO, ma pubblicare e' un'altra cosa: finche' l'audit YouTube non
+# e' approvato ogni upload viene bloccato come privato e BRUCIA uno script (il
+# contatore avanza, il video resta invisibile e va ricaricato da zero).
+#
+# Tenere il cron spento "per sicurezza" ha pero' un costo nascosto: nessuno ha
+# mai visto questa automazione girare davvero nel cloud. Separando le due cose,
+# il run gira ogni giorno come CONTROLLO DI SALUTE (checkout, dipendenze,
+# ffmpeg, caricamento script) senza pubblicare nulla, e il giorno
+# dell'approvazione basta cambiare UNA variabile: niente commit, niente push,
+# nessuno scope 'workflow' richiesto.
+#
+#   Repo > Settings > Secrets and variables > Actions > Variables
+#   > New repository variable > PUBLISH_ENABLED = true
+_TRUTHY = {"1", "true", "yes", "on", "si", "sì"}
+
+
+def publishing_enabled() -> bool:
+    return os.environ.get("PUBLISH_ENABLED", "").strip().lower() in _TRUTHY
 
 
 def load_state() -> dict:
@@ -43,6 +64,26 @@ def main() -> int:
         print(f"Nessuno script #{nxt} (totale {total}). Niente da pubblicare.")
         print("Aggiungi un nuovo file english_scripts_N.json per continuare.")
         return 0  # uscita pulita, non un errore
+
+    if not publishing_enabled():
+        # CONTROLLO DI SALUTE: si e' arrivati fin qui, quindi checkout, Python,
+        # dipendenze, ffmpeg e caricamento degli script funzionano. Non si tocca
+        # nulla che pubblichi, non si sfiorano le credenziali, state.json resta
+        # fermo. Un run "verde" qui significa: l'automazione e' viva e pronta.
+        print("=== CONTROLLO DI SALUTE (pubblicazione DISATTIVATA) ===")
+        print(f"Script caricati: {total}. Il prossimo sarebbe il #{nxt}.")
+        print(f"Primo fatto: {script['facts'][0]}")
+        print("")
+        print("Non pubblico niente: PUBLISH_ENABLED non e' impostata.")
+        print("E' voluto. Finche' l'audit YouTube non e' approvato ogni upload")
+        print("viene bloccato come privato e BRUCIA lo script (il contatore")
+        print("avanza, il video resta invisibile e va ricaricato da zero).")
+        print("")
+        print("Quando arriva l'email di approvazione, per accendere davvero:")
+        print("  Repo > Settings > Secrets and variables > Actions > Variables")
+        print("  > New repository variable > PUBLISH_ENABLED = true")
+        print("Nessun commit e nessun push necessari.")
+        return 0
 
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
