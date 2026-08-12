@@ -59,12 +59,18 @@ INTRO_TEXT = INTRO_TEXT_EN if LANGUAGE == "en" else INTRO_TEXT_IT
 OUTRO_TEXT = OUTRO_TEXT_EN if LANGUAGE == "en" else OUTRO_TEXT_IT
 
 # Account
-# Handle REALE del canale: ha il suffisso `-n5g`. `@5absurdfacts` nudo e' un ALTRO
-# canale (UC_iHL7XJY4Wnes8BFycPuCQ, vuoto, 2 iscritti); il nostro target di upload
-# e' UC98nOdXD_giA-xqs5CuBBLA. Questa costante finisce (a) impressa nel frame del
-# video e (b) in descrizione YouTube / caption IG come "Follow {USERNAME}": con
-# l'handle nudo YouTube auto-linkava all'altro canale. Corretto il 2026-08-01.
-USERNAME = "@5AbsurdFacts-n5g"
+# Handle REALE del canale: `@5AbsurdFacts-ql`. Cambiato dall'owner il 2026-08-12
+# (prima era `-n5g`, prima ancora si scriveva `@5absurdfacts` nudo). Verificato lo
+# stesso giorno leggendo la pagina: `-ql` risolve a UC98nOdXD_giA-xqs5CuBBLA, cioe'
+# il canale di EXPECTED_CHANNEL_ID in upload_youtube.py (l'ID NON cambia quando
+# cambia l'handle: la guardia anti-canale-sbagliato resta valida).
+# Anche `-n5g` oggi rimanda ancora li', ma YouTube puo' liberare un handle dismesso
+# in qualsiasi momento -> vale solo quello nuovo.
+# ⚠️ `@5absurdfacts` nudo e' un ALTRO canale reale (UC_iHL7XJY4Wnes8BFycPuCQ,
+# vuoto): non usarlo mai, YouTube auto-linka le menzioni @handle in descrizione.
+# Questa costante finisce (a) impressa nel frame del video, in basso al centro
+# (generate_video.py) e (b) in descrizione YouTube / caption IG ("Follow {USERNAME}").
+USERNAME = "@5AbsurdFacts-ql"
 
 # ── Attribuzione CC-BY degli sfondi (OBBLIGATORIA) ──
 # I clip di sfondo sono CC-BY (vedi docs/SFONDI-DIRITTI.md): la licenza richiede

@@ -29,7 +29,11 @@ YT_TOKEN_PATH    = _BASE / "yt_token.json"   # refresh token da OAuth Playground
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
-# Canale su cui DEVE atterrare l'upload: "5AbsurdFacts - Shorts" (@5AbsurdFacts-n5g).
+# Canale su cui DEVE atterrare l'upload: "5AbsurdFacts" (@5AbsurdFacts-ql).
+# NB: il NOME visualizzato del canale e' cambiato il 2026-08-12 insieme all'handle
+# (era "5AbsurdFacts - Shorts"). Il nome pero' NON e' il campo su cui decidere:
+# puo' divergere tra risposta API e pagina pubblica. Vale solo il channelId qui sotto,
+# che NON cambia quando si cambia handle o nome.
 # Sotto lo stesso login Google esiste un secondo canale omonimo (@5absurdfacts,
 # UC_iHL7XJY4Wnes8BFycPuCQ): se il token OAuth e' legato a quello, l'upload riesce
 # lo stesso e NON c'e' alcun errore — lo scope youtube.upload non permette
@@ -275,7 +279,7 @@ def _resumable_upload(request, filename: str) -> str:
     print(stato)
 
     if ch_id == EXPECTED_CHANNEL_ID:
-        print("    VERDETTO: MATCH - e' il canale giusto (@5AbsurdFacts-n5g)")
+        print("    VERDETTO: MATCH - e' il canale giusto (@5AbsurdFacts-ql)")
         return video_id
 
     # MISMATCH. Il video e' GIA' caricato: il verdetto arriva dopo videos.insert,
@@ -285,7 +289,8 @@ def _resumable_upload(request, filename: str) -> str:
     # giorno bruciando uno script a ogni giro. "Verde" non vuol dire "funziona".
     print(f"    VERDETTO: *** MISMATCH *** - atteso {EXPECTED_CHANNEL_ID}")
     print("    Il token OAuth e' legato a un ALTRO canale. Rifare il consenso")
-    print("    scegliendo il Brand Account '5AbsurdFacts - Shorts', e rigenerare")
+    print("    scegliendo il Brand Account '5AbsurdFacts' (quello con i video,")
+    print("    UC98nOdXD_giA-xqs5CuBBLA - NON l'omonimo vuoto), e rigenerare")
     print("    anche il secret YT_TOKEN del repo deployed.")
     print(f"    ATTENZIONE: questo video ({video_id}) e' GIA' stato caricato sul")
     print("    canale sbagliato: annota l'URL qui sopra e cancellalo da Studio.")
