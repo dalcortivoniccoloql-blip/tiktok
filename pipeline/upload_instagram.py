@@ -40,7 +40,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from config import (  # noqa: E402
     IG_API_VERSION, IG_GRAPH_HOST, IG_HASHTAGS,
-    IG_POLL_EVERY_S, IG_POLL_TIMEOUT_S, USERNAME, BG_CREDIT_LINE,
+    IG_POLL_EVERY_S, IG_POLL_TIMEOUT_S, IG_USERNAME, BG_CREDIT_LINE,
 )
 
 IG_USER_ID = os.environ.get("IG_USER_ID", "")
@@ -85,6 +85,14 @@ def _hook_from_fact(fact: str, max_len: int = 80) -> str:
     return cut.rstrip(",;:") + "..."
 
 
+def _follow_line(handle: str) -> str:
+    """Invito a seguire, o stringa vuota se l'handle non e' configurato.
+
+    Meglio nessun invito che un invito verso un profilo inesistente: e' il
+    motivo per cui IG_USERNAME e' una costante a se' e non USERNAME."""
+    return f"Follow {handle} for daily absurd facts!" if handle else ""
+
+
 def build_caption(script: dict) -> str:
     """Caption IG: hook + i 5 fatti (testo reale, non solo hashtag) + hashtag
     + CREDITO CC-BY obbligatorio dello sfondo (vedi docs/SFONDI-DIRITTI.md)."""
@@ -92,7 +100,7 @@ def build_caption(script: dict) -> str:
     return (
         f"{_hook_from_fact(script['facts'][0])}... and 4 more ABSURD facts \U0001F92F\n\n"
         f"{facts}\n\n"
-        f"Follow {USERNAME} for daily absurd facts!\n\n"
+        f"{_follow_line(IG_USERNAME)}\n\n"
         f"{IG_HASHTAGS}\n\n"
         f"{BG_CREDIT_LINE}"
     )

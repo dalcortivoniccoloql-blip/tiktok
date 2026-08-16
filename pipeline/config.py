@@ -94,6 +94,13 @@ IG_POLL_EVERY_S   = 5     # ogni quanti secondi controllare l'elaborazione del c
 IG_POLL_TIMEOUT_S = 300   # attesa massima elaborazione lato Meta
 IG_HASHTAGS = "#reels #facts #didyouknow #amazingfacts #funfacts"
 
+# Handle Instagram del canale. DEVE restare separato da USERNAME (l'handle
+# YouTube, "@5AbsurdFacts-ql"): sono due piattaforme diverse e i due handle
+# NON coincidono. Mettere quello YouTube nella caption IG manda chi ci segue
+# su un handle che su Instagram non esiste. Se vuoto, la caption omette
+# l'invito "Follow ..." invece di stampare un handle sbagliato.
+IG_USERNAME = "@5absurdfacts"
+
 # Quanti post al giorno e a che ora pubblicarli (orari UTC).
 # 07/12/17 UTC = circa 09/14/19 ora italiana (estate).
 POSTS_PER_DAY  = 3
