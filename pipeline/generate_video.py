@@ -14,8 +14,11 @@ from config import (
     BACKGROUNDS_DIR,
     CAPTION_FILL, CAPTION_STROKE, STROKE_WIDTH, CAPTION_FONT_SIZE,
     CAPTION_MODE, CAPTION_CHUNK_WORDS, CAPTION_CHUNK_FONT_SIZE, CAPTION_UPPERCASE,
-    BG_DARKEN, INTRO_TEXT, OUTRO_TEXT, USERNAME,
+    BG_DARKEN, USERNAME,
+    SINGLE_HOOK_FULL_TEXT, HOOK_FONT_SIZE, HOOK_BG_DARKEN,
+    BEAT_CUT_ENABLED, BEAT_CUT_JUMP_S, is_single,
 )
+from generate_audio import narration_parts, hook_text, cta_text
 
 # ── font ─────────────────────────────────────────────────────────────────────
 
@@ -128,10 +131,17 @@ def _draw_caption(draw: ImageDraw.Draw, text: str, font: ImageFont.FreeTypeFont,
 
 # ── sottotitoli sincronizzati (sidecar .timings.json scritto da generate_audio) ──
 
-def _load_timeline(audio_path: Path, facts: list[str]) -> list[tuple[float, str]] | None:
-    """Costruisce la timeline [(inizio_sec, testo), ...] dai tempi parola-per-parola.
+def _load_timeline(audio_path: Path, script: dict) -> tuple[list[tuple[float, str]], list[float]] | None:
+    """Costruisce la timeline [(inizio_sec, testo), ...] dai tempi parola-per-parola,
+    piu' la lista degli inizi di ogni BEAT (usata per gli stacchi di sfondo).
+
     Ogni sottotitolo resta visibile fino all'inizio del successivo (mai schermo vuoto).
-    Ritorna None se il sidecar manca o non e' valido -> il video usa il fallback a stima."""
+    Ritorna None se il sidecar manca o non e' coerente -> il video cade sul fallback
+    a stima (sottotitoli desincronizzati: si vede, ed e' segnalato a schermo dal print).
+
+    ⚠️ La struttura delle parti la decide `narration_parts()` in generate_audio.py:
+    qui si CONTA da li', non si assume "intro + fatti + outro". Nel formato single
+    l'outro non esiste e assumere +2 avrebbe scartato ogni sidecar in silenzio."""
     timings_p = audio_path.parent / (audio_path.stem + ".timings.json")
     if not timings_p.exists():
         return None
@@ -139,12 +149,29 @@ def _load_timeline(audio_path: Path, facts: list[str]) -> list[tuple[float, str]
         parts = json.loads(timings_p.read_text(encoding="utf-8"))["parts"]
     except (ValueError, KeyError, OSError):
         return None
-    if len(parts) != len(facts) + 2 or not all(p.get("words") for p in parts):
+    if len(parts) != len(narration_parts(script)) or not all(p.get("words") for p in parts):
         return None  # sidecar incoerente con lo script corrente
 
+    single    = is_single(script)
     timeline: list[tuple[float, str]] = []
+    beats: list[float] = []
+
     for part in parts:
         words = part["words"]
+        if part.get("kind") == "fact":
+            beats.append(words[0]["t"])
+
+        # HOOK del formato single: una sola caption con la frase INTERA, non i chunk
+        # da 3 parole. Motivo (benchmark 2026-08-23): l'hook deve essere leggibile
+        # tutto insieme nei primi 2 secondi, sound-off compreso. A chunk, a 0,5s si
+        # legge solo un terzo della promessa e non c'e' nessun motivo per restare.
+        if single and SINGLE_HOOK_FULL_TEXT and part.get("kind") == "intro":
+            text = part["text"]
+            if CAPTION_UPPERCASE:
+                text = text.upper()
+            timeline.append((words[0]["t"], text))
+            continue
+
         if CAPTION_MODE == "chunks":
             chunks = [words[i:i + CAPTION_CHUNK_WORDS]
                       for i in range(0, len(words), CAPTION_CHUNK_WORDS)]
@@ -162,7 +189,7 @@ def _load_timeline(audio_path: Path, facts: list[str]) -> list[tuple[float, str]
     if not timeline:
         return None
     timeline[0] = (0.0, timeline[0][1])  # il primo sottotitolo parte subito
-    return timeline
+    return timeline, beats
 
 
 # ── frame renderer ────────────────────────────────────────────────────────────
@@ -172,7 +199,14 @@ def _make_frame(t: float, facts: list[str], audio_duration: float,
                 timeline: list[tuple[float, str]] | None = None,
                 starts: list[float] | None = None,
                 font_size: int = CAPTION_FONT_SIZE,
-                bg_offset: float = 0.0) -> np.ndarray:
+                bg_offset: float = 0.0,
+                intro_text: str = "",
+                outro_text: str = "",
+                hook_end: float = 0.0,
+                beats: list[float] | None = None,
+                hook_full: bool = False) -> np.ndarray:
+
+    in_hook = hook_full and t < hook_end
 
     # ── timing ──
     if timeline is not None and starts is not None:
@@ -180,16 +214,19 @@ def _make_frame(t: float, facts: list[str], audio_duration: float,
         idx = max(bisect_right(starts, t) - 1, 0)
         caption = timeline[idx][1]
     else:
-        # fallback a stima (nessun sidecar tempi): distribuzione uniforme dei fatti
+        # fallback a stima (nessun sidecar tempi): distribuzione uniforme dei fatti.
+        # ⚠️ intro_text/outro_text arrivano dallo SCRIPT, non da costanti globali:
+        # con l'hook per-script, usare INTRO_TEXT qui stamperebbe "5 absurd facts"
+        # sopra un video che di fatti ne ha uno solo.
         intro_dur = 2.8
-        outro_dur = 1.2
+        outro_dur = 1.2 if outro_text else 0.0
         facts_dur = max(audio_duration - intro_dur - outro_dur, len(facts) * 2.0)
         per_fact  = facts_dur / len(facts)
 
         if t < intro_dur:
-            caption = INTRO_TEXT
-        elif t >= audio_duration - outro_dur:
-            caption = OUTRO_TEXT
+            caption = intro_text
+        elif outro_text and t >= audio_duration - outro_dur:
+            caption = outro_text
         else:
             idx = min(int((t - intro_dur) / per_fact), len(facts) - 1)
             caption = facts[idx]
@@ -197,20 +234,31 @@ def _make_frame(t: float, facts: list[str], audio_duration: float,
     # ── background a tutto schermo ──
     if bg_clip is not None:
         # bg_offset varia il punto di partenza per script: anche con lo stesso
-        # video di sfondo, due Short non mostrano mai lo stesso spezzone
-        loop_t = (t + bg_offset) % bg_clip.duration
+        # video di sfondo, due Short non mostrano mai lo stesso spezzone.
+        # STACCO PER BEAT: a ogni beat lo sfondo salta di BEAT_CUT_JUMP_S secondi.
+        # E' un "cut" a costo zero (nessun clip in piu' da montare) e copre la regola
+        # "un cambio visivo ogni 2-4 secondi" dei benchmark del 2026-08-23: prima
+        # l'inquadratura restava identica per tutti i 22 secondi.
+        cut_shift = 0.0
+        if BEAT_CUT_ENABLED and beats:
+            cut_shift = BEAT_CUT_JUMP_S * bisect_right(beats, t)
+        loop_t = (t + bg_offset + cut_shift) % bg_clip.duration
         frame  = Image.fromarray(bg_clip.get_frame(loop_t))
         frame  = _crop_fill(frame, WIDTH, HEIGHT)
-        if BG_DARKEN < 1.0:
-            frame = ImageEnhance.Brightness(frame).enhance(BG_DARKEN)
+        # durante l'hook lo sfondo resta piu' luminoso: aprire su un frame scuro
+        # e' uno dei modi documentati di perdere lo spettatore prima della voce.
+        darken = HOOK_BG_DARKEN if in_hook else BG_DARKEN
+        if darken < 1.0:
+            frame = ImageEnhance.Brightness(frame).enhance(darken)
         img = frame.convert("RGB")
     else:
         img = Image.new("RGB", (WIDTH, HEIGHT), (15, 10, 30))
 
     draw = ImageDraw.Draw(img)
 
-    # ── caption centrata ──
-    _draw_caption(draw, caption, _font(font_size), center_y=HEIGHT // 2)
+    # ── caption centrata (l'hook a schermo intero ha un font suo: deve entrarci tutto) ──
+    _draw_caption(draw, caption, _font(HOOK_FONT_SIZE if in_hook else font_size),
+                  center_y=HEIGHT // 2)
 
     # ── username in basso ──
     foot_font = _font(40)
@@ -252,15 +300,25 @@ def create_video(script: dict, audio_path: Path, output_path: Path,
     if bg_clip is not None and bg_clip.duration:
         bg_offset = (script_n * 37.0) % bg_clip.duration
 
-    timeline  = _load_timeline(audio_path, facts)
+    loaded    = _load_timeline(audio_path, script)
+    timeline, beats = loaded if loaded else (None, [])
     starts    = [s for s, _ in timeline] if timeline else None
     font_size = CAPTION_CHUNK_FONT_SIZE if (timeline and CAPTION_MODE == "chunks") else CAPTION_FONT_SIZE
     sync_mode = "sincronizzati" if timeline else "a stima (nessun sidecar tempi)"
 
-    print(f"    Rendering {'(full-screen + caption)' if bg_clip else '(no background!)'} - sottotitoli {sync_mode}...")
+    # formato "single": hook a schermo intero fino all'inizio del primo beat
+    hook_full = bool(is_single(script) and SINGLE_HOOK_FULL_TEXT and timeline)
+    hook_end  = beats[0] if beats else 0.0
+    fmt       = "single (1 fatto)" if is_single(script) else "5 fatti (v2)"
+
+    print(f"    Rendering {'(full-screen + caption)' if bg_clip else '(no background!)'} "
+          f"- formato {fmt} - sottotitoli {sync_mode}"
+          + (f" - hook intero fino a {hook_end:.1f}s" if hook_full else "") + "...")
 
     video = VideoClip(
-        lambda t: _make_frame(t, facts, duration, bg_clip, timeline, starts, font_size, bg_offset),
+        lambda t: _make_frame(t, facts, duration, bg_clip, timeline, starts, font_size,
+                              bg_offset, hook_text(script), cta_text(script),
+                              hook_end, beats, hook_full),
         duration=duration,
     ).with_fps(FPS).with_audio(audio)
 

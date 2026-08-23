@@ -47,9 +47,44 @@ CAPTION_CHUNK_WORDS     = 3         # parole per chunk
 CAPTION_CHUNK_FONT_SIZE = 88        # font piu' grande: i chunk brevi devono riempire lo schermo
 CAPTION_UPPERCASE       = True      # TUTTO MAIUSCOLO (standard dei faceless Shorts ad alta retention)
 
+# ── formato "single" (1 fatto per Short) — v3, 2026-08-23 ─────────────────────
+# PERCHE': i dati Studio del 2026-08-23 (28 giorni, 43 video) dicono
+#   - "Ha continuato a guardare" = 42,1%  (swipe-away 57,9%)
+#   - solo il 12,2% delle views arriva dal feed Shorts (il resto e' ricerca)
+# I benchmark pubblici raccolti lo stesso giorno mettono 70-90% come "distribuzione
+# forte" e <60% come "collasso della distribuzione": il formato a 5 fatti in 22s
+# (~4s a fatto, nessuno sviluppato, hook generico uguale per tutti) sta sotto la
+# soglia di collasso. Da qui il formato "single": UN fatto, hook specifico scritto
+# per quel fatto, payoff in fondo. Fonti e ragionamento in
+# docs/ANALISI-CANALE-2026-08-23.md e docs/FORMATO-SINGLE.md.
+#
+# Schema di uno script single (in english_scripts_N.json):
+#   {"format": "single", "hook": "...", "facts": ["beat 1", "beat 2", "beat 3"], "cta": ""}
+#   - "hook"  = la prima frase parlata (<= ~9 parole: deve stare in 2-2,5 secondi)
+#   - "facts" = i beat che sviluppano l'UNICO fatto (non 5 fatti diversi!). Il nome
+#               del campo resta "facts" apposta: cosi' tutto il resto della pipeline
+#               (timeline, caption, render) funziona senza modifiche strutturali.
+#   - "cta"   = outro parlato. VUOTO nel formato single: la coda rompe il loop.
+# Uno script SENZA "format" resta il vecchio formato a 5 fatti, invariato.
+def is_single(script: dict) -> bool:
+    """True se lo script e' nel formato v3 'single' (1 fatto sviluppato, hook proprio).
+
+    Sta qui, in config, e NON duplicata nei tre moduli che la usano (audio, video,
+    upload): su questo progetto i valori duplicati in piu' copie sono gia' divergiti
+    due volte in silenzio (USERNAME, state.json). Una definizione sola."""
+    return str(script.get("format", "")).lower() == "single"
+
+
+SINGLE_HOOK_FULL_TEXT = True   # durante l'hook mostra la frase INTERA, non i chunk da 3 parole
+HOOK_FONT_SIZE        = 76     # font dell'hook a schermo intero (piu' piccolo dei chunk: deve entrarci tutto)
+HOOK_BG_DARKEN        = 0.95   # primo frame piu' luminoso (i benchmark: mai aprire su un frame scuro)
+BEAT_CUT_ENABLED      = True   # "stacco" dello sfondo a ogni beat -> ~1 cambio ogni 3-4s
+BEAT_CUT_JUMP_S       = 23.0   # di quanto salta lo sfondo a ogni stacco (secondi)
+
 # Testo intro/outro
 # Intro = hook con open loop ("the last one"): promette un payoff alla fine -> watch-through.
 # Outro corto: meno coda = loop del video piu' pulito (gli Short ripartono da capo).
+# NB: nel formato "single" questi due NON si usano: hook e cta arrivano dallo script.
 INTRO_TEXT_EN = "5 absurd facts. You won't believe the last one!"
 OUTRO_TEXT_EN = "Follow for more!"
 INTRO_TEXT_IT = "5 curiosita' assurde. L'ultima ti lascera' senza parole!"
@@ -95,10 +130,10 @@ IG_POLL_TIMEOUT_S = 300   # attesa massima elaborazione lato Meta
 IG_HASHTAGS = "#reels #facts #didyouknow #amazingfacts #funfacts"
 
 # Handle Instagram del canale. DEVE restare separato da USERNAME (l'handle
-# YouTube, "@5AbsurdFacts-ql"): sono due piattaforme diverse e i due handle
-# NON coincidono. Mettere quello YouTube nella caption IG manda chi ci segue
-# su un handle che su Instagram non esiste. Se vuoto, la caption omette
-# l'invito "Follow ..." invece di stampare un handle sbagliato.
+# YouTube, "@5AbsurdFacts-ql"): sono due piattaforme diverse e i due handle NON
+# coincidono. Mettere quello YouTube nella caption IG manda chi ci segue su un
+# handle che su Instagram non esiste. Se vuoto, la caption omette del tutto la
+# riga "Follow ..." invece di stampare un handle sbagliato.
 IG_USERNAME = "@5absurdfacts"
 
 # Quanti post al giorno e a che ora pubblicarli (orari UTC).

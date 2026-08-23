@@ -40,7 +40,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from config import (  # noqa: E402
     IG_API_VERSION, IG_GRAPH_HOST, IG_HASHTAGS,
-    IG_POLL_EVERY_S, IG_POLL_TIMEOUT_S, IG_USERNAME, BG_CREDIT_LINE,
+    IG_POLL_EVERY_S, IG_POLL_TIMEOUT_S, IG_USERNAME, BG_CREDIT_LINE, is_single,
 )
 
 IG_USER_ID = os.environ.get("IG_USER_ID", "")
@@ -95,7 +95,21 @@ def _follow_line(handle: str) -> str:
 
 def build_caption(script: dict) -> str:
     """Caption IG: hook + i 5 fatti (testo reale, non solo hashtag) + hashtag
-    + CREDITO CC-BY obbligatorio dello sfondo (vedi docs/SFONDI-DIRITTI.md)."""
+    + CREDITO CC-BY obbligatorio dello sfondo (vedi docs/SFONDI-DIRITTI.md).
+
+    Formato "single" (v3): hook dello script + il fatto per esteso. Scrivere
+    "and 4 more ABSURD facts" sotto un video che ne contiene uno solo e' una
+    promessa non mantenuta — esattamente il modo documentato di far crollare
+    la ritenzione, oltre che una riga falsa."""
+    if is_single(script):
+        return (
+            f"{(script.get('hook') or '').strip()} \U0001F92F\n\n"
+            f"{' '.join(f.strip() for f in script['facts'])}\n\n"
+            f"{_follow_line(IG_USERNAME)}\n\n"
+            f"{IG_HASHTAGS}\n\n"
+            f"{BG_CREDIT_LINE}"
+        )
+
     facts = "\n".join(f"{i}) {fact}" for i, fact in enumerate(script["facts"], 1))
     return (
         f"{_hook_from_fact(script['facts'][0])}... and 4 more ABSURD facts \U0001F92F\n\n"

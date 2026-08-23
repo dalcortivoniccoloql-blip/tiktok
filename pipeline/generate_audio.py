@@ -16,17 +16,39 @@ from pathlib import Path
 
 import edge_tts
 
-from config import DEFAULT_VOICE, INTRO_TEXT, OUTRO_TEXT, VOICE_RATE
+from config import DEFAULT_VOICE, INTRO_TEXT, OUTRO_TEXT, VOICE_RATE, is_single
 
 
 # ── narrazione ────────────────────────────────────────────────────────────────
 
+def hook_text(script: dict) -> str:
+    """L'hook parlato: quello dello script se c'e', altrimenti l'intro generica v2."""
+    return (script.get("hook") or "").strip() or INTRO_TEXT
+
+
+def cta_text(script: dict) -> str:
+    """L'outro parlato. Nel formato single il default e' VUOTO: la coda rompe il loop
+    (uno Short che riparte da capo pulito guadagna replay). Nel formato a 5 fatti
+    resta l'outro storico."""
+    cta = (script.get("cta") or "").strip()
+    if cta:
+        return cta
+    return "" if is_single(script) else OUTRO_TEXT
+
+
 def narration_parts(script: dict) -> list[tuple[str, str]]:
-    """Le parti della narrazione, in ordine: intro, i fatti (senza numerazione), outro."""
-    parts = [("intro", INTRO_TEXT)]
+    """Le parti della narrazione, in ordine: hook, i fatti/beat, (outro solo se c'e').
+
+    ⚠️ Una parte VUOTA non va mai emessa: `_align_boundaries` non le assegnerebbe
+    nessuna parola e `_load_timeline` scarterebbe l'intero sidecar, facendo cadere
+    il video sui sottotitoli "a stima" (desincronizzati) senza dire niente.
+    Questa funzione e' la fonte unica della struttura: il video conta le parti da qui."""
+    parts = [("intro", hook_text(script))]
     for fact in script["facts"]:
         parts.append(("fact", fact))
-    parts.append(("outro", OUTRO_TEXT))
+    outro = cta_text(script)
+    if outro:
+        parts.append(("outro", outro))
     return parts
 
 

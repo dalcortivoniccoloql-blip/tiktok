@@ -19,7 +19,7 @@ from googleapiclient.http import MediaFileUpload
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 
-from config import USERNAME, BG_CREDIT_LINE
+from config import USERNAME, BG_CREDIT_LINE, is_single
 
 # ── path ──────────────────────────────────────────────────────────────────────
 
@@ -112,11 +112,16 @@ def build_service():
 # ── metadata helpers ──────────────────────────────────────────────────────────
 
 def _hook_from_fact(fact: str, max_len: int) -> str:
-    """Accorcia il primo fatto a un hook da titolo, tagliando su un confine di parola."""
+    """Accorcia il primo fatto a un hook da titolo, tagliando su un confine di parola.
+
+    ⚠️ I puntini di sospensione vanno CONTATI dentro max_len: prima venivano appesi
+    dopo il taglio, sforando di 3 caratteri, e il `title[:100]` a valle si mangiava
+    la coda del titolo. Esito reale, gia' pubblicato: `... #Short` senza la "s"
+    (video 07W6Nkw_mSQ, 21/08/2026). Trovato nell'analisi canale del 2026-08-23."""
     hook = fact.strip().rstrip(".!?")
     if len(hook) <= max_len:
         return hook
-    cut = hook[:max_len].rsplit(" ", 1)[0]
+    cut = hook[:max(max_len - 3, 1)].rsplit(" ", 1)[0]
     return cut.rstrip(",;:") + "..."
 
 
@@ -131,7 +136,17 @@ _TITLE_TEMPLATES = [
 
 def build_title(script: dict) -> str:
     """Titolo YouTube dinamico: hook dal primo fatto + template a rotazione.
-    #Shorts nel titolo e meno di 100 caratteri = classificazione garantita come Short."""
+    #Shorts nel titolo e meno di 100 caratteri = classificazione garantita come Short.
+
+    Formato "single" (v3): il titolo E' l'hook dello script, non un template.
+    L'hook e' gia' scritto per incuriosire in 2 secondi: riformularlo in
+    "... - and 4 more ABSURD facts" mentirebbe (il video ha UN fatto solo) e
+    butterebbe via l'unica frase pensata per fermare lo scroll."""
+    if is_single(script):
+        hook = (script.get("hook") or "").strip().rstrip(".!?") or script["facts"][0]
+        room = 100 - len(" #Shorts")
+        return _hook_from_fact(hook, room) + " #Shorts"
+
     template = _TITLE_TEMPLATES[script.get("number", 0) % len(_TITLE_TEMPLATES)]
     room = 100 - len(template.format(hook=""))
     hook = _hook_from_fact(script["facts"][0], room)
@@ -141,7 +156,23 @@ def build_title(script: dict) -> str:
 def build_description(script: dict) -> str:
     """Descrizione YouTube dinamica: hook + i 5 fatti del video (keyword reali per il SEO)
     + hashtag puliti (niente doppioni, niente #fyp che su YouTube non serve)
-    + CREDITO CC-BY obbligatorio dello sfondo (vedi docs/SFONDI-DIRITTI.md)."""
+    + CREDITO CC-BY obbligatorio dello sfondo (vedi docs/SFONDI-DIRITTI.md).
+
+    Formato "single": niente "5 ABSURD facts" (sarebbe falso) e niente elenco
+    numerato: hook + il fatto per esteso. La ricerca YouTube porta oggi il 78,9%
+    delle views di questo canale, quindi il testo qui sotto e' l'unica superficie
+    che sta gia' funzionando: resta ricco di parole reali, non di hashtag."""
+    if is_single(script):
+        body = " ".join(f.strip() for f in script["facts"])
+        hook = (script.get("hook") or "").strip()
+        return (
+            f"{hook} \U0001F92F\n\n"
+            f"{body}\n\n"
+            f"Follow {USERNAME} for one absurd fact a day!\n\n"
+            "#shorts #facts #didyouknow #amazingfacts #funfacts\n\n"
+            f"{BG_CREDIT_LINE}"
+        )
+
     facts = "\n".join(f"{i}) {fact}" for i, fact in enumerate(script["facts"], 1))
     return (
         "5 ABSURD facts that will leave you SPEECHLESS\U0001F636"
