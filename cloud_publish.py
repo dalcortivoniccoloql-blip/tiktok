@@ -60,10 +60,6 @@ def main() -> int:
     nxt   = int(state.get("next", 1))
 
     script = next((s for s in scripts if s["number"] == nxt), None)
-    if script is None:
-        print(f"Nessuno script #{nxt} (totale {total}). Niente da pubblicare.")
-        print("Aggiungi un nuovo file english_scripts_N.json per continuare.")
-        return 0  # uscita pulita, non un errore
 
     if not publishing_enabled():
         # CONTROLLO DI SALUTE: si e' arrivati fin qui, quindi checkout, Python,
@@ -72,7 +68,12 @@ def main() -> int:
         # fermo. Un run "verde" qui significa: l'automazione e' viva e pronta.
         print("=== CONTROLLO DI SALUTE (pubblicazione DISATTIVATA) ===")
         print(f"Script caricati: {total}. Il prossimo sarebbe il #{nxt}.")
-        print(f"Primo fatto: {script['facts'][0]}")
+        if script is None:
+            print(f"ATTENZIONE: lo script #{nxt} non esiste: la coda e' finita.")
+            print("Non e' urgente adesso perche' la pubblicazione e' spenta, ma va")
+            print("rifornita prima di riaccenderla, o il primo run utile fallira'.")
+        else:
+            print(f"Primo fatto: {script['facts'][0]}")
         print("")
         print("Non pubblico niente: PUBLISH_ENABLED non e' impostata.")
         print("E' voluto. Finche' l'audit YouTube non e' approvato ogni upload")
@@ -84,6 +85,26 @@ def main() -> int:
         print("  > New repository variable > PUBLISH_ENABLED = true")
         print("Nessun commit e nessun push necessari.")
         return 0
+
+    # ── coda esaurita: il run FALLISCE, non esce verde ───────────────────────────
+    # Fino al 2026-08-31 qui c'era un "return 0  # uscita pulita, non un errore".
+    # Conseguenza reale: il 26/08 e' finito lo script #209, l'ultimo, e da allora il
+    # job ha girato 3 volte al giorno restando VERDE senza pubblicare niente. Nessuna
+    # email, nessun log rosso, nessuno se ne e' accorto per cinque giorni: il canale
+    # sembrava attivo e non lo era. Una coda vuota mentre la pubblicazione e' accesa
+    # e' un guasto, e un guasto si vede.
+    if script is None:
+        print(f"ERRORE: lo script #{nxt} non esiste (in archivio ce ne sono {total}).")
+        print("La coda e' finita: la pubblicazione e' accesa ma non c'e' piu' niente")
+        print("da pubblicare, quindi questo run fallisce di proposito.")
+        print("")
+        print("Rimedio: aggiungere un nuovo pipeline/english_scripts_N.json nel formato")
+        print("single (schema in docs/FORMATO-SINGLE.md, sezione 3). Il numero degli")
+        print("script e' posizionale: i file si concatenano in ordine alfabetico, quindi")
+        print("il nuovo file si accoda da solo dopo l'ultimo esistente.")
+        print("Il rifornimento automatico e' il job 'Genera nuove curiosita'' e chiede")
+        print("il secret ANTHROPIC_API_KEY: se non e' impostato, non genera niente.")
+        return 1
 
     AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
