@@ -1,10 +1,17 @@
 name: Genera nuove curiosita'
 
-# Una volta a settimana (lunedi' alle 06:00 UTC). Genera nuovi script
-# solo se quelli rimasti stanno per finire E se ANTHROPIC_API_KEY e' impostata.
+# Ogni giorno alle 06:00 UTC. Genera nuovi script solo se quelli rimasti stanno
+# per finire E se ANTHROPIC_API_KEY e' impostata.
+#
+# Era SETTIMANALE (lunedi'). Il controllo in se' non costa nulla: l'API viene
+# chiamata solo quando la coda e' sotto soglia, negli altri giorni il job legge
+# due file ed esce. Il controllo settimanale invece aveva un buco reale: fra due
+# lunedi' publish.yml consuma 21 script (3 al giorno), quindi una coda sopra
+# soglia il lunedi' poteva essere a zero il giovedi' senza che nessun job avesse
+# mai provato a rifornirla.
 on:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:

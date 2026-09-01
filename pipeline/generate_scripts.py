@@ -30,7 +30,16 @@ PIPE = Path(__file__).parent
 NEW_SCRIPTS   = 30     # quanti script generare per volta (30 = 10 giorni a 3/giorno)
 BEATS_EACH    = 3      # beat per script nel formato single (il campo si chiama ancora "facts")
 HOOK_MAX_WORDS = 9     # ~2,5 s di TTS: oltre, la promessa arriva dopo lo swipe
-LOW_THRESHOLD = 12     # genera se restano meno di N script non ancora usati
+# Soglia di rifornimento. NON e' un numero a piacere: deve coprire almeno il
+# consumo di UN intervallo fra due controlli di topup.yml, altrimenti la coda
+# puo' finire fra un controllo e il successivo senza che nessuno provi a
+# rifornirla. Era 12 con topup SETTIMANALE mentre publish.yml pubblica 3 volte
+# al giorno: 21 script consumati fra due controlli contro una soglia di 12, cioe'
+# la soglia non poteva essere vista in tempo. Con remaining=13 il lunedi' il job
+# diceva "non serve" e il giovedi' la coda era vuota: la stessa famiglia di
+# guasto del 2026-08-26, solo spostata un piano piu' su.
+# L'invariante e' bloccata dal test tests/test_soglia_coda.py.
+LOW_THRESHOLD = 21     # = 3 pubblicazioni/giorno x 7 giorni (vedi test)
 MODEL         = "claude-opus-5"     # massima accuratezza sui fatti (costo comunque irrisorio: ~30 script/settimana)
 
 
