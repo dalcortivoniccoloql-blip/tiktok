@@ -24,7 +24,19 @@ WF = REPO / ".github" / "workflows"
 def _cron(nome: str) -> list[list[str]]:
     testo = (WF / nome).read_text(encoding="utf-8")
     righe = re.findall(r'^\s*-\s*cron:\s*"([^"]+)"', testo, re.MULTILINE)
-    assert righe, f"nessun cron trovato in {nome}"
+    # Se i cron ci sono ma commentati, questo test sta girando dalla copia su
+    # Drive, dove publish.yml tiene il cron commentato di proposito (divergenza
+    # voluta, vedi P09/CLAUDE.md). Non e' un guasto: e' il posto sbagliato.
+    assert righe, (
+        f"nessun cron ATTIVO trovato in {nome}. "
+        + ("Ci sono cron COMMENTATI: stai quasi certamente girando dalla copia su "
+           "Drive, dove publish.yml tiene il cron disattivato di proposito "
+           "(divergenza voluta, vedi P09/CLAUDE.md). Non e' un guasto, e' il posto "
+           "sbagliato: lancia questo test dal repo git (dev/tiktok), che e' l'unica "
+           "configurazione che gira davvero."
+           if "cron:" in testo else
+           "Il file non contiene nessuna riga cron: schedulazione rimossa?")
+    )
     return [r.split() for r in righe]
 
 
