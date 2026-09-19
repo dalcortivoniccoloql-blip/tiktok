@@ -144,9 +144,9 @@ def main() -> None:
         return
     _gh_secret("IG_USER_ID", str(info["user_id"]))
     _gh_secret("IG_ACCESS_TOKEN", token)
-    print("\nFatto. Il token scade tra ~60 giorni: rinnovo con\n"
-          "  py -3 pipeline/upload_instagram.py --refresh-token   (con IG_ACCESS_TOKEN nell'env)\n"
-          "  py -3 tools/ig_setup.py --solo-secret                 (incolla il token nuovo)")
+    print("\nFatto. Il token scade tra ~60 giorni. Per rinnovarlo: Meta for Developers ->\n"
+          "  app -> API setup con Instagram Login -> Genera token -> copia ->\n"
+          "  py -3 tools/ig_setup.py --solo-secret   (premi solo Invio: legge dagli appunti)")
 
 
 if __name__ == "__main__":
