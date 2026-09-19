@@ -15,6 +15,8 @@ Cosa fa, in ordine (si ferma al primo problema):
      TRANSFER_TOKEN non e' gia' nell'env lo prende dal login `gh` di NdC171);
   4. SOLO dopo conferma esplicita [s/N] scrive i secret IG_USER_ID e
      IG_ACCESS_TOKEN sul repo GitHub. Da quel momento il cron pubblica anche su IG.
+     Scrive anche la variabile IG_TOKEN_EXPIRES (oggi + 60 giorni), letta dal
+     workflow ig-token-reminder.yml che manda la mail di promemoria.
 
 Il token non viene mai stampato ne' salvato su file. Setup completo della
 parte Meta (app, tester, permessi): docs/SETUP_INSTAGRAM.md.
@@ -23,6 +25,7 @@ parte Meta (app, tester, permessi): docs/SETUP_INSTAGRAM.md.
 from __future__ import annotations
 
 import argparse
+import datetime
 import getpass
 import json
 import os
@@ -35,6 +38,7 @@ from pathlib import Path
 REPO = "dalcortivoniccoloql-blip/tiktok"
 TRANSFER_REPO_DEFAULT = "NdC171/shorts-transfer"
 TRANSFER_GH_USER = "NdC171"
+TOKEN_DAYS = 60   # durata del token long-lived di Meta
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
@@ -72,6 +76,14 @@ def _gh_secret(name: str, value: str) -> None:
     if r.returncode:
         raise SystemExit(f"STOP: gh secret set {name} fallito: {r.stderr.strip()}")
     print(f"    secret {name} impostato su {REPO}")
+
+
+def _gh_variable(name: str, value: str) -> None:
+    r = subprocess.run(["gh", "variable", "set", name, "--repo", REPO, "--body", value],
+                       capture_output=True, text=True)
+    if r.returncode:
+        raise SystemExit(f"STOP: gh variable set {name} fallito: {r.stderr.strip()}")
+    print(f"    variabile {name}={value} impostata su {REPO}")
 
 
 def _publish_test(script_n: int, video: Path) -> None:
@@ -144,8 +156,12 @@ def main() -> None:
         return
     _gh_secret("IG_USER_ID", str(info["user_id"]))
     _gh_secret("IG_ACCESS_TOKEN", token)
-    print("\nFatto. Il token scade tra ~60 giorni. Per rinnovarlo: Meta for Developers ->\n"
-          "  app -> API setup con Instagram Login -> Genera token -> copia ->\n"
+    # la legge il workflow ig-token-reminder.yml: mail di promemoria negli ultimi 7 giorni
+    expires = (datetime.date.today() + datetime.timedelta(days=TOKEN_DAYS)).isoformat()
+    _gh_variable("IG_TOKEN_EXPIRES", expires)
+    print(f"\nFatto. Il token scade il {expires}: dal 7o giorno prima arriva una mail al giorno\n"
+          "  (workflow ig-token-reminder). Per rinnovarlo: Meta for Developers -> app ->\n"
+          "  API setup con Instagram Login -> Genera token -> copia ->\n"
           "  py -3 tools/ig_setup.py --solo-secret   (premi solo Invio: legge dagli appunti)")
 
 

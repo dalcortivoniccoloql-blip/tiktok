@@ -1,0 +1,83 @@
+# Durata: LEGATO-A:P09
+name: "Token Instagram - promemoria scadenza"
+
+# Ogni giorno controlla:
+#   1. che il token nel secret IG_ACCESS_TOKEN funzioni ancora (GET /me);
+#   2. quanti giorni mancano alla data in vars.IG_TOKEN_EXPIRES
+#      (la scrive tools/ig_setup.py ogni volta che si rinnova il token).
+# Negli ultimi 7 giorni, o se il token non funziona piu', il run FALLISCE
+# APPOSTA: GitHub manda la mail "Run failed" all'owner del repo, una al giorno
+# finche' non si rinnova. Nessuna credenziale email da gestire.
+#
+# Perche' esiste: quando il token scade, upload_instagram salta in silenzio,
+# publish.yml resta verde e YouTube continua -> nessuno se ne accorgerebbe.
+#
+# Prova a mano che la mail arrivi: Actions > questo workflow > Run workflow >
+# spunta "prova_email".
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC = 08:00 ora italiana (estate)
+  workflow_dispatch:
+    inputs:
+      prova_email:
+        description: "Fallisci apposta per verificare che la mail arrivi"
+        type: boolean
+        default: false
+
+permissions: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Prova mail (solo se richiesta a mano)
+        if: ${{ inputs.prova_email }}
+        run: |
+          echo "::error title=PROVA promemoria token Instagram::Se ti e' arrivata la mail il promemoria funziona. Nessuna azione richiesta."
+          exit 1
+
+      - name: Controlla token e scadenza
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          EXPIRES: ${{ vars.IG_TOKEN_EXPIRES }}
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os, sys, urllib.error, urllib.request
+
+          HOW = ("Rinnovo in 2 minuti - Meta for Developers > app 5AbsurdFacts Publisher > "
+                 "API setup con Instagram Login > Genera token > copia > in locale "
+                 "py -3 tools/ig_setup.py --solo-secret (premi solo Invio).")
+
+          def fail(title, msg):
+              # niente ':' o ',' nel titolo: rompono il comando ::error
+              print(f"::error title={title}::{msg} {HOW}")
+              sys.exit(1)
+
+          tok = os.environ.get("IG_ACCESS_TOKEN", "")
+          if not tok:
+              fail("Token Instagram mancante", "Il secret IG_ACCESS_TOKEN non esiste e i Reel non escono.")
+
+          url = "https://graph.instagram.com/v23.0/me?fields=username&access_token=" + tok
+          try:
+              with urllib.request.urlopen(url, timeout=30) as r:
+                  user = json.loads(r.read()).get("username")
+          except urllib.error.HTTPError as e:
+              if e.code == 429 or e.code >= 500:
+                  print(f"::warning::Instagram temporaneamente non disponibile (HTTP {e.code}) - riprovo domani")
+                  sys.exit(0)
+              fail("Token Instagram NON valido", f"Instagram rifiuta il token (HTTP {e.code}) e i Reel non escono.")
+          except Exception as e:
+              print(f"::warning::Instagram non raggiungibile ({type(e).__name__}) - riprovo domani")
+              sys.exit(0)
+
+          exp = os.environ.get("EXPIRES", "").strip()
+          if not exp:
+              fail("Scadenza token Instagram sconosciuta", "Manca la variabile di repo IG_TOKEN_EXPIRES.")
+          days = (datetime.date.fromisoformat(exp) - datetime.date.today()).days
+          print(f"Token valido per @{user} - scade il {exp} (tra {days} giorni)")
+          if days <= 7:
+              fail(f"Token Instagram scade tra {days} giorni ({exp})",
+                   "Rinnovalo adesso o Instagram smette di pubblicare in silenzio.")
+          PY
