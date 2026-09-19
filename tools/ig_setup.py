@@ -59,6 +59,13 @@ def _me(token: str) -> dict:
         raise SystemExit(f"STOP: Instagram non raggiungibile ({type(e).__name__})")
 
 
+def _from_clipboard() -> str:
+    """Token dagli appunti di Windows, senza mai stamparlo."""
+    r = subprocess.run(["powershell", "-NoProfile", "-Command", "Get-Clipboard -Raw"],
+                       capture_output=True, text=True)
+    return "".join(r.stdout.split())   # via spazi/a-capo finiti nella copia
+
+
 def _gh_secret(name: str, value: str) -> None:
     r = subprocess.run(["gh", "secret", "set", name, "--repo", REPO],
                        input=value, text=True, capture_output=True)
@@ -103,10 +110,13 @@ def main() -> None:
     if not args.solo_secret and not (args.script and args.video):
         ap.error("servono --script e --video (oppure --solo-secret)")
 
-    token = getpass.getpass("[1/4] Incolla il token Instagram e premi Invio "
-                            "(non si vede mentre incolli): ").strip()
+    print("[1/4] Copia il token da Meta (\"Genera token\"), poi premi SOLO Invio qui:\n"
+          "      lo leggo dagli appunti. (In alternativa incollalo: non si vede, e' normale.)")
+    token = getpass.getpass("      > ").strip() or _from_clipboard()
     if not token:
-        raise SystemExit("STOP: nessun token inserito")
+        raise SystemExit("STOP: nessun token (appunti vuoti?)")
+    print(f"      token letto: {len(token)} caratteri"
+          f"{'' if token.startswith('IG') else ' - ATTENZIONE: non inizia con IG, e dagli appunti?'}")
 
     info = _me(token)
     print(f"\n[2/4] Account del token: username={info.get('username')} "
