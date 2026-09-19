@@ -134,7 +134,9 @@ IG_HASHTAGS = "#reels #facts #didyouknow #amazingfacts #funfacts"
 # coincidono. Mettere quello YouTube nella caption IG manda chi ci segue su un
 # handle che su Instagram non esiste. Se vuoto, la caption omette del tutto la
 # riga "Follow ..." invece di stampare un handle sbagliato.
-IG_USERNAME = "@5absurdfacts"
+# Handle REALE verificato il 2026-09-19 sul profilo: `@5absurdfacts_ql`
+# (`@5absurdfacts` nudo su Instagram non e' nostro).
+IG_USERNAME = "@5absurdfacts_ql"
 
 # Quanti post al giorno e a che ora pubblicarli (orari UTC).
 # 07/12/17 UTC = circa 09/14/19 ora italiana (estate).
