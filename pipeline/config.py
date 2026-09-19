@@ -138,6 +138,12 @@ IG_HASHTAGS = "#reels #facts #didyouknow #amazingfacts #funfacts"
 # (`@5absurdfacts` nudo su Instagram non e' nostro).
 IG_USERNAME = "@5absurdfacts_ql"
 
+# Etichetta "IA" di Instagram: parametro API `is_ai_generated` (autodichiarazione).
+# Attivata il 2026-09-19 su decisione dell'owner: voce TTS sintetica + testi
+# generati. Se l'API la rifiuta, upload_instagram riprova SENZA etichetta:
+# il Reel esce comunque.
+IG_AI_GENERATED = True
+
 # Quanti post al giorno e a che ora pubblicarli (orari UTC).
 # 07/12/17 UTC = circa 09/14/19 ora italiana (estate).
 POSTS_PER_DAY  = 3

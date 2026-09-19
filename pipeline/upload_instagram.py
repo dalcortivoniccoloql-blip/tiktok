@@ -41,6 +41,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import (  # noqa: E402
     IG_API_VERSION, IG_GRAPH_HOST, IG_HASHTAGS,
     IG_POLL_EVERY_S, IG_POLL_TIMEOUT_S, IG_USERNAME, BG_CREDIT_LINE, is_single,
+    IG_AI_GENERATED,
 )
 
 IG_USER_ID = os.environ.get("IG_USER_ID", "")
@@ -125,12 +126,23 @@ def build_caption(script: dict) -> str:
 def publish_reel(video_url: str, caption: str) -> str:
     """Container -> poll fino a FINISHED -> publish. Ritorna l'id del media IG."""
     print("    Creazione container Reel...")
-    container = _api("POST", f"{IG_USER_ID}/media", {
+    params = {
         "media_type": "REELS",
         "video_url": video_url,
         "caption": caption[:2200],   # limite caption IG
         "share_to_feed": "true",
-    })
+    }
+    if IG_AI_GENERATED:
+        params["is_ai_generated"] = "true"
+    try:
+        container = _api("POST", f"{IG_USER_ID}/media", params)
+    except RuntimeError as e:
+        if "is_ai_generated" not in params:
+            raise
+        # L'etichetta e' un'aggiunta: se l'API la rifiuta il Reel deve uscire lo stesso.
+        print(f"    ATTENZIONE: etichetta IA rifiutata ({e}) -> riprovo SENZA etichetta")
+        params.pop("is_ai_generated")
+        container = _api("POST", f"{IG_USER_ID}/media", params)
     container_id = container["id"]
 
     # Meta scarica ed elabora il video: pubblicare prima di FINISHED da' errore.
