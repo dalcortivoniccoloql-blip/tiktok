@@ -1,0 +1,63 @@
+# Durata: USO-SINGOLO
+# Workflow diagnostico usa-e-getta (2026-09-22): stampa l'errore COMPLETO di Meta
+# quando Instagram rifiuta il token. Serve a distinguere un problema di token
+# (famiglia 190 -> rigenerare) da un blocco a livello app/account (-> pannello Meta).
+# Il body della risposta d'errore NON contiene il token: e' sicuro loggarlo.
+# Da rimuovere una volta identificata la causa.
+name: IG diagnostica (usa-e-getta)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnostica:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Interroga Instagram e stampa l'errore completo
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.error, urllib.request
+
+          tok = os.environ.get("IG_ACCESS_TOKEN", "")
+          uid = os.environ.get("IG_USER_ID", "")
+          print(f"token presente: {bool(tok)} (lunghezza {len(tok)})")
+          print(f"IG_USER_ID presente: {bool(uid)}")
+          print()
+
+          def prova(nome, url):
+              print(f"--- {nome} ---")
+              try:
+                  with urllib.request.urlopen(url, timeout=30) as r:
+                      print(f"HTTP {r.status} OK")
+                      print(r.read().decode("utf-8", "replace")[:2000])
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode("utf-8", "replace")
+                  print(f"HTTP {e.code}")
+                  try:
+                      err = json.loads(body).get("error", {})
+                      for k in ("message", "type", "code", "error_subcode",
+                                "error_user_title", "error_user_msg", "fbtrace_id"):
+                          if k in err:
+                              print(f"  {k}: {err[k]}")
+                  except Exception:
+                      print(f"  body grezzo: {body[:2000]}")
+              except Exception as e:
+                  print(f"  eccezione: {type(e).__name__}: {e}")
+              print()
+
+          # 1) lettura base sull'endpoint Instagram Login (quello usato dal promemoria)
+          prova("graph.instagram.com /me",
+                "https://graph.instagram.com/v23.0/me?fields=id,username,account_type&access_token=" + tok)
+
+          # 2) stesso account via IG_USER_ID (distingue 'token cieco' da 'account bloccato')
+          if uid:
+              prova(f"graph.instagram.com /{uid}",
+                    f"https://graph.instagram.com/v23.0/{uid}?fields=id,username&access_token=" + tok)
+
+          # 3) debug del token: dice chi l'ha emesso, per quale app, e se e' ancora valido
+          prova("debug_token",
+                "https://graph.instagram.com/debug_token?input_token=" + tok + "&access_token=" + tok)
+          PY
