@@ -1,11 +1,51 @@
 <!-- Durata: LEGATO-A:P09 -->
 
-# 🔴 Incidente Instagram — 2026-09-20
+# 🔴 Incidente Instagram — 2026-09-20 → ✅ chiuso 2026-09-23
 
 > Copia sincronizzata via git del record che sta in `faceless-shorts/docs/SETUP_INSTAGRAM.md` del workspace P09 (quella copia vive su Drive, oggi in pausa: questa è l'unica che tutti vedono).
 
 
-> **Durata:** LEGATO-A:P09 · aperto il 2026-09-22 (Niccolò). ⚠️ **Causa esatta NON ancora identificata** — qui c'è solo ciò che è stato verificato. Non trattare le ipotesi come diagnosi.
+> **Durata:** LEGATO-A:P09 · aperto il 2026-09-22, **sbloccato il 2026-09-23** (Niccolò). ⚠️ **Causa mai identificata**: si è risolto da solo. Non trattare le ipotesi come diagnosi.
+
+## ✅ ESITO — si è sbloccato da solo, con lo STESSO token (2026-09-23)
+
+**L'accesso API è tornato senza che nessuno abbia toccato niente.** Run diagnostico `35823125958` (2026-09-23 05:36 UTC):
+
+```
+--- graph.instagram.com /me ---
+HTTP 200 OK
+{"id":"28547559528213837","username":"5absurdfacts_ql","account_type":"BUSINESS"}
+```
+
+🔑 **Il token è lo STESSO di prima**, e questo è il punto che vale più di tutto il resto:
+- il secret `IG_ACCESS_TOKEN` porta ancora la data **2026-09-19T10:28:56Z** — **non è mai stato riscritto** (nessun `ig_setup.py` eseguito);
+- lunghezza del token **181 caratteri** sia nel run fallito del 22/09 sia in quello riuscito del 23/09.
+
+➡️ **Non era il token, non era l'app, non era l'account.** Era un **blocco temporaneo lato Meta**, durato **~2 giorni e 10 ore**: dal 2026-09-20 ~19:14 UTC al più tardi 2026-09-23 05:36 UTC (si è sbloccato tra il 22/09 19:58 UTC — ultimo run di pubblicazione ancora bloccato — e il 23/09 05:36 UTC).
+
+**Costo:** ~7 Reel non pubblicati. YouTube non si è mai fermato.
+
+### ⛔ L'esclusione che avevo sbagliato
+
+Avevo scritto: *"❌ Non è transitorio: ~8 run falliti su 2 giorni, non un 429/5xx."* **Era falso.** Era esattamente transitorio — solo su una scala di **giorni**, non di minuti, e senza mai passare da un 429. **Lezione:** "ho visto fallire N volte di fila" misura la **durata osservata finora**, non la natura del guasto. Per dichiarare non-transitorio serve un meccanismo che spieghi *perché* non può rientrare da solo — qui non c'era.
+
+### ✅ Il test di controllo su `debug_token`, finalmente fatto
+
+Nel run riuscito, con l'API perfettamente funzionante, `debug_token` risponde **comunque** con un errore — ma **diverso**:
+
+```
+HTTP 403 · message: Application does not have permission for this action
+type: IGApiException · code: 10
+```
+
+➡️ Conferma definitiva che **quell'endpoint non è utilizzabile così su `graph.instagram.com`**, a prescindere dallo stato del token: il "fallisce perfino `debug_token`" del 22/09 non provava niente, come già ritirato. **Da togliere dal workflow diagnostico**: genera solo rumore.
+
+### 🔴 Cosa resta da fare (il guasto è chiuso, il problema di disegno no)
+
+1. **Verificare su un artefatto, non sul verde del run** (regola già cablata in `CLAUDE.md` dopo il fermo del 26/08): il prossimo run di pubblicazione utile è alle **07:00 UTC**. "Riparato" = **Reel effettivamente online sul profilo**, non `HTTP 200` su `/me`.
+2. **Un fallimento Instagram lascia il run VERDE** — è la ragione per cui nessuno se n'è accorto per 2 giorni e mezzo. `cloud_publish.py` tratta IG come best-effort dopo YouTube. Serve almeno un segnale (run rosso dopo N fallimenti IG consecutivi, o un contatore). **È la stessa famiglia del fermo del 26/08 e della soglia del 01/09: un ramo che significa "il prodotto non esce" non deve uscire verde.**
+3. **`ig-token-reminder.yml` va corretto**: ha gridato *"Token NON valido → rigenera"* per 2 giorni su un token perfettamente valido. Se qualcuno gli avesse dato retta, avrebbe rigenerato il token senza risolvere niente e avrebbe dato la colpa alla cosa sbagliata.
+4. **Rimuovere `ig-diagnostica.yml`** quando non serve più (o tenerlo, togliendo la chiamata a `debug_token`).
 
 **Sintomo.** I Reel non escono più. YouTube continua a pubblicare normalmente (3×/giorno, run verdi): l'upload IG è best-effort **dopo** YouTube in `cloud_publish.py`, quindi il run resta `success` anche quando Instagram fallisce. Nessun allarme è scattato da lì.
 
