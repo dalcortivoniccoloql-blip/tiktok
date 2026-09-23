@@ -61,9 +61,11 @@ Tutto integro — **nessuna delle ipotesi "blocco visibile" regge**:
 ➡️ **Conseguenza importante:** nessuno ha cambiato la configurazione dell'app nella finestra del guasto. Ma il registro attività **non registra la generazione dei token** — quindi un click su *Genera token* domenica pomeriggio farebbe morire in silenzio quello salvato nel secret **senza lasciare traccia in nessuna delle schermate qui sopra**. È l'unica ipotesi che spiega *insieme* la finestra di 7 ore e il pannello immacolato.
 
 **Ipotesi aperte, in ordine di plausibilità — nessuna verificata:**
-1. **Il token salvato nel secret è stato invalidato** (es. un *Genera token* rifatto a mano il 20/09: generarne uno nuovo invalida il precedente, e il registro attività non lo mostra).
-2. Blocco automatico di Meta su un'app **nuova** (creata il 2026-09-19) che ha iniziato a pubblicare subito 3×/giorno — enforcement che non compare nel pannello.
+1. **Enforcement automatico di Meta** su un'app di **2 giorni** (creata il 19/09) che ha iniziato subito a pubblicare 3×/giorno — un blocco di questo tipo **non compare nel pannello**, il che è coerente con tutto ciò che si è visto.
+2. **Il token salvato nel secret è stato invalidato** da qualcos'altro (un token nuovo invalida il precedente, e il registro attività non lo mostra). ⚠️ **Declassata dal 1° posto il 22/09**: l'owner conferma di **non aver toccato pannello né account** domenica pomeriggio, quindi non per un *Genera token* fatto a mano.
 3. ~~L'account IG riportato a Personal/Creator, o ruolo tester tolto~~ → **ESCLUSO a schermo il 22/09** (tabella sopra).
+
+⛔ **Perché il test di controllo non è stato fatto in sessione:** cliccando *Genera token* dalla sessione AI **non succede nulla di visibile** — nessun dialog, nessuna scheda nuova nel gruppo controllato dall'AI (non è stato verificato *perché*: popup bloccato, finestra fuori dal gruppo, o altro). Il passo va fatto **a schermo dall'owner**.
 3. Restrizione dell'app per verifica business / App Review non completata.
 
 **🐛 Bug trovato di passaggio (in strumento nostro, non di Meta).** `.github/workflows/ig-token-reminder.yml` etichetta **qualunque** HTTP 400 come *"Token Instagram NON valido"* e consiglia `ig_setup.py --solo-secret`: il titolo è scritto a mano nella funzione `fail()`, non deriva dalla risposta di Meta. In questo incidente manda dritti sulla strada sbagliata. **Da correggere: stampare il messaggio reale di Meta invece di affermare una causa.** (Separato dall'incidente, non risolverlo insieme.)
