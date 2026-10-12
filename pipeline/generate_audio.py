@@ -14,7 +14,10 @@ import asyncio
 import json
 from pathlib import Path
 
+import aiohttp
 import edge_tts
+import edge_tts.communicate
+import edge_tts.constants
 
 from config import DEFAULT_VOICE, INTRO_TEXT, OUTRO_TEXT, VOICE_RATE, is_single
 
@@ -63,7 +66,32 @@ def _timings_path(audio_path: Path) -> Path:
 
 # ── TTS con cattura dei tempi ─────────────────────────────────────────────────
 
+# Da ottobre 2026 Microsoft rifiuta con 403 il vecchio host speech.platform.bing.com
+# (dagli USA, quindi dai runner GitHub, dal 2026-10-12). Edge 155 sintetizza da
+# api.msedgeservices.com, che accetta lo stesso token come Ocp-Apim-Subscription-Key.
+# Proviamo il nuovo host e, se l'handshake fallisce, il vecchio (edge-tts 7.2.8 non
+# lo supporta ancora: vedi rany2/edge-tts#490 / PR #491; togliere quando e' rilasciato).
+_TTS_ENDPOINTS = [
+    "wss://api.msedgeservices.com/tts/cognitiveservices/websocket/v1"
+    f"?Ocp-Apim-Subscription-Key={edge_tts.constants.TRUSTED_CLIENT_TOKEN}",
+    edge_tts.constants.WSS_URL,
+]
+
+
 async def _tts_stream(text: str, output_path: Path, voice: str, rate: str) -> list[dict]:
+    """Genera l'audio provando gli endpoint in ordine; ritorna i WordBoundary."""
+    last_err: Exception | None = None
+    for url in dict.fromkeys(_TTS_ENDPOINTS):     # dedup se la libreria si aggiorna
+        edge_tts.communicate.WSS_URL = url
+        try:
+            return await _tts_stream_once(text, output_path, voice, rate)
+        except aiohttp.WSServerHandshakeError as e:
+            print(f"  TTS: handshake {e.status} su {url.split('?')[0]}, provo il prossimo")
+            last_err = e
+    raise last_err
+
+
+async def _tts_stream_once(text: str, output_path: Path, voice: str, rate: str) -> list[dict]:
     """Genera l'audio e ritorna i WordBoundary (t/d in secondi, w = parola)."""
     try:
         # edge-tts >= 7 emette SentenceBoundary di default: i tempi parola vanno chiesti
