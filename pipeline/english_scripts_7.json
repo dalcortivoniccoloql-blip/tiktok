@@ -1,531 +1,11 @@
 [
   {
     "format": "single",
-    "hook": "One man ate an entire airplane.",
+    "hook": "One tulip once cost as much as a house.",
     "facts": [
-      "His name was Michel Lotito, and he was a French entertainer.",
-      "Starting in nineteen seventy-eight, he cut a small plane into tiny pieces.",
-      "He swallowed it bit by bit, and it took him about two years."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A cat was a town mayor for twenty years.",
-    "facts": [
-      "The town is Talkeetna, a tiny place in Alaska.",
-      "In nineteen ninety-seven, people chose a cat called Stubbs as their honorary mayor.",
-      "He kept the job for about twenty years, until he died in twenty seventeen."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Abraham Lincoln is in a wrestling hall of fame.",
-    "facts": [
-      "Long before he was president, Lincoln was a strong young wrestler.",
-      "Stories say he fought around three hundred matches and lost only one.",
-      "Today he is honored in the National Wrestling Hall of Fame in America."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Hippos cannot swim.",
-    "facts": [
-      "They are too heavy to float in the water.",
-      "Instead, they walk or bounce along the bottom of rivers.",
-      "They can hold their breath for about five minutes while they do it."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "The Moon is slowly running away from us.",
-    "facts": [
-      "Every year it moves about four centimeters farther from Earth.",
-      "That is about as fast as your fingernails grow.",
-      "Long ago, the Moon looked much bigger in the sky than it does now."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A town called Boring has two sister towns.",
-    "facts": [
-      "Boring is a small town in Oregon, in the United States.",
-      "It became partners with a village in Scotland called Dull.",
-      "Later, a place in Australia joined them. Its name is Bland."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Mammoths were alive when the Great Pyramid was built.",
-    "facts": [
-      "Most mammoths died out about ten thousand years ago.",
-      "But a small group survived on Wrangel Island, far up in the Arctic.",
-      "They lived until about four thousand years ago, after the Great Pyramid was finished."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "One woman survived three huge ship disasters.",
-    "facts": [
-      "Violet Jessop worked as a stewardess on big ocean ships.",
-      "In nineteen eleven, her ship Olympic crashed into a warship. The next year, she was on the Titanic.",
-      "In nineteen sixteen, her hospital ship Britannic sank too, and she survived all three."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "One man was hit by lightning seven times.",
-    "facts": [
-      "Roy Sullivan was a park ranger in Virginia, in the United States.",
-      "Between nineteen forty-two and nineteen seventy-seven, lightning struck him seven different times.",
-      "He survived every single one, and he is in the record books for it."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Your body glows in the dark.",
-    "facts": [
-      "Scientists in Japan filmed people with super sensitive cameras.",
-      "Human skin gives off a very weak light that changes during the day.",
-      "It is about a thousand times too weak for our eyes to see."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "You cannot hum while holding your nose.",
-    "facts": [
-      "When you hum with your mouth closed, the air leaves through your nose.",
-      "If you close your nose too, the air has nowhere to go.",
-      "So the sound stops almost right away. Try it now."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "You cannot see the Great Wall from space.",
-    "facts": [
-      "Many people believe it is the only building you can see from space.",
-      "But the wall is very thin, and it is the same colour as the land around it.",
-      "Even China's first astronaut said he could not see it with his eyes."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Hawaiian pizza was invented in Canada.",
-    "facts": [
-      "A Greek immigrant named Sam Panopoulos ran a restaurant in Ontario.",
-      "In nineteen sixty-two, he tried putting pineapple from a can on a pizza.",
-      "He named it after the brand of the pineapple can, not after a trip to Hawaii."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Caesar salad has nothing to do with Julius Caesar.",
-    "facts": [
-      "It was created by Caesar Cardini, an Italian who had a restaurant in Mexico.",
-      "The story says that in nineteen twenty-four, his kitchen was almost empty.",
-      "He mixed what was left, and his own name ended up on a world famous salad."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "German chocolate cake is not from Germany.",
-    "facts": [
-      "It is named after an American man called Samuel German.",
-      "In eighteen fifty-two, he made a sweet baking chocolate for a company in America.",
-      "A cake recipe using his chocolate became famous, and people simply dropped his name's ending."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Hell really does freeze over.",
-    "facts": [
-      "Hell is a small village in Norway, near the city of Trondheim.",
-      "In winter, it often gets snow and temperatures below zero.",
-      "So almost every year, people can honestly say that Hell has frozen over."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Mount Everest is not the tallest mountain.",
-    "facts": [
-      "Everest is the highest above the sea, at almost nine thousand meters.",
-      "But Mauna Kea in Hawaii starts deep under the ocean.",
-      "Measured from bottom to top, it is over ten thousand meters tall."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "It may rain diamonds on Neptune.",
-    "facts": [
-      "Deep inside Neptune and Uranus there is a lot of carbon and huge pressure.",
-      "Scientists think this pressure can squeeze the carbon into diamonds.",
-      "The diamonds could then sink slowly toward the center, like rain."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "One planet has winds faster than sound.",
-    "facts": [
-      "Neptune is the windiest planet we know.",
-      "Its winds can blow at around two thousand kilometers per hour.",
-      "That is faster than the speed of sound here on Earth."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "The Sun is actually white.",
-    "facts": [
-      "From Earth, the Sun often looks yellow or orange.",
-      "That is because our air scatters some of its blue light away.",
-      "Seen from space, sunlight is white, a mix of all the colours."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "The tongue map is completely wrong.",
-    "facts": [
-      "Many school books showed sweet, salty, sour and bitter in different areas of the tongue.",
-      "It came from a bad translation of a German study.",
-      "In fact, every part of your tongue can taste every flavour."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Goldfish do not have three second memories.",
-    "facts": [
-      "Many people believe goldfish forget everything after a few seconds.",
-      "But scientists have trained them to push levers and react to sounds for food.",
-      "Goldfish can remember these things for months."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Bulls do not get angry at red.",
-    "facts": [
-      "Bulls cannot really tell red apart from green.",
-      "What makes them charge is the movement of the cape.",
-      "Tests show they attack a moving cape of any colour."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Ostriches do not bury their heads in sand.",
-    "facts": [
-      "This is one of the most famous animal myths in the world.",
-      "Ostriches dig holes in the ground for their eggs.",
-      "They put their heads in to turn the eggs, which from far away looks like hiding."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Lemmings do not really jump off cliffs.",
-    "facts": [
-      "Many people believe lemmings follow each other off cliffs on purpose.",
-      "The idea became famous through a Disney nature film from nineteen fifty-eight.",
-      "The film crew is reported to have pushed the lemmings in themselves."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Napoleon was not actually short.",
-    "facts": [
-      "He was about one meter sixty-nine, which was normal for his time.",
-      "The confusion partly came from old French inches, which were longer than English ones.",
-      "British cartoons also loved to draw him as a tiny angry man."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Einstein never failed maths.",
-    "facts": [
-      "This story has been told in schools for many years.",
-      "In fact, he had mastered very difficult maths before he was fifteen.",
-      "When he saw the rumour in a newspaper, he said it was simply not true."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Medieval people knew the Earth was round.",
-    "facts": [
-      "Many think people in the Middle Ages believed in a flat Earth.",
-      "But scholars had known the Earth was round since ancient Greek times.",
-      "Kings were even painted holding a round ball that stood for the world."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "You have far more than five senses.",
-    "facts": [
-      "Sight, hearing, taste, smell and touch are only the famous ones.",
-      "You also have a sense of balance, of temperature, and of pain.",
-      "You even know where your hands are with your eyes closed. That is a sense too."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Dogs are not completely colour blind.",
-    "facts": [
-      "Dogs can see colours, just fewer than we do.",
-      "They see blue and yellow quite well.",
-      "But red and green look almost the same to them, a bit like brown."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "An earthworm has five hearts.",
-    "facts": [
-      "Well, sort of. It has five pairs of tubes that pump its blood.",
-      "They work like small hearts near the front of its body.",
-      "Earthworms also have no lungs, so they breathe through their skin."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Male lions do almost none of the hunting.",
-    "facts": [
-      "In a lion group, the females work together to hunt.",
-      "The males mostly guard the area and protect the group.",
-      "But when the food arrives, the males often eat first."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "An elephant cannot jump.",
-    "facts": [
-      "Adult elephants are simply too heavy to leave the ground.",
-      "Their leg bones point straight down, which makes springing up very hard.",
-      "Even when they run fast, one foot always stays on the ground."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Your teeth cannot heal themselves.",
-    "facts": [
-      "Your skin and bones can repair damage, but tooth enamel cannot.",
-      "Enamel is the hardest thing in the human body.",
-      "But once it breaks or wears away, your body can never grow it back."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A Roman emperor declared war on the sea.",
-    "facts": [
-      "Ancient writers say the emperor Caligula marched his army to the coast.",
-      "Instead of fighting, he ordered the soldiers to collect seashells.",
-      "He called the shells treasure won from the sea, and took them back to Rome."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A giant wave of syrup hit Boston.",
-    "facts": [
-      "In nineteen nineteen, a huge tank of molasses burst in the city.",
-      "A brown wave, several meters high, rushed through the streets.",
-      "Twenty-one people died, and people say the area smelled sweet for years."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A beer flood once hit London.",
-    "facts": [
-      "In eighteen fourteen, a huge beer tank burst at a brewery in London.",
-      "More than a million liters of beer poured into the streets.",
-      "It knocked down walls, and eight people lost their lives."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "People once danced for days and could not stop.",
-    "facts": [
-      "In fifteen eighteen, a woman in Strasbourg started dancing in the street.",
-      "Within weeks, dozens and then hundreds of people had joined her.",
-      "Some danced for days, and still nobody knows for sure why it happened."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A con man sold the Eiffel Tower.",
-    "facts": [
-      "In nineteen twenty-five, Victor Lustig told business men that Paris wanted to sell the tower.",
-      "He pretended to be a government official and sold it for scrap metal.",
-      "The buyer was too embarrassed to tell the police, so Lustig came back and tried it again."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Cleopatra was not Egyptian.",
-    "facts": [
-      "She ruled Egypt, but her family came from Macedonia, in Greece.",
-      "Her family had ruled Egypt for about three hundred years.",
-      "Cleopatra is said to be the first of them to learn the Egyptian language."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Leonardo da Vinci wrote backwards.",
-    "facts": [
-      "Most of his notes go from right to left.",
-      "To read them easily, you need to hold the page up to a mirror.",
-      "Nobody knows for sure why he did it, but he was left-handed."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "One president served just thirty-one days.",
-    "facts": [
-      "William Henry Harrison became president of the United States in eighteen forty-one.",
-      "He gave the longest first speech ever, almost two hours long, in cold weather.",
-      "Weeks later he fell sick, and he died just one month into the job."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A pig was once put on trial.",
-    "facts": [
-      "In the Middle Ages, animals could be taken to court like people.",
-      "In thirteen eighty-six, in the French town of Falaise, a pig was judged for a crime.",
-      "It was found guilty, and old stories say it was dressed in human clothes."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Water can boil and freeze at the same time.",
-    "facts": [
-      "It happens at one special temperature and pressure.",
-      "Scientists call it the triple point.",
-      "There, water can be ice, liquid and gas all at once."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Some cats are allergic to humans.",
-    "facts": [
-      "It is rare, but vets have seen it happen.",
-      "The cats react to tiny bits of human skin in the air.",
-      "They can sneeze and itch, just like people who are allergic to cats."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A woodpecker's tongue wraps around its skull.",
-    "facts": [
-      "Its tongue is so long it cannot fit inside its beak.",
-      "So it curls around the back of its head when it is not used.",
-      "Scientists think this may also help protect its brain while it pecks."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A duck's quack does echo.",
-    "facts": [
-      "For years, people said a duck's quack makes no echo.",
-      "In two thousand three, scientists in England tested it in a special room.",
-      "The quack does echo. It is just quiet and hard to hear."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "A turtle cannot leave its shell.",
-    "facts": [
-      "Cartoons show turtles walking out of their shells.",
-      "But the shell is part of the turtle's skeleton.",
-      "Its backbone and ribs are joined to it, so the shell is part of its body."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Male platypuses have poison in their legs.",
-    "facts": [
-      "On their back legs they have a sharp spike.",
-      "It can deliver a venom that is very painful to humans.",
-      "It is not deadly to people, but the pain can last for weeks."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Rats laugh when you tickle them.",
-    "facts": [
-      "Scientists tickled rats in a laboratory.",
-      "The rats made happy squeaking sounds, too high for humans to hear.",
-      "They even came back to the scientist's hand, asking for more."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Saturn has a giant storm shaped like a hexagon.",
-    "facts": [
-      "At Saturn's north pole there is a cloud pattern with six straight sides.",
-      "Each side is longer than the width of Earth.",
-      "Scientists still do not fully know why it keeps that shape."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "One sea has no coastline at all.",
-    "facts": [
-      "The Sargasso Sea is in the middle of the Atlantic Ocean.",
-      "Ocean currents form its borders, not land.",
-      "It is famous for floating golden seaweed that covers huge areas."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Sudan has more pyramids than Egypt.",
-    "facts": [
-      "Egypt has more than one hundred pyramids.",
-      "But ancient kings in Sudan built more than two hundred.",
-      "They are smaller and steeper, and far fewer people visit them."
+      "Rare tulips became a craze in the Netherlands and prices went wild.",
+      "People traded contracts for bulbs still buried in the winter ground.",
+      "The market collapsed in weeks, and buyers were left holding onions."
     ],
     "cta": ""
   },
@@ -541,11 +21,31 @@
   },
   {
     "format": "single",
+    "hook": "The first animal in orbit was a stray dog.",
+    "facts": [
+      "She was picked up from the streets of Moscow and trained in weeks.",
+      "Engineers chose strays because they already coped with cold and hunger.",
+      "She reached orbit, and there was never any plan to bring her home."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
     "hook": "A boy invented the popsicle by accident.",
     "facts": [
       "In nineteen oh five, eleven-year-old Frank Epperson left a drink outside with a stick in it.",
       "It was a cold night, and by morning it had frozen solid.",
       "Years later he sold it as the Popsicle, and the name stuck around the world."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "The world's shortest flight can take under a minute.",
+    "facts": [
+      "Two islands in Scotland are linked by a scheduled flight in a small plane.",
+      "The hop between them is shorter than the runway at many big airports.",
+      "With a good wind behind it, the whole journey can take under a minute."
     ],
     "cta": ""
   },
@@ -561,21 +61,11 @@
   },
   {
     "format": "single",
-    "hook": "The Slinky was born from a falling spring.",
+    "hook": "Saudi Arabia does not have a single river.",
     "facts": [
-      "In nineteen forty-three, engineer Richard James was working with springs for ships.",
-      "One spring fell off a shelf and kept walking across the floor.",
-      "He turned it into a toy, and millions have been sold since."
-    ],
-    "cta": ""
-  },
-  {
-    "format": "single",
-    "hook": "Nobody wanted to use the first shopping carts.",
-    "facts": [
-      "Sylvan Goldman invented the shopping cart in nineteen thirty-seven.",
-      "Men thought it looked weak, and women thought it looked like a baby carriage.",
-      "So he paid people to push carts around his shops until everyone copied them."
+      "The whole country contains not one river that flows all year round.",
+      "Rain runs down dry valleys for a few hours and then vanishes.",
+      "Most drinking water is pulled from the sea and the salt taken out."
     ],
     "cta": ""
   },
@@ -591,11 +81,11 @@
   },
   {
     "format": "single",
-    "hook": "Cracking your knuckles does not cause arthritis.",
+    "hook": "The oldest known complaint is about bad copper.",
     "facts": [
-      "The popping sound comes from gas bubbles in the fluid of your joints.",
-      "One doctor cracked the knuckles of only his left hand for sixty years.",
-      "In the end, neither hand had arthritis, and he won a funny science prize for it."
+      "A customer in ancient Mesopotamia was sent the wrong grade of copper.",
+      "He pressed his anger into a clay tablet and had it delivered.",
+      "It survives, so the earliest complaint we have is about bad metal."
     ],
     "cta": ""
   },
@@ -611,11 +101,11 @@
   },
   {
     "format": "single",
-    "hook": "Oscar statues were once made of plaster.",
+    "hook": "One bridge is grown, not built.",
     "facts": [
-      "During World War Two, metal was needed for the war.",
-      "So for three years, winners got Oscars made of painted plaster.",
-      "After the war, they could trade them in for real metal ones."
+      "In north east India, people guide the roots of fig trees across rivers.",
+      "The roots are trained along frames for years until they reach the far bank.",
+      "The bridge then keeps growing, so it gets stronger instead of rotting."
     ],
     "cta": ""
   },
@@ -631,6 +121,16 @@
   },
   {
     "format": "single",
+    "hook": "A family turned a sea fort into a country.",
+    "facts": [
+      "An old wartime platform stands on stilts off the coast of England.",
+      "A family moved on, declared it a nation, and printed their own stamps.",
+      "No large country recognises it, but they have run it for decades."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
     "hook": "One tennis match lasted three days.",
     "facts": [
       "In twenty ten, John Isner and Nicolas Mahut played at Wimbledon.",
@@ -641,11 +141,11 @@
   },
   {
     "format": "single",
-    "hook": "Olympic gold medals are mostly silver.",
+    "hook": "Plants can hear themselves being eaten.",
     "facts": [
-      "The rules say a gold medal must contain at least six grams of gold.",
-      "The rest of the medal is made of silver.",
-      "The last medals made of solid gold were given in nineteen twelve."
+      "Researchers played the recorded sound of a caterpillar chewing leaves.",
+      "The plant heard the vibration and pushed out more of its defence chemicals.",
+      "Wind and insect song caused no such reaction, so it knew the difference."
     ],
     "cta": ""
   },
@@ -691,11 +191,351 @@
   },
   {
     "format": "single",
-    "hook": "One man is buried on the Moon.",
+    "hook": "Rubber was useless until someone burned it.",
     "facts": [
-      "Eugene Shoemaker was a scientist who studied craters and comets.",
-      "He dreamed of going to the Moon, but he never could.",
-      "In nineteen ninety-nine, a space probe carried some of his ashes there."
+      "Natural rubber turned sticky in summer and cracked hard in winter.",
+      "An inventor spent years failing, then dropped a mix onto a hot stove.",
+      "The heat locked it into something springy that held its shape in any weather."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Abraham Lincoln is in a wrestling hall of fame.",
+    "facts": [
+      "Long before he was president, Lincoln was a strong young wrestler.",
+      "Stories say he fought around three hundred matches and lost only one.",
+      "Today he is honored in the National Wrestling Hall of Fame in America."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Purple was royal because it came from snails.",
+    "facts": [
+      "It took many thousands of shellfish to colour a single royal robe.",
+      "The workshops stank so badly that they were pushed outside the city walls.",
+      "That is why purple meant power, since almost nobody could afford it."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A town called Boring has two sister towns.",
+    "facts": [
+      "Boring is a small town in Oregon, in the United States.",
+      "It became partners with a village in Scotland called Dull.",
+      "Later, a place in Australia joined them. Its name is Bland."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Some deserts have not seen rain for centuries.",
+    "facts": [
+      "Parts of the Atacama in Chile are the driest ground outside the poles.",
+      "Mountains on both sides block wet air before it can ever arrive.",
+      "The soil is so dry and dead that spacecraft are tested there for Mars."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "German chocolate cake is not from Germany.",
+    "facts": [
+      "It is named after an American man called Samuel German.",
+      "In eighteen fifty-two, he made a sweet baking chocolate for a company in America.",
+      "A cake recipe using his chocolate became famous, and people simply dropped his name's ending."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Mount Everest is still growing.",
+    "facts": [
+      "India is still pushing north into Asia and crumpling the ground upward.",
+      "The whole range rises by a few millimetres over the course of a year.",
+      "Earthquakes can undo some of it, so the official height keeps changing."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One planet has winds faster than sound.",
+    "facts": [
+      "Neptune is the windiest planet we know.",
+      "Its winds can blow at around two thousand kilometers per hour.",
+      "That is faster than the speed of sound here on Earth."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A hidden lake sits under the Antarctic ice.",
+    "facts": [
+      "Far below the surface, liquid water is trapped against the bedrock.",
+      "The weight of the ice above and heat from below stop it freezing solid.",
+      "It has been sealed off for millions of years, and life may still be in it."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Lemmings do not really jump off cliffs.",
+    "facts": [
+      "Many people believe lemmings follow each other off cliffs on purpose.",
+      "The idea became famous through a Disney nature film from nineteen fifty-eight.",
+      "The film crew is reported to have pushed the lemmings in themselves."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Golf balls fly farther because they are dented.",
+    "facts": [
+      "Players noticed that old scuffed balls travelled better than new smooth ones.",
+      "The dents hold a thin layer of turning air close against the surface.",
+      "That cuts the drag behind the ball, so makers began cutting them on purpose."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Medieval people knew the Earth was round.",
+    "facts": [
+      "Many think people in the Middle Ages believed in a flat Earth.",
+      "But scholars had known the Earth was round since ancient Greek times.",
+      "Kings were even painted holding a round ball that stood for the world."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One cricket match lasted twelve days and nobody won.",
+    "facts": [
+      "The two teams agreed to play on with no time limit until someone won.",
+      "Rain kept washing out play, and the scores crept along for nearly two weeks.",
+      "In the end the visitors had to leave to catch their ship home."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Your teeth cannot heal themselves.",
+    "facts": [
+      "Your skin and bones can repair damage, but tooth enamel cannot.",
+      "Enamel is the hardest thing in the human body.",
+      "But once it breaks or wears away, your body can never grow it back."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Van Gogh sold almost nothing while alive.",
+    "facts": [
+      "He painted hundreds of works in about ten years of very hard effort.",
+      "His brother sent him money and tried to interest dealers, with little luck.",
+      "Today a single one of those canvases can change hands for a fortune."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A Roman emperor declared war on the sea.",
+    "facts": [
+      "Ancient writers say the emperor Caligula marched his army to the coast.",
+      "Instead of fighting, he ordered the soldiers to collect seashells.",
+      "He called the shells treasure won from the sea, and took them back to Rome."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One country drives on both sides.",
+    "facts": [
+      "Most nations pick a side of the road and keep to it everywhere.",
+      "A short bridge on the Chinese border must swap traffic over as it crosses.",
+      "Cars cross over on a looping ramp so both systems can meet safely."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Leonardo da Vinci wrote backwards.",
+    "facts": [
+      "Most of his notes go from right to left.",
+      "To read them easily, you need to hold the page up to a mirror.",
+      "Nobody knows for sure why he did it, but he was left-handed."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One island has more sheep than people.",
+    "facts": [
+      "The Falklands keep a flock many times the size of the human population.",
+      "The land is windy grass, which suits wool far better than crops.",
+      "New Zealand once had a similar gap, though it has narrowed a lot."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One president served just thirty-one days.",
+    "facts": [
+      "William Henry Harrison became president of the United States in eighteen forty-one.",
+      "He gave the longest first speech ever, almost two hours long, in cold weather.",
+      "Weeks later he fell sick, and he died just one month into the job."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A tortoise outlived everyone who found it.",
+    "facts": [
+      "One was taken from the wild during the age of sailing ships.",
+      "It passed through several owners and outlasted every one of them.",
+      "It was still eating grass in a zoo after well over a century."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A duck's quack does echo.",
+    "facts": [
+      "For years, people said a duck's quack makes no echo.",
+      "In two thousand three, scientists in England tested it in a special room.",
+      "The quack does echo. It is just quiet and hard to hear."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Your computer comes from a weaving machine.",
+    "facts": [
+      "A loom used stiff cards with holes to set the pattern in the cloth.",
+      "Early computers borrowed the very same idea to hold their instructions.",
+      "So the way a jumper was patterned became the way a machine was told what to do."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A turtle cannot leave its shell.",
+    "facts": [
+      "Cartoons show turtles walking out of their shells.",
+      "But the shell is part of the turtle's skeleton.",
+      "Its backbone and ribs are joined to it, so the shell is part of its body."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Goats have rectangular eyes.",
+    "facts": [
+      "The dark part of a goat's eye is a wide horizontal slot, not a circle.",
+      "That shape gives a very broad view for spotting movement to the sides.",
+      "The eyes even rotate as the head lowers, so the slot stays level."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Male platypuses have poison in their legs.",
+    "facts": [
+      "On their back legs they have a sharp spike.",
+      "It can deliver a venom that is very painful to humans.",
+      "It is not deadly to people, but the pain can last for weeks."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Cows have best friends.",
+    "facts": [
+      "Farmers noticed that certain pairs graze and lie down together daily.",
+      "Split those two apart and the heart rate of both animals climbs.",
+      "Kept with a friend, a cow feeds better and gives more milk."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Saturn has a giant storm shaped like a hexagon.",
+    "facts": [
+      "At Saturn's north pole there is a cloud pattern with six straight sides.",
+      "Each side is longer than the width of Earth.",
+      "Scientists still do not fully know why it keeps that shape."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "The narwhal horn is really a tooth.",
+    "facts": [
+      "What looks like a spear is a single tooth pushed out through the lip.",
+      "It is packed with nerve endings, so the tusk can actually sense things.",
+      "Now and then a narwhal grows two, which means two front teeth outside."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "The Slinky was born from a falling spring.",
+    "facts": [
+      "In nineteen forty-three, engineer Richard James was working with springs for ships.",
+      "One spring fell off a shelf and kept walking across the floor.",
+      "He turned it into a toy, and millions have been sold since."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "In seahorses, the dads give birth.",
+    "facts": [
+      "The female places her eggs into a pouch on the front of the male.",
+      "He fertilises them inside, then carries and feeds them until they are ready.",
+      "When the time comes he pumps and tiny seahorses shoot out of the pouch."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Nobody wanted to use the first shopping carts.",
+    "facts": [
+      "Sylvan Goldman invented the shopping cart in nineteen thirty-seven.",
+      "Men thought it looked weak, and women thought it looked like a baby carriage.",
+      "So he paid people to push carts around his shops until everyone copied them."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A crocodile's tongue is stuck in place.",
+    "facts": [
+      "A band of skin holds the tongue flat against the floor of the mouth.",
+      "So the huge jaws open wide and the tongue never comes forward at all.",
+      "It also stops water pouring down the throat while the mouth is open."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Oscar statues were once made of plaster.",
+    "facts": [
+      "During World War Two, metal was needed for the war.",
+      "So for three years, winners got Oscars made of painted plaster.",
+      "After the war, they could trade them in for real metal ones."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Snakes hear with their jaw.",
+    "facts": [
+      "A snake has no outer ear opening at all on either side of the head.",
+      "Sound travels through the ground and into the bone of the lower jaw.",
+      "From there it reaches the inner ear, so the snake hears by feeling."
     ],
     "cta": ""
   },
@@ -711,6 +551,16 @@
   },
   {
     "format": "single",
+    "hook": "A famous sauce is made from rotted fish.",
+    "facts": [
+      "Worcestershire sauce starts with salted anchovies left to break down.",
+      "The story goes that a failed first batch was abandoned in a cellar.",
+      "Tasted again much later, it had turned into something people loved."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
     "hook": "Brazil touches almost every country in South America.",
     "facts": [
       "Brazil is so large it covers almost half of South America.",
@@ -721,11 +571,161 @@
   },
   {
     "format": "single",
-    "hook": "The pyramids were not built by slaves.",
+    "hook": "One spread is made from beer waste.",
     "facts": [
-      "Many films show slaves building the pyramids of Egypt.",
-      "But archaeologists found the villages where the builders lived.",
-      "They were paid workers, who ate bread, meat and beer, and got medical care."
+      "Brewing leaves behind a thick sludge of spent yeast at the bottom.",
+      "A scientist worked out that this waste could be turned into food paste.",
+      "So a strong salty spread on toast is really a brewery by-product."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Boycott was a real man's name.",
+    "facts": [
+      "He managed land in Ireland and pushed hard on the tenant farmers.",
+      "The whole community agreed to stop dealing with him in any way.",
+      "Shops refused him, workers walked off, and his surname became the verb."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A schoolteacher went over Niagara Falls in a barrel.",
+    "facts": [
+      "She was a teacher with no money and no experience of stunts at all.",
+      "She padded a wooden barrel, climbed in, and had the lid screwed down.",
+      "She survived, made very little money, and warned others never to try."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One hotel is built entirely out of salt.",
+    "facts": [
+      "It stands on a vast dried salt flat high in the mountains of Bolivia.",
+      "Walls, floors, chairs and beds are all cut from blocks of salt.",
+      "Guests are asked not to lick the walls, which apparently needs saying."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One library book came back a century late.",
+    "facts": [
+      "A borrower took it out and it simply stayed on a family shelf.",
+      "A descendant found it while clearing a house and posted it back.",
+      "The library waived the fine, which would have been an absurd sum."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One famous town has banned cars.",
+    "facts": [
+      "Zermatt sits under the Matterhorn and allows no petrol cars at all.",
+      "Visitors park in the next village down and finish the trip by train.",
+      "Inside the town everything moves by small electric cart or by horse."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A failed red paint created the first blue.",
+    "facts": [
+      "A workshop was boiling bones and waste to make a red pigment.",
+      "Something in the pot was contaminated and the batch came out deep blue.",
+      "That accident gave painters the first strong blue they could afford."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "The first bright purple dye was an accident.",
+    "facts": [
+      "A teenage chemist was trying to make a malaria treatment in his holidays.",
+      "He got a black sludge, and rinsing it left a brilliant purple stain.",
+      "He dropped medicine, sold the colour, and made himself very rich."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "A pig was once put on trial.",
+    "facts": [
+      "In the Middle Ages, animals could be taken to court like people.",
+      "In thirteen eighty-six, in the French town of Falaise, a pig was judged for a crime.",
+      "It was found guilty, and old stories say it was dressed in human clothes."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Michelangelo hated painting that famous ceiling.",
+    "facts": [
+      "He thought of himself as a sculptor and said painting was not his trade.",
+      "He worked standing, bent backwards, with plaster dripping onto his face.",
+      "He wrote a bitter poem about it while he was still up on the boards."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Toyota began by making weaving machines.",
+    "facts": [
+      "Toyota started life building automatic weaving machines for cloth.",
+      "The founder sold the rights to his best loom to fund something new.",
+      "That money paid for the first cars, and the family name stayed."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "One animal makes cube shaped droppings.",
+    "facts": [
+      "The wombat is the only creature known to produce square sided waste.",
+      "Its gut has stiff and stretchy patches that press the shape as it moves.",
+      "Cubes do not roll away, so they stay put as a scent marker on rocks."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Some snails sleep for three whole years.",
+    "facts": [
+      "In hot dry spells a snail seals its shell with a plug of dried slime.",
+      "Inside it slows almost to a stop and simply waits for the weather.",
+      "If the rain takes years to come, the snail can wait that long."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Silhouette was a hated finance minister.",
+    "facts": [
+      "He taxed the rich and pushed cheap living during a costly war.",
+      "People sneered that anything done on the cheap was done his way.",
+      "A shadow outline was the cheapest portrait, so it took his name."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Shakespeare put hundreds of words into English.",
+    "facts": [
+      "He needed words that did not exist, so he bent old ones into new shapes.",
+      "Many first appear in print in his plays and never left the language.",
+      "Some he only popularised, but the list of firsts is still enormous."
+    ],
+    "cta": ""
+  },
+  {
+    "format": "single",
+    "hook": "Some baobabs died after standing a thousand years.",
+    "facts": [
+      "The baobab stores water in a trunk wide enough to hollow into a room.",
+      "Some of the oldest ones have died suddenly in the last few decades.",
+      "Trees that stood for over a thousand years fell within a single year."
     ],
     "cta": ""
   }
