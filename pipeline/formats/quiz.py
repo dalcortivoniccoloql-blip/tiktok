@@ -35,11 +35,23 @@ DATA_P   = Path(__file__).parent / "data" / "countries.json"
 FLAGS    = BASE / "assets" / "flags"
 QUEUE_P  = PIPE / "queues" / "quiz.json"
 
-VOICE        = "en-US-AndrewMultilingualNeural"  # voce diversa dagli absurd facts (Ava). NB: "en-US-AndrewNeural" da 403 sul nuovo endpoint TTS (13/11/2026)
+VOICE        = "en-US-AndrewMultilingualNeural"  # voce diversa dagli absurd facts (Ava)
 KINDS        = ["flag", "capital", "bigger"]
 COUNTDOWN_S  = 3.0
 NO_REPEAT_VIDEOS = 15                 # un paese non torna come risposta prima di 15 quiz
 SEED         = 20261113
+
+# Capitali contese o con doppia capitale: niente domanda (un canale di trivia neutro
+# non deve "decidere" Gerusalemme, e Sucre/La Paz o Kotte/Colombo genera commenti "sbagliato").
+NO_CAPITAL_Q = {"il", "bo", "lk", "ci", "bj", "my"}
+
+# Bandiere quasi identiche: mai insieme tra le opzioni della stessa domanda.
+CONFUSABLE = [{"au", "nz"}, {"nl", "lu"}, {"td", "ro"}, {"id", "mc"}, {"id", "pl"}, {"mc", "pl"},
+              {"co", "ec"}, {"ie", "ci"}, {"sn", "ml"}, {"gn", "ml"}, {"si", "sk"}, {"sk", "ru"}, {"si", "ru"}]
+
+
+def _confusable(a: str, b: str) -> bool:
+    return {a, b} in CONFUSABLE
 
 HEADERS = {"flag": "GUESS THE FLAG", "capital": "GUESS THE CAPITAL", "bigger": "WHICH IS BIGGER?"}
 GRADIENTS = {  # (alto, basso) per tipo: ogni tipo si riconosce dal primo frame
@@ -81,6 +93,9 @@ def num_words(n: int) -> str:
 def load_countries() -> list[dict]:
     cs = json.loads(DATA_P.read_text(encoding="utf-8"))
     cs = [c for c in cs if c["population"] and (FLAGS / f"{c['cca2']}.png").exists()]
+    for c in cs:
+        if c["cca2"] in NO_CAPITAL_Q:
+            c["capital"] = None
     # difficolta' = notorieta' approssimata dalla popolazione
     ranked = sorted(cs, key=lambda c: -c["population"])
     for i, c in enumerate(ranked):
@@ -90,15 +105,17 @@ def load_countries() -> list[dict]:
 
 def _pick_options(rng, answer, pool, n, key):
     """n-1 distrattori: stessa regione se possibile, mai doppioni di testo."""
-    same = [c for c in pool if c is not answer and c["region"] == answer["region"] and c[key]]
-    other = [c for c in pool if c is not answer and c[key]]
+    ok = [c for c in pool if c is not answer and c[key] and not _confusable(c["cca2"], answer["cca2"])]
+    same = [c for c in ok if c["region"] == answer["region"]]
+    other = list(ok)
     rng.shuffle(same)
     rng.shuffle(other)
-    picked, seen = [], {answer[key]}
+    picked, seen, codes = [], {answer[key]}, [answer["cca2"]]
     for c in same + other:
-        if c[key] not in seen:
+        if c[key] not in seen and not any(_confusable(c["cca2"], x) for x in codes):
             picked.append(c[key])
             seen.add(c[key])
+            codes.append(c["cca2"])
         if len(picked) == n - 1:
             break
     opts = picked + [answer[key]]
@@ -127,7 +144,8 @@ def _q_capital(rng, cs, tier, used, i):
 
 
 def _q_bigger(rng, cs, tier, used, i):
-    lo, hi = [(1.4, 3.0), (1.1, 1.4), (1.02, 1.15)][i]
+    # minimo 6%: sotto, la risposta dipende dalla fonte (acque interne, territori contesi)
+    lo, hi = [(1.4, 3.0), (1.12, 1.4), (1.06, 1.2)][i]
     pool = [c for c in cs if c["tier"] <= max(tier, 1) and c["area_km2"] and c["cca2"] not in used]
     for _ in range(4000):
         a, b = rng.sample(pool, 2)
@@ -172,7 +190,27 @@ def build_queue(n_videos: int = 120) -> list[dict]:
         recent.append(this)
         queue.append({"format": "quiz", "kind": kind, "id": k + 1,
                       "title_idx": (k // len(KINDS)) % 3, "questions": qs})
+    _validate(queue, cs)
     return queue
+
+
+def _validate(queue: list[dict], cs: list[dict]) -> None:
+    """Fallisce la build se una regola di qualita' e' violata."""
+    by_name = {c["name"]: c["cca2"] for c in cs}
+    for it in queue:
+        for q in it["questions"]:
+            if it["kind"] == "flag":
+                codes = [by_name[o] for o in q["options"]]
+                for x in codes:
+                    for y in codes:
+                        assert not _confusable(x, y), f"quiz {it['id']}: bandiere gemelle {x}/{y}"
+            if it["kind"] == "capital":
+                assert q["show"][0] not in NO_CAPITAL_Q, f"quiz {it['id']}: capitale contesa"
+                assert not ({"Jerusalem"} & set(q["options"])), f"quiz {it['id']}: Gerusalemme"
+            if it["kind"] == "bigger":
+                a, b = sorted(q["areas"])
+                assert b / a >= 1.06, f"quiz {it['id']}: aree troppo vicine"
+            assert len(set(q["options"])) == len(q["options"]), f"quiz {it['id']}: opzioni doppie"
 
 
 def load_queue() -> list[dict]:
@@ -358,7 +396,7 @@ def _base(item, qi, mode):
     q = item["questions"][qi]
     img = _gradient(kind).convert("RGBA")
     d = ImageDraw.Draw(img)
-    _text_c(d, WIDTH / 2, 215, HEADERS[kind], 88, stroke=8)
+    _text_c(d, WIDTH / 2, 215, HEADERS[kind], 88, stroke=8, max_w=980)
     # progresso: 3 pallini
     for k in range(3):
         cx = WIDTH / 2 + (k - 1) * 70
@@ -391,7 +429,7 @@ def _base(item, qi, mode):
                 _text_c(d, cx, yb + 145, area, 48, fill=(253, 224, 71) if win else (209, 213, 219), stroke=5)
         _text_c(d, WIDTH / 2, 660, "VS", 72, fill=(253, 224, 71), stroke=8)
     if mode == "end":
-        _text_c(d, WIDTH / 2, 1560, "COMMENT YOUR SCORE!", 70, fill=(253, 224, 71), stroke=8)
+        _text_c(d, WIDTH / 2, 1560, "COMMENT YOUR SCORE!", 70, fill=(253, 224, 71), stroke=8, max_w=980)
     return img
 
 
