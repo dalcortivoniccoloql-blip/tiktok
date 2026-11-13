@@ -26,6 +26,8 @@ import sys
 from pathlib import Path
 
 PIPE = Path(__file__).parent
+sys.path.insert(0, str(PIPE))
+from extract_scripts import script_file_key  # noqa: E402
 
 NEW_SCRIPTS   = 30     # quanti script generare per volta (30 = 10 giorni a 3/giorno)
 BEATS_EACH    = 3      # beat per script nel formato single (il campo si chiama ancora "facts")
@@ -44,7 +46,7 @@ MODEL         = "claude-opus-5"     # massima accuratezza sui fatti (costo comun
 
 
 def _all_script_files() -> list[Path]:
-    return sorted(PIPE.glob("english_scripts*.json"))
+    return sorted(PIPE.glob("english_scripts*.json"), key=script_file_key)
 
 
 def _load_existing() -> list[dict]:

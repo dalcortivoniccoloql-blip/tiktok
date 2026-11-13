@@ -5,15 +5,23 @@ from pathlib import Path
 from docx import Document
 
 
+def script_file_key(path) -> int:
+    """Ordine numerico dei file: english_scripts.json = 1, _2 = 2, ..., _10 = 10.
+    Il sort alfabetico metterebbe _10 tra _1 e _2 e sposterebbe la numerazione
+    posizionale di tutti gli script gia' in coda."""
+    m = re.search(r"english_scripts_(\d+)\.json$", Path(path).name)
+    return int(m.group(1)) if m else 1
+
+
 def load_english_scripts(json_path) -> list[dict]:
     """
     Carica gli script inglesi da tutti i file english_scripts*.json nella stessa
-    cartella, in ordine alfabetico, e li rinumera in sequenza (1..N).
+    cartella, in ordine numerico di suffisso, e li rinumera in sequenza (1..N).
     Cosi' per aggiungere nuove curiosita' basta creare un nuovo file
     english_scripts_3.json, _4.json, ecc.
     """
     folder  = Path(json_path).parent
-    files   = sorted(folder.glob("english_scripts*.json"))
+    files   = sorted(folder.glob("english_scripts*.json"), key=script_file_key)
     scripts: list[dict] = []
     for f in files:
         with open(f, encoding="utf-8") as fh:
