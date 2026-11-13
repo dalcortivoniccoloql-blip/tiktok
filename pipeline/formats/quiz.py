@@ -43,7 +43,28 @@ SEED         = 20261113
 
 # Capitali contese o con doppia capitale: niente domanda (un canale di trivia neutro
 # non deve "decidere" Gerusalemme, e Sucre/La Paz o Kotte/Colombo genera commenti "sbagliato").
-NO_CAPITAL_Q = {"il", "bo", "lk", "ci", "bj", "my"}
+# Escluse anche (revisione a mano 13/11): Guinea Equatoriale (Ciudad de la Paz non
+# ancora capitale effettiva, Malabo lo e'), Eswatini (Lobamba/Mbabane), Burundi
+# (Gitega/Bujumbura), Yemen (Sana'a/Aden), Nauru (nessuna capitale ufficiale) e le
+# citta'-stato dove capitale = nome del paese (domanda banale).
+NO_CAPITAL_Q = {"il", "bo", "lk", "ci", "bj", "my", "gq", "sz", "bi", "ye", "nr",
+                "mc", "sg", "va", "lu", "dj"}
+CAPITAL_FIX = {"Ulan Bator": "Ulaanbaatar"}
+
+# Forme brevi SOLO a schermo (la voce legge il nome intero): col font del runner
+# "Saint Vincent and the Grenadines" non sta in un riquadro opzione nemmeno su 2 righe.
+SHORT_NAMES = {
+    "Saint Vincent and the Grenadines": "St Vincent & Grenadines",
+    "Saint Kitts and Nevis": "St Kitts & Nevis",
+    "Antigua and Barbuda": "Antigua & Barbuda",
+    "São Tomé and Príncipe": "São Tomé & Príncipe",
+    "Bosnia and Herzegovina": "Bosnia & Herzegovina",
+    "Trinidad and Tobago": "Trinidad & Tobago",
+}
+
+
+def short(name: str) -> str:
+    return SHORT_NAMES.get(name, name)
 
 # Bandiere quasi identiche: mai insieme tra le opzioni della stessa domanda.
 CONFUSABLE = [{"au", "nz"}, {"nl", "lu"}, {"td", "ro"}, {"id", "mc"}, {"id", "pl"}, {"mc", "pl"},
@@ -142,6 +163,8 @@ def load_countries() -> list[dict]:
     for c in cs:
         if c["cca2"] in NO_CAPITAL_Q:
             c["capital"] = None
+        elif c["capital"] in CAPITAL_FIX:
+            c["capital"] = CAPITAL_FIX[c["capital"]]
     # difficolta' = notorieta' approssimata dalla popolazione
     ranked = sorted(cs, key=lambda c: -c["population"])
     for i, c in enumerate(ranked):
@@ -445,25 +468,33 @@ def _text_c(draw, cx, cy, text, size, fill=WHITE, stroke=6, stroke_fill=(0, 0, 0
 
 
 def _fit(draw, text, size, max_w, min_size):
-    """Righe e font per far stare `text` in max_w: una riga se ci sta, altrimenti DUE
-    righe bilanciate, rimpicciolendo al massimo fino a min_size. Il font del runner
-    (DejaVu) e' ~15% piu' largo di Arial: col solo rimpicciolimento "DOMINICAN
+    """Righe e font per far stare `text` in max_w: una riga se ci sta, altrimenti 2 e
+    poi 3 righe bilanciate, rimpicciolendo al massimo fino a min_size. Il font del
+    runner (DejaVu) e' ~15% piu' largo di Arial: col solo rimpicciolimento "DOMINICAN
     REPUBLIC" diventava illeggibile (render del 13/11/2026 sul runner)."""
     f = _font(size)
     if draw.textlength(text, font=f) <= max_w:
         return [text], f, size
     words = text.split()
-    splits = [(" ".join(words[:i]), " ".join(words[i:])) for i in range(1, len(words))]
-    for s in range(size, min_size - 1, -2):
-        f = _font(s)
-        best = None
-        for a, b in splits:
-            w = max(draw.textlength(a, font=f), draw.textlength(b, font=f))
-            if w <= max_w and (best is None or w < best[0]):
-                best = (w, [a, b])
-        if best:
-            return best[1], f, s
-    s = size                                   # parola singola lunghissima: rimpicciolisci
+    n = len(words)
+    for nlines in (2, 3):
+        if n < nlines:
+            break
+        if nlines == 2:
+            splits = [[" ".join(words[:i]), " ".join(words[i:])] for i in range(1, n)]
+        else:
+            splits = [[" ".join(words[:i]), " ".join(words[i:j]), " ".join(words[j:])]
+                      for i in range(1, n - 1) for j in range(i + 1, n)]
+        for s in range(size, min_size - 1, -2):
+            f = _font(s)
+            best = None
+            for parts in splits:
+                w = max(draw.textlength(x, font=f) for x in parts)
+                if w <= max_w and (best is None or w < best[0]):
+                    best = (w, parts)
+            if best:
+                return best[1], f, s
+    s = size                                   # ultima risorsa: rimpicciolisci
     while draw.textlength(text, font=_font(s)) > max_w and s > 24:
         s -= 2
     return [text], _font(s), s
@@ -531,7 +562,7 @@ def _base(item, qi, mode):
         _paste_flag(img, q["show"][0], WIDTH / 2, 640, 860, 500)
     elif kind == "capital":
         _paste_flag(img, q["show"][0], WIDTH / 2, 590, 640, 380)
-        cname = q["country"].upper()
+        cname = short(q["country"]).upper()
         two = len(_fit(d, cname, 84, 980, 60)[0]) == 2
         _text_fit(d, WIDTH / 2, 915 if two else 870, cname, 84, 980, 60, stroke=8)
     if kind in ("flag", "capital"):
@@ -539,14 +570,14 @@ def _base(item, qi, mode):
                  (70, 1230, 520, 1370), (560, 1230, 1010, 1370)]
         for k, (box, opt) in enumerate(zip(boxes, q["options"])):
             st = "idle" if not revealed else ("right" if k == q["answer"] else "wrong")
-            _option_box(d, box, "ABCD"[k], opt, st)
+            _option_box(d, box, "ABCD"[k], short(opt), st)
     else:  # bigger: due bandiere affiancate, il nome sotto, l'area alla rivelazione
         for k, code in enumerate(q["show"]):
             cx = WIDTH / 2 + (k * 2 - 1) * 265
             win = revealed and k == q["answer"]
             border = (GREEN, 16) if win else ((WHITE, 8) if not revealed else ((75, 85, 99), 8))
             _, _, _, yb = _paste_flag(img, code, cx, 660, 380, 290, border)
-            name = q["options"][k].upper()
+            name = short(q["options"][k]).upper()
             two = len(_fit(d, name, 56, 440, 42)[0]) == 2
             _text_fit(d, cx, yb + (100 if two else 70), name, 56, 440, 42, stroke=6)
             if revealed:
