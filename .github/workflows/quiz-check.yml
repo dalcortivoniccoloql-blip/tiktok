@@ -1,0 +1,46 @@
+name: Controllo render quiz (non pubblica)
+
+# Prova del format quiz sul runner Linux PRIMA di accendere FORMAT_ROTATION:
+# font DejaVu, ffmpeg, TTS dagli IP USA dei runner. Genera i video e li carica
+# come artifact scaricabile. NON usa secret, NON carica su YouTube/Instagram,
+# NON tocca state.json. Si lancia solo a mano (Actions > questo workflow > Run).
+on:
+  workflow_dispatch:
+    inputs:
+      quiz:
+        description: "Numeri dei quiz da renderizzare (separati da spazio)"
+        default: "1 2 3"
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installa ffmpeg e font
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Installa dipendenze Python
+        run: pip install -r requirements.txt
+
+      - name: Render quiz
+        env:
+          QUIZ: ${{ inputs.quiz }}
+        run: python pipeline/formats/quiz.py render $QUIZ
+
+      - name: Carica i video come artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: quiz-render
+          path: output/quiz/*.mp4
+          retention-days: 7
