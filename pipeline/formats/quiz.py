@@ -50,6 +50,21 @@ CONFUSABLE = [{"au", "nz"}, {"nl", "lu"}, {"td", "ro"}, {"id", "mc"}, {"id", "pl
               {"co", "ec"}, {"ie", "ci"}, {"sn", "ml"}, {"gn", "ml"}, {"si", "sk"}, {"sk", "ru"}, {"si", "ru"}]
 
 
+# Paesi che in inglese vogliono l'articolo ("Is the Netherlands bigger...", "It's the Philippines!")
+THE_NAMES = {"Bahamas", "Central African Republic", "Comoros", "Congo", "DR Congo", "Dominican Republic",
+             "Gambia", "Maldives", "Marshall Islands", "Netherlands", "Philippines", "Seychelles",
+             "Solomon Islands", "United Arab Emirates", "United Kingdom", "United States"}
+
+
+def the(name: str) -> str:
+    """Nome dentro una frase parlata o un titolo (le opzioni a schermo restano nude)."""
+    return f"the {name}" if name in THE_NAMES else name
+
+
+def _cap(t: str) -> str:
+    return t[:1].upper() + t[1:]
+
+
 def _confusable(a: str, b: str) -> bool:
     return {a, b} in CONFUSABLE
 
@@ -63,6 +78,37 @@ GREEN = (22, 163, 74)
 WHITE = (255, 255, 255)
 INK   = (17, 24, 39)
 
+# Titoli SPECIFICI per video (decisione 2026-11-13): 3 titoli fissi per tipo si
+# sarebbero ripetuti ~13 volte in 120 giorni = il "template ripetitivo" che la
+# policy inauthentic content colpisce. Il titolo nasce dal contenuto del video.
+# Bandiere: mai il solo paese giusto nel titolo (svelerebbe la risposta) ->
+# risposta + un distrattore, in ordine casuale.
+TITLE_TEMPLATES = {
+    "flag": [
+        "{a} or {b}? Guess the flag",
+        "Is this the flag of {a} or {b}?",
+        "{a} or {b}? Most people get this flag wrong",
+        "Can you tell the {a} and {b} flags apart?",
+        "{a} or {b}? Name all 3 flags",
+    ],
+    "capital": [
+        "What's the capital of {c3}?",
+        "Do you know the capital of {c3}?",
+        "Capitals of {c1}, {c2} and {c3}: can you name them?",
+        "Most people miss the capital of {c3}",
+        "Name the capital of {c2} in 3 seconds",
+    ],
+    "bigger": [
+        "Is {a} bigger than {b}?",
+        "{a} or {b}: which country is bigger?",
+        "{a} vs {b}: which is bigger?",
+        "Which is bigger, {a} or {b}?",
+        "Bigger country: {a} or {b}?",
+    ],
+}
+TITLE_MAX = 100 - len(" #Shorts")
+
+# (legacy) titoli fissi: usati solo da code vecchie senza campo "title"
 TITLES = {
     "flag":    ["Can you guess all 3 flags?", "Guess the flag in 3 seconds", "Only flag experts get all 3"],
     "capital": ["Can you name these 3 capitals?", "Guess the capital in 3 seconds", "Most people miss the last capital"],
@@ -129,16 +175,16 @@ def _q_flag(rng, cs, tier, used, i):
     opts, ans = _pick_options(rng, a, cs, 4, "name")
     say_q = ["Can you name all three flags? First one.", "Second flag.", "Last one. This one is hard."][i]
     return {"show": [a["cca2"]], "options": opts, "answer": ans,
-            "say_q": say_q, "say_a": f"It's {a['name']}!"}, [a["cca2"]]
+            "say_q": say_q, "say_a": f"It's {the(a['name'])}!"}, [a["cca2"]]
 
 
 def _q_capital(rng, cs, tier, used, i):
     cand = [c for c in cs if c["tier"] == tier and c["capital"] and c["cca2"] not in used]
     a = rng.choice(cand)
     opts, ans = _pick_options(rng, a, cs, 4, "capital")
-    say_q = [f"Name all three capitals. What's the capital of {a['name']}?",
-             f"The capital of {a['name']}?",
-             f"Last one. The capital of {a['name']}?"][i]
+    say_q = [f"Name all three capitals. What's the capital of {the(a['name'])}?",
+             f"The capital of {the(a['name'])}?",
+             f"Last one. The capital of {the(a['name'])}?"][i]
     return {"show": [a["cca2"]], "country": a["name"], "options": opts, "answer": ans,
             "say_q": say_q, "say_a": f"{a['capital']}!"}, [a["cca2"]]
 
@@ -168,7 +214,7 @@ def _q_bigger(rng, cs, tier, used, i):
     say_q = ["Which country is bigger?", "And these two?", "Last one. Which is bigger?"][i]
     return {"show": [a["cca2"], b["cca2"]], "options": [a["name"], b["name"]], "answer": ans,
             "areas": [round(a["area_km2"]), round(b["area_km2"])],
-            "say_q": say_q, "say_a": f"{big['name']}, {tail}"}, [a["cca2"], b["cca2"]]
+            "say_q": say_q, "say_a": _cap(f"{the(big['name'])}, {tail}")}, [a["cca2"], b["cca2"]]
 
 
 _BUILDERS = {"flag": _q_flag, "capital": _q_capital, "bigger": _q_bigger}
@@ -179,6 +225,8 @@ def build_queue(n_videos: int = 120) -> list[dict]:
     cs = load_countries()
     recent: list[list[str]] = []
     queue = []
+    taken: set[str] = set()
+    rng_t = random.Random(SEED + 1)   # generatore separato: i titoli non spostano le domande
     for k in range(n_videos):
         kind = KINDS[k % len(KINDS)]
         used = {c for v in recent[-NO_REPEAT_VIDEOS:] for c in v}
@@ -188,14 +236,47 @@ def build_queue(n_videos: int = 120) -> list[dict]:
             qs.append(q)
             this += codes
         recent.append(this)
-        queue.append({"format": "quiz", "kind": kind, "id": k + 1,
-                      "title_idx": (k // len(KINDS)) % 3, "questions": qs})
+        item = {"format": "quiz", "kind": kind, "id": k + 1, "questions": qs}
+        item["title"] = _make_title(rng_t, item, k, taken)
+        queue.append(item)
     _validate(queue, cs)
     return queue
 
 
+def _make_title(rng, item: dict, k: int, taken: set) -> str:
+    """Primo titolo (template x domanda) che sta nei 92 caratteri e non e' gia' usato."""
+    kind, qs = item["kind"], item["questions"]
+    tpls = TITLE_TEMPLATES[kind]
+    start = (k // len(KINDS)) % len(tpls)
+    q_order = [2, 1, 0] if kind != "flag" else [(k // len(KINDS) + d) % 3 for d in range(3)]
+    for j in range(len(tpls)):
+        tpl = tpls[(start + j) % len(tpls)]
+        for qi in q_order:
+            q = qs[qi]
+            if kind == "flag":
+                right = q["options"][q["answer"]]
+                wrong = rng.choice([o for o in q["options"] if o != right])
+                a, b = (right, wrong) if rng.random() < 0.5 else (wrong, right)
+                t = _cap(tpl.format(a=the(a), b=the(b)))
+            elif kind == "capital":
+                c = [x["country"] for x in qs]
+                # il paese "di punta" ruota: {c3} prende quello della domanda qi
+                c1, c2, c3 = c[(qi + 1) % 3], c[(qi + 2) % 3], c[qi]
+                t = _cap(tpl.format(c1=the(c1), c2=the(c2), c3=the(c3)))
+            else:
+                a, b = q["options"]
+                t = _cap(tpl.format(a=the(a), b=the(b)))
+            if len(t) <= TITLE_MAX and t not in taken:
+                taken.add(t)
+                return t
+    raise RuntimeError(f"quiz {item['id']}: nessun titolo libero entro {TITLE_MAX} caratteri")
+
+
 def _validate(queue: list[dict], cs: list[dict]) -> None:
     """Fallisce la build se una regola di qualita' e' violata."""
+    titles = [it["title"] for it in queue]
+    dup = {t for t in titles if titles.count(t) > 1}
+    assert not dup, f"titoli doppi: {sorted(dup)[:3]}"
     by_name = {c["name"]: c["cca2"] for c in cs}
     for it in queue:
         for q in it["questions"]:
@@ -220,6 +301,8 @@ def load_queue() -> list[dict]:
 # ── metadati (titolo/descrizione/caption: neutri, niente "absurd facts") ──────
 
 def title(item: dict) -> str:
+    if item.get("title"):
+        return item["title"] + " #Shorts"
     return TITLES[item["kind"]][item.get("title_idx", 0) % 3] + " #Shorts"
 
 

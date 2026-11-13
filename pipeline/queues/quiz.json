@@ -3,7 +3,6 @@
   "format": "quiz",
   "kind": "flag",
   "id": 1,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -47,13 +46,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Kuwait!"
    }
-  ]
+  ],
+  "title": "Ethiopia or Guinea-Bissau? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 2,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -100,13 +99,13 @@
     "say_q": "Last one. The capital of Lebanon?",
     "say_a": "Beirut!"
    }
-  ]
+  ],
+  "title": "What's the capital of Lebanon?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 3,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -159,13 +158,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Slovakia, seventeen percent bigger!"
    }
-  ]
+  ],
+  "title": "Is the Netherlands bigger than Slovakia?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 4,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -209,13 +208,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's São Tomé and Príncipe!"
    }
-  ]
+  ],
+  "title": "Is this the flag of Peru or Cuba?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 5,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -262,13 +261,13 @@
     "say_q": "Last one. The capital of Moldova?",
     "say_a": "Chișinău!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Moldova?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 6,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -321,13 +320,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Suriname, eleven percent bigger!"
    }
-  ]
+  ],
+  "title": "Suriname or Bangladesh: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 7,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -371,13 +370,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Tuvalu!"
    }
-  ]
+  ],
+  "title": "The Marshall Islands or Tuvalu? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 8,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -424,13 +423,13 @@
     "say_q": "Last one. The capital of Equatorial Guinea?",
     "say_a": "Ciudad de la Paz!"
    }
-  ]
+  ],
+  "title": "Capitals of Ghana, Chad and Equatorial Guinea: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 9,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -483,13 +482,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "South Sudan, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "South Sudan vs France: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 10,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -533,13 +532,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Saint Vincent and the Grenadines!"
    }
-  ]
+  ],
+  "title": "Can you tell the Türkiye and Yemen flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 11,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -586,13 +585,13 @@
     "say_q": "Last one. The capital of Cyprus?",
     "say_a": "Nicosia!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of Cyprus"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 12,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -626,7 +625,7 @@
      185180
     ],
     "say_q": "And these two?",
-    "say_a": "United Kingdom, thirty-one percent bigger!"
+    "say_a": "The United Kingdom, thirty-one percent bigger!"
    },
    {
     "show": [
@@ -643,15 +642,15 @@
      2344858
     ],
     "say_q": "Last one. Which is bigger?",
-    "say_a": "DR Congo, nineteen percent bigger!"
+    "say_a": "The DR Congo, nineteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, Mexico or the DR Congo?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 13,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -693,15 +692,15 @@
     ],
     "answer": 3,
     "say_q": "Last one. This one is hard.",
-    "say_a": "It's Solomon Islands!"
+    "say_a": "It's the Solomon Islands!"
    }
-  ]
+  ],
+  "title": "Libya or Eswatini? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 14,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -748,13 +747,13 @@
     "say_q": "Last one. The capital of Trinidad and Tobago?",
     "say_a": "Port of Spain!"
    }
-  ]
+  ],
+  "title": "Name the capital of Laos in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 15,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -807,13 +806,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Oman, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Oman or Ecuador?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 16,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -855,15 +854,15 @@
     ],
     "answer": 0,
     "say_q": "Last one. This one is hard.",
-    "say_a": "It's Bahamas!"
+    "say_a": "It's the Bahamas!"
    }
-  ]
+  ],
+  "title": "The Bahamas or Belize? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 17,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -907,16 +906,16 @@
      "Moroni"
     ],
     "answer": 3,
-    "say_q": "Last one. The capital of Comoros?",
+    "say_q": "Last one. The capital of the Comoros?",
     "say_a": "Moroni!"
    }
-  ]
+  ],
+  "title": "What's the capital of the Comoros?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 18,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -969,13 +968,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Montenegro, nineteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Is Qatar bigger than Montenegro?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 19,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1003,7 +1002,7 @@
     ],
     "answer": 3,
     "say_q": "Second flag.",
-    "say_a": "It's Dominican Republic!"
+    "say_a": "It's the Dominican Republic!"
    },
    {
     "show": [
@@ -1019,13 +1018,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Liberia!"
    }
-  ]
+  ],
+  "title": "Is this the flag of Somalia or Nigeria?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 20,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1072,13 +1071,13 @@
     "say_q": "Last one. The capital of Micronesia?",
     "say_a": "Palikir!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Micronesia?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 21,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1131,13 +1130,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Lesotho, nine percent bigger!"
    }
-  ]
+  ],
+  "title": "Lesotho or Haiti: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 22,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -1179,15 +1178,15 @@
     ],
     "answer": 2,
     "say_q": "Last one. This one is hard.",
-    "say_a": "It's Central African Republic!"
+    "say_a": "It's the Central African Republic!"
    }
-  ]
+  ],
+  "title": "Mauritius or Burundi? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 23,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -1234,13 +1233,13 @@
     "say_q": "Last one. The capital of Belize?",
     "say_a": "Belmopan!"
    }
-  ]
+  ],
+  "title": "Capitals of China, Rwanda and Belize: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 24,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -1293,13 +1292,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Grenada, nine percent bigger!"
    }
-  ]
+  ],
+  "title": "Grenada vs Malta: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 25,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -1343,13 +1342,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's San Marino!"
    }
-  ]
+  ],
+  "title": "Can you tell the San Marino and Romania flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 26,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -1396,13 +1395,13 @@
     "say_q": "Last one. The capital of Palau?",
     "say_a": "Ngerulmud!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of Palau"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 27,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -1455,13 +1454,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Sweden, nineteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, Sweden or Japan?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 28,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1505,13 +1504,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Cape Verde!"
    }
-  ]
+  ],
+  "title": "Afghanistan or Bhutan? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 29,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1558,13 +1557,13 @@
     "say_q": "Last one. The capital of Slovakia?",
     "say_a": "Bratislava!"
    }
-  ]
+  ],
+  "title": "Name the capital of Czechia in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 30,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1617,13 +1616,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Croatia, eleven percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Costa Rica or Croatia?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 31,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -1667,13 +1666,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Barbados!"
    }
-  ]
+  ],
+  "title": "Benin or Algeria? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 32,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -1720,13 +1719,13 @@
     "say_q": "Last one. The capital of Ireland?",
     "say_a": "Dublin!"
    }
-  ]
+  ],
+  "title": "What's the capital of Ireland?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 33,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -1743,7 +1742,7 @@
      118484
     ],
     "say_q": "Which country is bigger?",
-    "say_a": "United Kingdom, about two times bigger!"
+    "say_a": "The United Kingdom, about two times bigger!"
    },
    {
     "show": [
@@ -1779,13 +1778,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Vanuatu, fourteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Is the Gambia bigger than Vanuatu?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 34,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -1829,13 +1828,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Oman!"
    }
-  ]
+  ],
+  "title": "Is this the flag of Bangladesh or Oman?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 35,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -1849,7 +1848,7 @@
      "Kinshasa"
     ],
     "answer": 3,
-    "say_q": "Name all three capitals. What's the capital of DR Congo?",
+    "say_q": "Name all three capitals. What's the capital of the DR Congo?",
     "say_a": "Kinshasa!"
    },
    {
@@ -1882,13 +1881,13 @@
     "say_q": "Last one. The capital of Estonia?",
     "say_a": "Tallinn!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Estonia?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 36,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -1941,13 +1940,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "New Zealand, fourteen percent bigger!"
    }
-  ]
+  ],
+  "title": "New Zealand or Laos: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 37,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -1991,13 +1990,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Kiribati!"
    }
-  ]
+  ],
+  "title": "Paraguay or Mexico? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 38,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -2041,16 +2040,16 @@
      "Bissau"
     ],
     "answer": 0,
-    "say_q": "Last one. The capital of Comoros?",
+    "say_q": "Last one. The capital of the Comoros?",
     "say_a": "Moroni!"
    }
-  ]
+  ],
+  "title": "Capitals of Kenya, Serbia and the Comoros: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 39,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -2103,13 +2102,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Ivory Coast, seven percent bigger!"
    }
-  ]
+  ],
+  "title": "Italy vs Ivory Coast: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 40,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -2153,13 +2152,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Eritrea!"
    }
-  ]
+  ],
+  "title": "Can you tell the Somalia and Egypt flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 41,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -2206,13 +2205,13 @@
     "say_q": "Last one. The capital of Equatorial Guinea?",
     "say_a": "Ciudad de la Paz!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of Equatorial Guinea"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 42,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -2263,15 +2262,15 @@
      28896
     ],
     "say_q": "Last one. Which is bigger?",
-    "say_a": "Solomon Islands, twelve percent bigger!"
+    "say_a": "The Solomon Islands, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, North Macedonia or the Solomon Islands?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 43,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -2315,13 +2314,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Guinea-Bissau!"
    }
-  ]
+  ],
+  "title": "Guinea-Bissau or Djibouti? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 44,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -2365,16 +2364,16 @@
      "Montevideo"
     ],
     "answer": 0,
-    "say_q": "Last one. The capital of Bahamas?",
+    "say_q": "Last one. The capital of the Bahamas?",
     "say_a": "Nassau!"
    }
-  ]
+  ],
+  "title": "Name the capital of Australia in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 45,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -2427,13 +2426,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Liberia, twenty percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Liberia or Hungary?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 46,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -2477,13 +2476,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Mauritania!"
    }
-  ]
+  ],
+  "title": "Poland or Belgium? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 47,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -2530,13 +2529,13 @@
     "say_q": "Last one. The capital of Nauru?",
     "say_a": "Yaren!"
    }
-  ]
+  ],
+  "title": "What's the capital of Nauru?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 48,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -2589,13 +2588,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Andorra, nine percent bigger!"
    }
-  ]
+  ],
+  "title": "Is Barbados bigger than Andorra?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 49,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -2623,7 +2622,7 @@
     ],
     "answer": 3,
     "say_q": "Second flag.",
-    "say_a": "It's Dominican Republic!"
+    "say_a": "It's the Dominican Republic!"
    },
    {
     "show": [
@@ -2639,13 +2638,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Iceland!"
    }
-  ]
+  ],
+  "title": "Is this the flag of El Salvador or the Dominican Republic?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 50,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -2692,13 +2691,13 @@
     "say_q": "Last one. The capital of Saint Vincent and the Grenadines?",
     "say_a": "Kingstown!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Saint Vincent and the Grenadines?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 51,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -2751,13 +2750,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Estonia, ten percent bigger!"
    }
-  ]
+  ],
+  "title": "Estonia or Switzerland: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 52,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -2801,13 +2800,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's São Tomé and Príncipe!"
    }
-  ]
+  ],
+  "title": "The Gambia or São Tomé and Príncipe? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 53,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -2854,13 +2853,13 @@
     "say_q": "Last one. The capital of Lesotho?",
     "say_a": "Maseru!"
    }
-  ]
+  ],
+  "title": "Capitals of Iran, Sweden and Lesotho: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 54,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -2877,7 +2876,7 @@
      108889
     ],
     "say_q": "Which country is bigger?",
-    "say_a": "United Kingdom, about two times bigger!"
+    "say_a": "The United Kingdom, about two times bigger!"
    },
    {
     "show": [
@@ -2913,13 +2912,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Belarus, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "Belarus vs Syria: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 55,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -2963,13 +2962,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Kiribati!"
    }
-  ]
+  ],
+  "title": "Can you tell the Georgia and South Korea flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 56,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3013,16 +3012,16 @@
      "N'Djamena"
     ],
     "answer": 2,
-    "say_q": "Last one. The capital of Comoros?",
+    "say_q": "Last one. The capital of the Comoros?",
     "say_a": "Moroni!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of the Comoros"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 57,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3075,13 +3074,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Moldova, eleven percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, Moldova or Belgium?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 58,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -3125,13 +3124,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Cape Verde!"
    }
-  ]
+  ],
+  "title": "Colombia or Venezuela? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 59,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -3160,7 +3159,7 @@
      "Tunis"
     ],
     "answer": 0,
-    "say_q": "The capital of Congo?",
+    "say_q": "The capital of the Congo?",
     "say_a": "Brazzaville!"
    },
    {
@@ -3178,13 +3177,13 @@
     "say_q": "Last one. The capital of Saint Lucia?",
     "say_a": "Castries!"
    }
-  ]
+  ],
+  "title": "Name the capital of the Congo in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 60,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -3237,13 +3236,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "New Zealand, thirteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Ghana or New Zealand?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 61,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -3287,13 +3286,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Equatorial Guinea!"
    }
-  ]
+  ],
+  "title": "Equatorial Guinea or Angola? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 62,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -3340,13 +3339,13 @@
     "say_q": "Last one. The capital of Liechtenstein?",
     "say_a": "Vaduz!"
    }
-  ]
+  ],
+  "title": "What's the capital of Liechtenstein?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 63,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -3399,13 +3398,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Costa Rica, nineteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Is Costa Rica bigger than Denmark?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 64,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3449,13 +3448,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Saint Kitts and Nevis!"
    }
-  ]
+  ],
+  "title": "Is this the flag of Bulgaria or Poland?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 65,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3502,13 +3501,13 @@
     "say_q": "Last one. The capital of Fiji?",
     "say_a": "Suva!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Fiji?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 66,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3561,13 +3560,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Palau, eighteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Palau or Saint Vincent and the Grenadines: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 67,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -3611,13 +3610,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Malta!"
    }
-  ]
+  ],
+  "title": "Austria or Croatia? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 68,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -3631,7 +3630,7 @@
      "Managua"
     ],
     "answer": 0,
-    "say_q": "Name all three capitals. What's the capital of United States?",
+    "say_q": "Name all three capitals. What's the capital of the United States?",
     "say_a": "Washington D.C.!"
    },
    {
@@ -3664,13 +3663,13 @@
     "say_q": "Last one. The capital of Ireland?",
     "say_a": "Dublin!"
    }
-  ]
+  ],
+  "title": "Capitals of the United States, Sierra Leone and Ireland: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 69,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -3723,13 +3722,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Gabon, thirteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Gabon vs Laos: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 70,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -3771,15 +3770,15 @@
     ],
     "answer": 1,
     "say_q": "Last one. This one is hard.",
-    "say_a": "It's Gambia!"
+    "say_a": "It's the Gambia!"
    }
-  ]
+  ],
+  "title": "Can you tell the the Gambia and Guinea-Bissau flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 71,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -3826,13 +3825,13 @@
     "say_q": "Last one. The capital of Barbados?",
     "say_a": "Bridgetown!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of Barbados"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 72,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -3883,15 +3882,15 @@
      551695
     ],
     "say_q": "Last one. Which is bigger?",
-    "say_a": "Central African Republic, thirteen percent bigger!"
+    "say_a": "The Central African Republic, thirteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, the Central African Republic or France?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 73,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3935,13 +3934,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Eritrea!"
    }
-  ]
+  ],
+  "title": "Afghanistan or Saudi Arabia? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 74,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -3988,13 +3987,13 @@
     "say_q": "Last one. The capital of Samoa?",
     "say_a": "Apia!"
    }
-  ]
+  ],
+  "title": "Name the capital of Chile in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 75,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -4047,13 +4046,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Moldova, fourteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Armenia or Moldova?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 76,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -4081,7 +4080,7 @@
     ],
     "answer": 3,
     "say_q": "Second flag.",
-    "say_a": "It's Congo!"
+    "say_a": "It's the Congo!"
    },
    {
     "show": [
@@ -4097,13 +4096,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Cape Verde!"
    }
-  ]
+  ],
+  "title": "Ghana or the Congo? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 77,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -4132,7 +4131,7 @@
      "Vilnius"
     ],
     "answer": 0,
-    "say_q": "The capital of Netherlands?",
+    "say_q": "The capital of the Netherlands?",
     "say_a": "Amsterdam!"
    },
    {
@@ -4147,16 +4146,16 @@
      "Luanda"
     ],
     "answer": 0,
-    "say_q": "Last one. The capital of Seychelles?",
+    "say_q": "Last one. The capital of the Seychelles?",
     "say_a": "Victoria!"
    }
-  ]
+  ],
+  "title": "What's the capital of the Seychelles?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 78,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -4173,7 +4172,7 @@
      242900
     ],
     "say_q": "Which country is bigger?",
-    "say_a": "United Kingdom, eighty-six percent bigger!"
+    "say_a": "The United Kingdom, eighty-six percent bigger!"
    },
    {
     "show": [
@@ -4209,13 +4208,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Kyrgyzstan, ten percent bigger!"
    }
-  ]
+  ],
+  "title": "Is Cambodia bigger than Kyrgyzstan?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 79,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -4259,13 +4258,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Lesotho!"
    }
-  ]
+  ],
+  "title": "Is this the flag of Lesotho or Chad?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 80,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -4312,13 +4311,13 @@
     "say_q": "Last one. The capital of El Salvador?",
     "say_a": "San Salvador!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of El Salvador?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 81,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -4371,13 +4370,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Guyana, nineteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Guyana or Uruguay: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 82,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -4391,7 +4390,7 @@
     ],
     "answer": 3,
     "say_q": "Can you name all three flags? First one.",
-    "say_a": "It's Philippines!"
+    "say_a": "It's the Philippines!"
    },
    {
     "show": [
@@ -4421,13 +4420,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's São Tomé and Príncipe!"
    }
-  ]
+  ],
+  "title": "The Philippines or Bangladesh? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 83,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -4474,13 +4473,13 @@
     "say_q": "Last one. The capital of Liechtenstein?",
     "say_a": "Vaduz!"
    }
-  ]
+  ],
+  "title": "Capitals of Uzbekistan, Senegal and Liechtenstein: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 84,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -4533,13 +4532,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Oman, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "Ecuador vs Oman: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 85,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -4553,7 +4552,7 @@
     ],
     "answer": 3,
     "say_q": "Can you name all three flags? First one.",
-    "say_a": "It's DR Congo!"
+    "say_a": "It's the DR Congo!"
    },
    {
     "show": [
@@ -4583,13 +4582,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Gabon!"
    }
-  ]
+  ],
+  "title": "Can you tell the Micronesia and Australia flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 86,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -4636,13 +4635,13 @@
     "say_q": "Last one. The capital of Bosnia and Herzegovina?",
     "say_a": "Sarajevo!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of Bosnia and Herzegovina"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 87,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -4695,13 +4694,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Vanuatu, seventeen percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, Vanuatu or Lebanon?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 88,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -4715,7 +4714,7 @@
     ],
     "answer": 1,
     "say_q": "Can you name all three flags? First one.",
-    "say_a": "It's United States!"
+    "say_a": "It's the United States!"
    },
    {
     "show": [
@@ -4745,13 +4744,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Djibouti!"
    }
-  ]
+  ],
+  "title": "Djibouti or Guinea-Bissau? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 89,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -4798,13 +4797,13 @@
     "say_q": "Last one. The capital of Georgia?",
     "say_a": "Tbilisi!"
    }
-  ]
+  ],
+  "title": "Name the capital of Switzerland in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 90,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -4857,13 +4856,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Myanmar, seventeen percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Myanmar or Kenya?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 91,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -4907,13 +4906,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Saint Vincent and the Grenadines!"
    }
-  ]
+  ],
+  "title": "Tanzania or Ivory Coast? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 92,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -4960,13 +4959,13 @@
     "say_q": "Last one. The capital of Cape Verde?",
     "say_a": "Praia!"
    }
-  ]
+  ],
+  "title": "What's the capital of Cape Verde?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 93,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5019,13 +5018,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Tunisia, eleven percent bigger!"
    }
-  ]
+  ],
+  "title": "Is Bangladesh bigger than Tunisia?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 94,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -5067,15 +5066,15 @@
     ],
     "answer": 3,
     "say_q": "Last one. This one is hard.",
-    "say_a": "It's Solomon Islands!"
+    "say_a": "It's the Solomon Islands!"
    }
-  ]
+  ],
+  "title": "Is this the flag of Hungary or Slovenia?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 95,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -5122,13 +5121,13 @@
     "say_q": "Last one. The capital of Palau?",
     "say_a": "Ngerulmud!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Palau?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 96,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -5181,13 +5180,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Equatorial Guinea, seven percent bigger!"
    }
-  ]
+  ],
+  "title": "Equatorial Guinea or Rwanda: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 97,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -5231,13 +5230,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Dominica!"
    }
-  ]
+  ],
+  "title": "Venezuela or Dominica? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 98,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -5251,7 +5250,7 @@
      "London"
     ],
     "answer": 3,
-    "say_q": "Name all three capitals. What's the capital of United Kingdom?",
+    "say_q": "Name all three capitals. What's the capital of the United Kingdom?",
     "say_a": "London!"
    },
    {
@@ -5284,13 +5283,13 @@
     "say_q": "Last one. The capital of Guinea-Bissau?",
     "say_a": "Bissau!"
    }
-  ]
+  ],
+  "title": "Capitals of the United Kingdom, Togo and Guinea-Bissau: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 99,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -5343,13 +5342,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Madagascar, eleven percent bigger!"
    }
-  ]
+  ],
+  "title": "Yemen vs Madagascar: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 100,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5393,13 +5392,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's San Marino!"
    }
-  ]
+  ],
+  "title": "Can you tell the Uzbekistan and Myanmar flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 101,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5446,13 +5445,13 @@
     "say_q": "Last one. The capital of Antigua and Barbuda?",
     "say_a": "Saint John's!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of Antigua and Barbuda"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 102,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5505,13 +5504,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Gabon, thirteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, Laos or Gabon?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 103,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -5553,15 +5552,15 @@
     ],
     "answer": 1,
     "say_q": "Last one. This one is hard.",
-    "say_a": "It's Bahamas!"
+    "say_a": "It's the Bahamas!"
    }
-  ]
+  ],
+  "title": "The Congo or Somalia? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 104,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -5590,7 +5589,7 @@
      "Havana"
     ],
     "answer": 0,
-    "say_q": "The capital of Dominican Republic?",
+    "say_q": "The capital of the Dominican Republic?",
     "say_a": "Santo Domingo!"
    },
    {
@@ -5608,13 +5607,13 @@
     "say_q": "Last one. The capital of Panama?",
     "say_a": "Panama City!"
    }
-  ]
+  ],
+  "title": "Name the capital of the Dominican Republic in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 105,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -5667,13 +5666,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Greece, seventeen percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Benin or Greece?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 106,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -5701,7 +5700,7 @@
     ],
     "answer": 0,
     "say_q": "Second flag.",
-    "say_a": "It's United Arab Emirates!"
+    "say_a": "It's the United Arab Emirates!"
    },
    {
     "show": [
@@ -5717,13 +5716,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Eritrea!"
    }
-  ]
+  ],
+  "title": "Benin or Eritrea? Guess the flag"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 107,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -5770,13 +5769,13 @@
     "say_q": "Last one. The capital of Micronesia?",
     "say_a": "Palikir!"
    }
-  ]
+  ],
+  "title": "What's the capital of Micronesia?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 108,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -5829,13 +5828,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Serbia, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "Is Serbia bigger than Czechia?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 109,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5879,13 +5878,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Mauritius!"
    }
-  ]
+  ],
+  "title": "Is this the flag of South Africa or Nigeria?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 110,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5932,13 +5931,13 @@
     "say_q": "Last one. The capital of Andorra?",
     "say_a": "Andorra la Vella!"
    }
-  ]
+  ],
+  "title": "Do you know the capital of Andorra?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 111,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -5991,13 +5990,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Palau, seven percent bigger!"
    }
-  ]
+  ],
+  "title": "Barbados or Palau: which country is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 112,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -6041,13 +6040,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Denmark!"
    }
-  ]
+  ],
+  "title": "Sweden or Belgium? Most people get this flag wrong"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 113,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -6094,13 +6093,13 @@
     "say_q": "Last one. The capital of Guyana?",
     "say_a": "Georgetown!"
    }
-  ]
+  ],
+  "title": "Capitals of Japan, Burkina Faso and Guyana: can you name them?"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 114,
-  "title_idx": 1,
   "questions": [
    {
     "show": [
@@ -6153,13 +6152,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Lithuania, fifteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Lithuania vs Croatia: which is bigger?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 115,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -6173,7 +6172,7 @@
     ],
     "answer": 3,
     "say_q": "Can you name all three flags? First one.",
-    "say_a": "It's DR Congo!"
+    "say_a": "It's the DR Congo!"
    },
    {
     "show": [
@@ -6203,13 +6202,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Bahrain!"
    }
-  ]
+  ],
+  "title": "Can you tell the Bahrain and China flags apart?"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 116,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -6256,13 +6255,13 @@
     "say_q": "Last one. The capital of San Marino?",
     "say_a": "City of San Marino!"
    }
-  ]
+  ],
+  "title": "Most people miss the capital of San Marino"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 117,
-  "title_idx": 2,
   "questions": [
    {
     "show": [
@@ -6315,13 +6314,13 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Finland, twelve percent bigger!"
    }
-  ]
+  ],
+  "title": "Which is bigger, Italy or Finland?"
  },
  {
   "format": "quiz",
   "kind": "flag",
   "id": 118,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -6365,13 +6364,13 @@
     "say_q": "Last one. This one is hard.",
     "say_a": "It's Botswana!"
    }
-  ]
+  ],
+  "title": "Nepal or Indonesia? Name all 3 flags"
  },
  {
   "format": "quiz",
   "kind": "capital",
   "id": 119,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -6418,13 +6417,13 @@
     "say_q": "Last one. The capital of Luxembourg?",
     "say_a": "Luxembourg!"
    }
-  ]
+  ],
+  "title": "Name the capital of Hungary in 3 seconds"
  },
  {
   "format": "quiz",
   "kind": "bigger",
   "id": 120,
-  "title_idx": 0,
   "questions": [
    {
     "show": [
@@ -6477,6 +6476,7 @@
     "say_q": "Last one. Which is bigger?",
     "say_a": "Guinea-Bissau, nineteen percent bigger!"
    }
-  ]
+  ],
+  "title": "Bigger country: Guinea-Bissau or Lesotho?"
  }
 ]
