@@ -1,0 +1,6482 @@
+[
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 1,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "et"
+    ],
+    "options": [
+     "Guinea-Bissau",
+     "Ethiopia",
+     "Egypt",
+     "Madagascar"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Ethiopia!"
+   },
+   {
+    "show": [
+     "ht"
+    ],
+    "options": [
+     "Canada",
+     "Haiti",
+     "Belize",
+     "Saint Kitts and Nevis"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Haiti!"
+   },
+   {
+    "show": [
+     "kw"
+    ],
+    "options": [
+     "Israel",
+     "Japan",
+     "Kuwait",
+     "Saudi Arabia"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Kuwait!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 2,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "sd"
+    ],
+    "country": "Sudan",
+    "options": [
+     "Khartoum",
+     "Tripoli",
+     "Asmara",
+     "Dodoma"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Sudan?",
+    "say_a": "Khartoum!"
+   },
+   {
+    "show": [
+     "cu"
+    ],
+    "country": "Cuba",
+    "options": [
+     "Georgetown",
+     "Havana",
+     "Kingstown",
+     "Bridgetown"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Cuba?",
+    "say_a": "Havana!"
+   },
+   {
+    "show": [
+     "mk"
+    ],
+    "country": "North Macedonia",
+    "options": [
+     "Andorra la Vella",
+     "Skopje",
+     "Stockholm",
+     "Paris"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of North Macedonia?",
+    "say_a": "Skopje!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 3,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "kr",
+     "ug"
+    ],
+    "options": [
+     "South Korea",
+     "Uganda"
+    ],
+    "answer": 1,
+    "areas": [
+     100210,
+     241550
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Uganda, about two times bigger!"
+   },
+   {
+    "show": [
+     "tg",
+     "cz"
+    ],
+    "options": [
+     "Togo",
+     "Czechia"
+    ],
+    "answer": 1,
+    "areas": [
+     56785,
+     78865
+    ],
+    "say_q": "And these two?",
+    "say_a": "Czechia, thirty-nine percent bigger!"
+   },
+   {
+    "show": [
+     "is",
+     "hu"
+    ],
+    "options": [
+     "Iceland",
+     "Hungary"
+    ],
+    "answer": 0,
+    "areas": [
+     103000,
+     93028
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Iceland, eleven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 4,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ar"
+    ],
+    "options": [
+     "Ecuador",
+     "Barbados",
+     "Argentina",
+     "Saint Vincent and the Grenadines"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Argentina!"
+   },
+   {
+    "show": [
+     "py"
+    ],
+    "options": [
+     "Venezuela",
+     "Suriname",
+     "Paraguay",
+     "Trinidad and Tobago"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Paraguay!"
+   },
+   {
+    "show": [
+     "hr"
+    ],
+    "options": [
+     "Norway",
+     "Switzerland",
+     "Greece",
+     "Croatia"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Croatia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 5,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "af"
+    ],
+    "country": "Afghanistan",
+    "options": [
+     "Kabul",
+     "Seoul",
+     "Colombo",
+     "New Delhi"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Afghanistan?",
+    "say_a": "Kabul!"
+   },
+   {
+    "show": [
+     "pt"
+    ],
+    "country": "Portugal",
+    "options": [
+     "Sofia",
+     "Lisbon",
+     "Chișinău",
+     "Prague"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Portugal?",
+    "say_a": "Lisbon!"
+   },
+   {
+    "show": [
+     "ws"
+    ],
+    "country": "Samoa",
+    "options": [
+     "Nuku'alofa",
+     "Apia",
+     "Majuro",
+     "Funafuti"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Samoa?",
+    "say_a": "Apia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 6,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ye",
+     "ne"
+    ],
+    "options": [
+     "Yemen",
+     "Niger"
+    ],
+    "answer": 1,
+    "areas": [
+     527968,
+     1267000
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Niger, about two times bigger!"
+   },
+   {
+    "show": [
+     "se",
+     "my"
+    ],
+    "options": [
+     "Sweden",
+     "Malaysia"
+    ],
+    "answer": 0,
+    "areas": [
+     450295,
+     330803
+    ],
+    "say_q": "And these two?",
+    "say_a": "Sweden, thirty-six percent bigger!"
+   },
+   {
+    "show": [
+     "it",
+     "pl"
+    ],
+    "options": [
+     "Italy",
+     "Poland"
+    ],
+    "answer": 1,
+    "areas": [
+     301336,
+     312679
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Poland, four percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 7,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ng"
+    ],
+    "options": [
+     "Nigeria",
+     "South Sudan",
+     "Sierra Leone",
+     "Ghana"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Nigeria!"
+   },
+   {
+    "show": [
+     "gn"
+    ],
+    "options": [
+     "Guinea",
+     "Benin",
+     "Somalia",
+     "Seychelles"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Guinea!"
+   },
+   {
+    "show": [
+     "md"
+    ],
+    "options": [
+     "Moldova",
+     "Czechia",
+     "Germany",
+     "Sweden"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Moldova!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 8,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "gh"
+    ],
+    "country": "Ghana",
+    "options": [
+     "Lilongwe",
+     "Libreville",
+     "Accra",
+     "Bangui"
+    ],
+    "answer": 2,
+    "say_q": "Name all three capitals. What's the capital of Ghana?",
+    "say_a": "Accra!"
+   },
+   {
+    "show": [
+     "gr"
+    ],
+    "country": "Greece",
+    "options": [
+     "Lisbon",
+     "Tallinn",
+     "London",
+     "Athens"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Greece?",
+    "say_a": "Athens!"
+   },
+   {
+    "show": [
+     "ag"
+    ],
+    "country": "Antigua and Barbuda",
+    "options": [
+     "Basseterre",
+     "Saint John's",
+     "Nassau",
+     "Kingston"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Antigua and Barbuda?",
+    "say_a": "Saint John's!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 9,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ua",
+     "vn"
+    ],
+    "options": [
+     "Ukraine",
+     "Vietnam"
+    ],
+    "answer": 0,
+    "areas": [
+     603500,
+     331212
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Ukraine, eighty-two percent bigger!"
+   },
+   {
+    "show": [
+     "mg",
+     "iq"
+    ],
+    "options": [
+     "Madagascar",
+     "Iraq"
+    ],
+    "answer": 0,
+    "areas": [
+     587041,
+     438317
+    ],
+    "say_q": "And these two?",
+    "say_a": "Madagascar, thirty-four percent bigger!"
+   },
+   {
+    "show": [
+     "mt",
+     "gd"
+    ],
+    "options": [
+     "Malta",
+     "Grenada"
+    ],
+    "answer": 1,
+    "areas": [
+     316,
+     344
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Grenada, nine percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 10,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ir"
+    ],
+    "options": [
+     "Cambodia",
+     "Iran",
+     "Japan",
+     "United Arab Emirates"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Iran!"
+   },
+   {
+    "show": [
+     "ae"
+    ],
+    "options": [
+     "United Arab Emirates",
+     "Saudi Arabia",
+     "Kuwait",
+     "Singapore"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's United Arab Emirates!"
+   },
+   {
+    "show": [
+     "li"
+    ],
+    "options": [
+     "Moldova",
+     "Denmark",
+     "Ireland",
+     "Liechtenstein"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Liechtenstein!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 11,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ci"
+    ],
+    "country": "Ivory Coast",
+    "options": [
+     "Yaoundé",
+     "Yamoussoukro",
+     "Dakar",
+     "Port Louis"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Ivory Coast?",
+    "say_a": "Yamoussoukro!"
+   },
+   {
+    "show": [
+     "at"
+    ],
+    "country": "Austria",
+    "options": [
+     "Chișinău",
+     "Warsaw",
+     "Vienna",
+     "Sarajevo"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Austria?",
+    "say_a": "Vienna!"
+   },
+   {
+    "show": [
+     "ad"
+    ],
+    "country": "Andorra",
+    "options": [
+     "Andorra la Vella",
+     "Stockholm",
+     "Vilnius",
+     "Zagreb"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Andorra?",
+    "say_a": "Andorra la Vella!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 12,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "by",
+     "bg"
+    ],
+    "options": [
+     "Belarus",
+     "Bulgaria"
+    ],
+    "answer": 0,
+    "areas": [
+     207600,
+     110879
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Belarus, eighty-seven percent bigger!"
+   },
+   {
+    "show": [
+     "tn",
+     "np"
+    ],
+    "options": [
+     "Tunisia",
+     "Nepal"
+    ],
+    "answer": 0,
+    "areas": [
+     163610,
+     147181
+    ],
+    "say_q": "And these two?",
+    "say_a": "Tunisia, eleven percent bigger!"
+   },
+   {
+    "show": [
+     "ke",
+     "ss"
+    ],
+    "options": [
+     "Kenya",
+     "South Sudan"
+    ],
+    "answer": 1,
+    "areas": [
+     580367,
+     619745
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "South Sudan, seven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 13,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "in"
+    ],
+    "options": [
+     "Laos",
+     "Thailand",
+     "United Arab Emirates",
+     "India"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's India!"
+   },
+   {
+    "show": [
+     "pg"
+    ],
+    "options": [
+     "Tonga",
+     "Palau",
+     "Papua New Guinea",
+     "New Zealand"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Papua New Guinea!"
+   },
+   {
+    "show": [
+     "jm"
+    ],
+    "options": [
+     "El Salvador",
+     "Antigua and Barbuda",
+     "Jamaica",
+     "Dominican Republic"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Jamaica!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 14,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ca"
+    ],
+    "country": "Canada",
+    "options": [
+     "Panama City",
+     "Havana",
+     "Kingston",
+     "Ottawa"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Canada?",
+    "say_a": "Ottawa!"
+   },
+   {
+    "show": [
+     "jo"
+    ],
+    "country": "Jordan",
+    "options": [
+     "Bandar Seri Begawan",
+     "Kuwait City",
+     "Kuala Lumpur",
+     "Amman"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Jordan?",
+    "say_a": "Amman!"
+   },
+   {
+    "show": [
+     "nz"
+    ],
+    "country": "New Zealand",
+    "options": [
+     "Port Vila",
+     "Wellington",
+     "Honiara",
+     "Port Moresby"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of New Zealand?",
+    "say_a": "Wellington!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 15,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "kz",
+     "au"
+    ],
+    "options": [
+     "Kazakhstan",
+     "Australia"
+    ],
+    "answer": 1,
+    "areas": [
+     2724900,
+     7692024
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Australia, about three times bigger!"
+   },
+   {
+    "show": [
+     "gt",
+     "tj"
+    ],
+    "options": [
+     "Guatemala",
+     "Tajikistan"
+    ],
+    "answer": 1,
+    "areas": [
+     108889,
+     143100
+    ],
+    "say_q": "And these two?",
+    "say_a": "Tajikistan, thirty-one percent bigger!"
+   },
+   {
+    "show": [
+     "ba",
+     "sk"
+    ],
+    "options": [
+     "Bosnia and Herzegovina",
+     "Slovakia"
+    ],
+    "answer": 0,
+    "areas": [
+     51209,
+     49037
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Bosnia and Herzegovina, four percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 16,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "pk"
+    ],
+    "options": [
+     "Myanmar",
+     "South Korea",
+     "Philippines",
+     "Pakistan"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Pakistan!"
+   },
+   {
+    "show": [
+     "be"
+    ],
+    "options": [
+     "Belgium",
+     "Bulgaria",
+     "Albania",
+     "Slovenia"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Belgium!"
+   },
+   {
+    "show": [
+     "om"
+    ],
+    "options": [
+     "Bangladesh",
+     "Oman",
+     "Iran",
+     "Qatar"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Oman!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 17,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "mx"
+    ],
+    "country": "Mexico",
+    "options": [
+     "Port-au-Prince",
+     "Havana",
+     "Tegucigalpa",
+     "Mexico City"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Mexico?",
+    "say_a": "Mexico City!"
+   },
+   {
+    "show": [
+     "ni"
+    ],
+    "country": "Nicaragua",
+    "options": [
+     "Kingston",
+     "Georgetown",
+     "Managua",
+     "Asunción"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Nicaragua?",
+    "say_a": "Managua!"
+   },
+   {
+    "show": [
+     "sz"
+    ],
+    "country": "Eswatini",
+    "options": [
+     "Kampala",
+     "Lobamba",
+     "Harare",
+     "Yamoussoukro"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Eswatini?",
+    "say_a": "Lobamba!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 18,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "sa",
+     "cl"
+    ],
+    "options": [
+     "Saudi Arabia",
+     "Chile"
+    ],
+    "answer": 0,
+    "areas": [
+     2149690,
+     756102
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Saudi Arabia, about three times bigger!"
+   },
+   {
+    "show": [
+     "zm",
+     "mm"
+    ],
+    "options": [
+     "Zambia",
+     "Myanmar"
+    ],
+    "answer": 0,
+    "areas": [
+     752612,
+     676578
+    ],
+    "say_q": "And these two?",
+    "say_a": "Zambia, eleven percent bigger!"
+   },
+   {
+    "show": [
+     "th",
+     "bw"
+    ],
+    "options": [
+     "Thailand",
+     "Botswana"
+    ],
+    "answer": 1,
+    "areas": [
+     513120,
+     582000
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Botswana, thirteen percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 19,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "dz"
+    ],
+    "options": [
+     "Lesotho",
+     "Botswana",
+     "Namibia",
+     "Algeria"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Algeria!"
+   },
+   {
+    "show": [
+     "bj"
+    ],
+    "options": [
+     "Eritrea",
+     "Benin",
+     "Ghana",
+     "Burundi"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Benin!"
+   },
+   {
+    "show": [
+     "dk"
+    ],
+    "options": [
+     "Albania",
+     "Latvia",
+     "Montenegro",
+     "Denmark"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Denmark!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 20,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cd"
+    ],
+    "country": "DR Congo",
+    "options": [
+     "Luanda",
+     "Kampala",
+     "Bissau",
+     "Kinshasa"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of DR Congo?",
+    "say_a": "Kinshasa!"
+   },
+   {
+    "show": [
+     "cg"
+    ],
+    "country": "Congo",
+    "options": [
+     "Maseru",
+     "Kigali",
+     "Brazzaville",
+     "Porto-Novo"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Congo?",
+    "say_a": "Brazzaville!"
+   },
+   {
+    "show": [
+     "sc"
+    ],
+    "country": "Seychelles",
+    "options": [
+     "Accra",
+     "Victoria",
+     "Libreville",
+     "Dakar"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Seychelles?",
+    "say_a": "Victoria!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 21,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cm",
+     "bf"
+    ],
+    "options": [
+     "Cameroon",
+     "Burkina Faso"
+    ],
+    "answer": 0,
+    "areas": [
+     475442,
+     272967
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Cameroon, seventy-four percent bigger!"
+   },
+   {
+    "show": [
+     "ph",
+     "jp"
+    ],
+    "options": [
+     "Philippines",
+     "Japan"
+    ],
+    "answer": 1,
+    "areas": [
+     342353,
+     377930
+    ],
+    "say_q": "And these two?",
+    "say_a": "Japan, ten percent bigger!"
+   },
+   {
+    "show": [
+     "ge",
+     "lk"
+    ],
+    "options": [
+     "Georgia",
+     "Sri Lanka"
+    ],
+    "answer": 0,
+    "areas": [
+     69700,
+     65610
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Georgia, six percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 22,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "fr"
+    ],
+    "options": [
+     "France",
+     "Slovenia",
+     "Germany",
+     "Greece"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's France!"
+   },
+   {
+    "show": [
+     "ly"
+    ],
+    "options": [
+     "Libya",
+     "Kenya",
+     "Djibouti",
+     "Senegal"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Libya!"
+   },
+   {
+    "show": [
+     "mv"
+    ],
+    "options": [
+     "Bahrain",
+     "United Arab Emirates",
+     "Oman",
+     "Maldives"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Maldives!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 23,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "pl"
+    ],
+    "country": "Poland",
+    "options": [
+     "Stockholm",
+     "Warsaw",
+     "Dublin",
+     "Ljubljana"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Poland?",
+    "say_a": "Warsaw!"
+   },
+   {
+    "show": [
+     "il"
+    ],
+    "country": "Israel",
+    "options": [
+     "Colombo",
+     "Bangkok",
+     "Amman",
+     "Jerusalem"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Israel?",
+    "say_a": "Jerusalem!"
+   },
+   {
+    "show": [
+     "me"
+    ],
+    "country": "Montenegro",
+    "options": [
+     "Podgorica",
+     "Rome",
+     "Vienna",
+     "Kyiv"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Montenegro?",
+    "say_a": "Podgorica!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 24,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "gh",
+     "so"
+    ],
+    "options": [
+     "Ghana",
+     "Somalia"
+    ],
+    "answer": 1,
+    "areas": [
+     238533,
+     637657
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Somalia, about three times bigger!"
+   },
+   {
+    "show": [
+     "gn",
+     "sy"
+    ],
+    "options": [
+     "Guinea",
+     "Syria"
+    ],
+    "answer": 0,
+    "areas": [
+     245857,
+     185180
+    ],
+    "say_q": "And these two?",
+    "say_a": "Guinea, thirty-three percent bigger!"
+   },
+   {
+    "show": [
+     "er",
+     "lr"
+    ],
+    "options": [
+     "Eritrea",
+     "Liberia"
+    ],
+    "answer": 0,
+    "areas": [
+     117600,
+     111369
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Eritrea, six percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 25,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "sd"
+    ],
+    "options": [
+     "Benin",
+     "Sudan",
+     "Djibouti",
+     "Angola"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Sudan!"
+   },
+   {
+    "show": [
+     "kp"
+    ],
+    "options": [
+     "Bangladesh",
+     "Türkiye",
+     "Sri Lanka",
+     "North Korea"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's North Korea!"
+   },
+   {
+    "show": [
+     "gy"
+    ],
+    "options": [
+     "Cuba",
+     "Bahamas",
+     "Dominica",
+     "Guyana"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Guyana!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 26,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "tz"
+    ],
+    "country": "Tanzania",
+    "options": [
+     "Port Louis",
+     "Asmara",
+     "Ciudad de la Paz",
+     "Dodoma"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Tanzania?",
+    "say_a": "Dodoma!"
+   },
+   {
+    "show": [
+     "bo"
+    ],
+    "country": "Bolivia",
+    "options": [
+     "San Salvador",
+     "Bridgetown",
+     "Sucre",
+     "Kingston"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Bolivia?",
+    "say_a": "Sucre!"
+   },
+   {
+    "show": [
+     "sr"
+    ],
+    "country": "Suriname",
+    "options": [
+     "Brasília",
+     "Saint John's",
+     "Paramaribo",
+     "Bridgetown"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Suriname?",
+    "say_a": "Paramaribo!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 27,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "bd",
+     "my"
+    ],
+    "options": [
+     "Bangladesh",
+     "Malaysia"
+    ],
+    "answer": 1,
+    "areas": [
+     147570,
+     330803
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Malaysia, about two times bigger!"
+   },
+   {
+    "show": [
+     "ae",
+     "hn"
+    ],
+    "options": [
+     "United Arab Emirates",
+     "Honduras"
+    ],
+    "answer": 1,
+    "areas": [
+     83600,
+     112492
+    ],
+    "say_q": "And these two?",
+    "say_a": "Honduras, thirty-five percent bigger!"
+   },
+   {
+    "show": [
+     "cz",
+     "at"
+    ],
+    "options": [
+     "Czechia",
+     "Austria"
+    ],
+    "answer": 1,
+    "areas": [
+     78865,
+     83871
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Austria, six percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 28,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "us"
+    ],
+    "options": [
+     "Grenada",
+     "United States",
+     "Honduras",
+     "Costa Rica"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's United States!"
+   },
+   {
+    "show": [
+     "py"
+    ],
+    "options": [
+     "Haiti",
+     "Paraguay",
+     "Cuba",
+     "Honduras"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Paraguay!"
+   },
+   {
+    "show": [
+     "gm"
+    ],
+    "options": [
+     "Somalia",
+     "Togo",
+     "Gambia",
+     "Kenya"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Gambia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 29,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ci"
+    ],
+    "country": "Ivory Coast",
+    "options": [
+     "Port Louis",
+     "Yamoussoukro",
+     "Brazzaville",
+     "Dodoma"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Ivory Coast?",
+    "say_a": "Yamoussoukro!"
+   },
+   {
+    "show": [
+     "rw"
+    ],
+    "country": "Rwanda",
+    "options": [
+     "Lusaka",
+     "Kigali",
+     "Banjul",
+     "Freetown"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Rwanda?",
+    "say_a": "Kigali!"
+   },
+   {
+    "show": [
+     "al"
+    ],
+    "country": "Albania",
+    "options": [
+     "Tirana",
+     "Bucharest",
+     "Skopje",
+     "Copenhagen"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Albania?",
+    "say_a": "Tirana!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 30,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "iq",
+     "gb"
+    ],
+    "options": [
+     "Iraq",
+     "United Kingdom"
+    ],
+    "answer": 0,
+    "areas": [
+     438317,
+     242900
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Iraq, eighty percent bigger!"
+   },
+   {
+    "show": [
+     "ca",
+     "br"
+    ],
+    "options": [
+     "Canada",
+     "Brazil"
+    ],
+    "answer": 0,
+    "areas": [
+     9984670,
+     8515767
+    ],
+    "say_q": "And these two?",
+    "say_a": "Canada, seventeen percent bigger!"
+   },
+   {
+    "show": [
+     "ws",
+     "lu"
+    ],
+    "options": [
+     "Samoa",
+     "Luxembourg"
+    ],
+    "answer": 0,
+    "areas": [
+     2842,
+     2586
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Samoa, ten percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 31,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ua"
+    ],
+    "options": [
+     "Ukraine",
+     "Ireland",
+     "Estonia",
+     "Moldova"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Ukraine!"
+   },
+   {
+    "show": [
+     "tn"
+    ],
+    "options": [
+     "Mali",
+     "Algeria",
+     "South Sudan",
+     "Tunisia"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Tunisia!"
+   },
+   {
+    "show": [
+     "bs"
+    ],
+    "options": [
+     "Trinidad and Tobago",
+     "Belize",
+     "Bolivia",
+     "Bahamas"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Bahamas!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 32,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "vn"
+    ],
+    "country": "Vietnam",
+    "options": [
+     "Abu Dhabi",
+     "Doha",
+     "Ashgabat",
+     "Hanoi"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Vietnam?",
+    "say_a": "Hanoi!"
+   },
+   {
+    "show": [
+     "kg"
+    ],
+    "country": "Kyrgyzstan",
+    "options": [
+     "Bishkek",
+     "Astana",
+     "Yerevan",
+     "Ashgabat"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Kyrgyzstan?",
+    "say_a": "Bishkek!"
+   },
+   {
+    "show": [
+     "is"
+    ],
+    "country": "Iceland",
+    "options": [
+     "Dublin",
+     "Athens",
+     "Lisbon",
+     "Reykjavik"
+    ],
+    "answer": 3,
+    "say_q": "Last one. The capital of Iceland?",
+    "say_a": "Reykjavik!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 33,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "hu",
+     "ec"
+    ],
+    "options": [
+     "Hungary",
+     "Ecuador"
+    ],
+    "answer": 1,
+    "areas": [
+     93028,
+     276841
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Ecuador, about three times bigger!"
+   },
+   {
+    "show": [
+     "ne",
+     "co"
+    ],
+    "options": [
+     "Niger",
+     "Colombia"
+    ],
+    "answer": 0,
+    "areas": [
+     1267000,
+     1141748
+    ],
+    "say_q": "And these two?",
+    "say_a": "Niger, eleven percent bigger!"
+   },
+   {
+    "show": [
+     "mw",
+     "gr"
+    ],
+    "options": [
+     "Malawi",
+     "Greece"
+    ],
+    "answer": 1,
+    "areas": [
+     118484,
+     131990
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Greece, eleven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 34,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ao"
+    ],
+    "options": [
+     "Angola",
+     "Zimbabwe",
+     "Equatorial Guinea",
+     "Burkina Faso"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Angola!"
+   },
+   {
+    "show": [
+     "ro"
+    ],
+    "options": [
+     "Romania",
+     "Czechia",
+     "Bulgaria",
+     "Belarus"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Romania!"
+   },
+   {
+    "show": [
+     "mn"
+    ],
+    "options": [
+     "Syria",
+     "Bangladesh",
+     "Mongolia",
+     "Kuwait"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Mongolia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 35,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ir"
+    ],
+    "country": "Iran",
+    "options": [
+     "Tashkent",
+     "Doha",
+     "Tehran",
+     "Jerusalem"
+    ],
+    "answer": 2,
+    "say_q": "Name all three capitals. What's the capital of Iran?",
+    "say_a": "Tehran!"
+   },
+   {
+    "show": [
+     "az"
+    ],
+    "country": "Azerbaijan",
+    "options": [
+     "Baku",
+     "Singapore",
+     "Thimphu",
+     "Dushanbe"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Azerbaijan?",
+    "say_a": "Baku!"
+   },
+   {
+    "show": [
+     "gq"
+    ],
+    "country": "Equatorial Guinea",
+    "options": [
+     "Ciudad de la Paz",
+     "Libreville",
+     "Gaborone",
+     "Addis Ababa"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Equatorial Guinea?",
+    "say_a": "Ciudad de la Paz!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 36,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ma",
+     "sn"
+    ],
+    "options": [
+     "Morocco",
+     "Senegal"
+    ],
+    "answer": 0,
+    "areas": [
+     446550,
+     196722
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Morocco, about two times bigger!"
+   },
+   {
+    "show": [
+     "pg",
+     "cg"
+    ],
+    "options": [
+     "Papua New Guinea",
+     "Congo"
+    ],
+    "answer": 0,
+    "areas": [
+     462840,
+     342000
+    ],
+    "say_q": "And these two?",
+    "say_a": "Papua New Guinea, thirty-five percent bigger!"
+   },
+   {
+    "show": [
+     "si",
+     "dj"
+    ],
+    "options": [
+     "Slovenia",
+     "Djibouti"
+    ],
+    "answer": 1,
+    "areas": [
+     20273,
+     23200
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Djibouti, fourteen percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 37,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ph"
+    ],
+    "options": [
+     "Georgia",
+     "Oman",
+     "Kuwait",
+     "Philippines"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Philippines!"
+   },
+   {
+    "show": [
+     "kh"
+    ],
+    "options": [
+     "Cambodia",
+     "Myanmar",
+     "Saudi Arabia",
+     "Pakistan"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Cambodia!"
+   },
+   {
+    "show": [
+     "gw"
+    ],
+    "options": [
+     "Djibouti",
+     "Equatorial Guinea",
+     "Guinea-Bissau",
+     "Ghana"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Guinea-Bissau!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 38,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "dz"
+    ],
+    "country": "Algeria",
+    "options": [
+     "Algiers",
+     "Bangui",
+     "Dodoma",
+     "Yaoundé"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Algeria?",
+    "say_a": "Algiers!"
+   },
+   {
+    "show": [
+     "tj"
+    ],
+    "country": "Tajikistan",
+    "options": [
+     "Dushanbe",
+     "Baku",
+     "Damascus",
+     "Kathmandu"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Tajikistan?",
+    "say_a": "Dushanbe!"
+   },
+   {
+    "show": [
+     "vc"
+    ],
+    "country": "Saint Vincent and the Grenadines",
+    "options": [
+     "Bogotá",
+     "Panama City",
+     "Kingstown",
+     "Saint John's"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Saint Vincent and the Grenadines?",
+    "say_a": "Kingstown!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 39,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cl",
+     "se"
+    ],
+    "options": [
+     "Chile",
+     "Sweden"
+    ],
+    "answer": 0,
+    "areas": [
+     756102,
+     450295
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Chile, sixty-eight percent bigger!"
+   },
+   {
+    "show": [
+     "cd",
+     "mx"
+    ],
+    "options": [
+     "DR Congo",
+     "Mexico"
+    ],
+    "answer": 0,
+    "areas": [
+     2344858,
+     1964375
+    ],
+    "say_q": "And these two?",
+    "say_a": "DR Congo, nineteen percent bigger!"
+   },
+   {
+    "show": [
+     "pw",
+     "ag"
+    ],
+    "options": [
+     "Palau",
+     "Antigua and Barbuda"
+    ],
+    "answer": 0,
+    "areas": [
+     459,
+     442
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Palau, four percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 40,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "it"
+    ],
+    "options": [
+     "Italy",
+     "Croatia",
+     "Andorra",
+     "Slovenia"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Italy!"
+   },
+   {
+    "show": [
+     "be"
+    ],
+    "options": [
+     "Belgium",
+     "Belarus",
+     "Bosnia and Herzegovina",
+     "Spain"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Belgium!"
+   },
+   {
+    "show": [
+     "om"
+    ],
+    "options": [
+     "Kazakhstan",
+     "Oman",
+     "Iran",
+     "China"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Oman!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 41,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "et"
+    ],
+    "country": "Ethiopia",
+    "options": [
+     "Gaborone",
+     "Algiers",
+     "Bamako",
+     "Addis Ababa"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Ethiopia?",
+    "say_a": "Addis Ababa!"
+   },
+   {
+    "show": [
+     "bf"
+    ],
+    "country": "Burkina Faso",
+    "options": [
+     "Gitega",
+     "Yaoundé",
+     "Asmara",
+     "Ouagadougou"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Burkina Faso?",
+    "say_a": "Ouagadougou!"
+   },
+   {
+    "show": [
+     "fj"
+    ],
+    "country": "Fiji",
+    "options": [
+     "Suva",
+     "Apia",
+     "Wellington",
+     "Honiara"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Fiji?",
+    "say_a": "Suva!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 42,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "sa",
+     "ml"
+    ],
+    "options": [
+     "Saudi Arabia",
+     "Mali"
+    ],
+    "answer": 0,
+    "areas": [
+     2149690,
+     1240192
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Saudi Arabia, seventy-three percent bigger!"
+   },
+   {
+    "show": [
+     "td",
+     "tz"
+    ],
+    "options": [
+     "Chad",
+     "Tanzania"
+    ],
+    "answer": 0,
+    "areas": [
+     1284000,
+     945087
+    ],
+    "say_q": "And these two?",
+    "say_a": "Chad, thirty-six percent bigger!"
+   },
+   {
+    "show": [
+     "by",
+     "la"
+    ],
+    "options": [
+     "Belarus",
+     "Laos"
+    ],
+    "answer": 1,
+    "areas": [
+     207600,
+     236800
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Laos, fourteen percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 43,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "pk"
+    ],
+    "options": [
+     "India",
+     "Malaysia",
+     "South Korea",
+     "Pakistan"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Pakistan!"
+   },
+   {
+    "show": [
+     "kz"
+    ],
+    "options": [
+     "Myanmar",
+     "Thailand",
+     "Kazakhstan",
+     "Kuwait"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Kazakhstan!"
+   },
+   {
+    "show": [
+     "lv"
+    ],
+    "options": [
+     "Spain",
+     "Croatia",
+     "Latvia",
+     "Portugal"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Latvia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 44,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "my"
+    ],
+    "country": "Malaysia",
+    "options": [
+     "Kuala Lumpur",
+     "Ankara",
+     "Naypyidaw",
+     "Tokyo"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Malaysia?",
+    "say_a": "Kuala Lumpur!"
+   },
+   {
+    "show": [
+     "ni"
+    ],
+    "country": "Nicaragua",
+    "options": [
+     "Port-au-Prince",
+     "Caracas",
+     "Georgetown",
+     "Managua"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Nicaragua?",
+    "say_a": "Managua!"
+   },
+   {
+    "show": [
+     "cy"
+    ],
+    "country": "Cyprus",
+    "options": [
+     "Nicosia",
+     "London",
+     "Oslo",
+     "Moscow"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Cyprus?",
+    "say_a": "Nicosia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 45,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "za",
+     "id"
+    ],
+    "options": [
+     "South Africa",
+     "Indonesia"
+    ],
+    "answer": 1,
+    "areas": [
+     1221037,
+     1904569
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Indonesia, fifty-six percent bigger!"
+   },
+   {
+    "show": [
+     "gn",
+     "sy"
+    ],
+    "options": [
+     "Guinea",
+     "Syria"
+    ],
+    "answer": 0,
+    "areas": [
+     245857,
+     185180
+    ],
+    "say_q": "And these two?",
+    "say_a": "Guinea, thirty-three percent bigger!"
+   },
+   {
+    "show": [
+     "mg",
+     "ss"
+    ],
+    "options": [
+     "Madagascar",
+     "South Sudan"
+    ],
+    "answer": 1,
+    "areas": [
+     587041,
+     619745
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "South Sudan, six percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 46,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ng"
+    ],
+    "options": [
+     "Nigeria",
+     "Cameroon",
+     "Comoros",
+     "Cape Verde"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Nigeria!"
+   },
+   {
+    "show": [
+     "sl"
+    ],
+    "options": [
+     "Central African Republic",
+     "Tunisia",
+     "Sierra Leone",
+     "Kenya"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Sierra Leone!"
+   },
+   {
+    "show": [
+     "lt"
+    ],
+    "options": [
+     "Cyprus",
+     "North Macedonia",
+     "Lithuania",
+     "Ireland"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Lithuania!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 47,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ua"
+    ],
+    "country": "Ukraine",
+    "options": [
+     "Kyiv",
+     "Zagreb",
+     "Dublin",
+     "Helsinki"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Ukraine?",
+    "say_a": "Kyiv!"
+   },
+   {
+    "show": [
+     "bo"
+    ],
+    "country": "Bolivia",
+    "options": [
+     "Montevideo",
+     "Nassau",
+     "Port-au-Prince",
+     "Sucre"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Bolivia?",
+    "say_a": "Sucre!"
+   },
+   {
+    "show": [
+     "er"
+    ],
+    "country": "Eritrea",
+    "options": [
+     "Bissau",
+     "Lobamba",
+     "Port Louis",
+     "Asmara"
+    ],
+    "answer": 3,
+    "say_q": "Last one. The capital of Eritrea?",
+    "say_a": "Asmara!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 48,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "tg",
+     "bd"
+    ],
+    "options": [
+     "Togo",
+     "Bangladesh"
+    ],
+    "answer": 1,
+    "areas": [
+     56785,
+     147570
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Bangladesh, about three times bigger!"
+   },
+   {
+    "show": [
+     "tr",
+     "eg"
+    ],
+    "options": [
+     "Türkiye",
+     "Egypt"
+    ],
+    "answer": 1,
+    "areas": [
+     783562,
+     1002450
+    ],
+    "say_q": "And these two?",
+    "say_a": "Egypt, twenty-eight percent bigger!"
+   },
+   {
+    "show": [
+     "nz",
+     "gb"
+    ],
+    "options": [
+     "New Zealand",
+     "United Kingdom"
+    ],
+    "answer": 0,
+    "areas": [
+     270467,
+     242900
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "New Zealand, eleven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 49,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "pl"
+    ],
+    "options": [
+     "Ireland",
+     "Germany",
+     "Poland",
+     "Monaco"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Poland!"
+   },
+   {
+    "show": [
+     "py"
+    ],
+    "options": [
+     "Bahamas",
+     "Paraguay",
+     "Antigua and Barbuda",
+     "Dominican Republic"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Paraguay!"
+   },
+   {
+    "show": [
+     "al"
+    ],
+    "options": [
+     "Albania",
+     "United Kingdom",
+     "Andorra",
+     "Denmark"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Albania!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 50,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ru"
+    ],
+    "country": "Russia",
+    "options": [
+     "Dublin",
+     "Moscow",
+     "Monaco",
+     "Kyiv"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Russia?",
+    "say_a": "Moscow!"
+   },
+   {
+    "show": [
+     "jo"
+    ],
+    "country": "Jordan",
+    "options": [
+     "Doha",
+     "Amman",
+     "Seoul",
+     "Tbilisi"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Jordan?",
+    "say_a": "Amman!"
+   },
+   {
+    "show": [
+     "sv"
+    ],
+    "country": "El Salvador",
+    "options": [
+     "San Salvador",
+     "Port of Spain",
+     "Panama City",
+     "Guatemala City"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of El Salvador?",
+    "say_a": "San Salvador!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 51,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ke",
+     "jp"
+    ],
+    "options": [
+     "Kenya",
+     "Japan"
+    ],
+    "answer": 0,
+    "areas": [
+     580367,
+     377930
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Kenya, fifty-four percent bigger!"
+   },
+   {
+    "show": [
+     "bj",
+     "at"
+    ],
+    "options": [
+     "Benin",
+     "Austria"
+    ],
+    "answer": 0,
+    "areas": [
+     112622,
+     83871
+    ],
+    "say_q": "And these two?",
+    "say_a": "Benin, thirty-four percent bigger!"
+   },
+   {
+    "show": [
+     "lk",
+     "ie"
+    ],
+    "options": [
+     "Sri Lanka",
+     "Ireland"
+    ],
+    "answer": 1,
+    "areas": [
+     65610,
+     70273
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Ireland, seven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 52,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ug"
+    ],
+    "options": [
+     "Uganda",
+     "Tunisia",
+     "Liberia",
+     "Djibouti"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Uganda!"
+   },
+   {
+    "show": [
+     "do"
+    ],
+    "options": [
+     "Mexico",
+     "Peru",
+     "Dominican Republic",
+     "Bahamas"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Dominican Republic!"
+   },
+   {
+    "show": [
+     "pa"
+    ],
+    "options": [
+     "Dominican Republic",
+     "Panama",
+     "Chile",
+     "Bahamas"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Panama!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 53,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "pe"
+    ],
+    "country": "Peru",
+    "options": [
+     "Washington D.C.",
+     "St. George's",
+     "Lima",
+     "Port-au-Prince"
+    ],
+    "answer": 2,
+    "say_q": "Name all three capitals. What's the capital of Peru?",
+    "say_a": "Lima!"
+   },
+   {
+    "show": [
+     "ro"
+    ],
+    "country": "Romania",
+    "options": [
+     "Ljubljana",
+     "Sofia",
+     "Brussels",
+     "Bucharest"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Romania?",
+    "say_a": "Bucharest!"
+   },
+   {
+    "show": [
+     "lu"
+    ],
+    "country": "Luxembourg",
+    "options": [
+     "Copenhagen",
+     "Lisbon",
+     "Prague",
+     "Luxembourg"
+    ],
+    "answer": 3,
+    "say_q": "Last one. The capital of Luxembourg?",
+    "say_a": "Luxembourg!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 54,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "vn",
+     "tm"
+    ],
+    "options": [
+     "Vietnam",
+     "Turkmenistan"
+    ],
+    "answer": 1,
+    "areas": [
+     331212,
+     488100
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Turkmenistan, forty-seven percent bigger!"
+   },
+   {
+    "show": [
+     "mw",
+     "tj"
+    ],
+    "options": [
+     "Malawi",
+     "Tajikistan"
+    ],
+    "answer": 1,
+    "areas": [
+     118484,
+     143100
+    ],
+    "say_q": "And these two?",
+    "say_a": "Tajikistan, twenty-one percent bigger!"
+   },
+   {
+    "show": [
+     "ee",
+     "nl"
+    ],
+    "options": [
+     "Estonia",
+     "Netherlands"
+    ],
+    "answer": 0,
+    "areas": [
+     45227,
+     41850
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Estonia, eight percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 55,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ar"
+    ],
+    "options": [
+     "Jamaica",
+     "Argentina",
+     "Brazil",
+     "Suriname"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Argentina!"
+   },
+   {
+    "show": [
+     "se"
+    ],
+    "options": [
+     "Luxembourg",
+     "Sweden",
+     "Montenegro",
+     "Latvia"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Sweden!"
+   },
+   {
+    "show": [
+     "mv"
+    ],
+    "options": [
+     "Syria",
+     "Kazakhstan",
+     "Maldives",
+     "Myanmar"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Maldives!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 56,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cd"
+    ],
+    "country": "DR Congo",
+    "options": [
+     "Kinshasa",
+     "Monrovia",
+     "Windhoek",
+     "N'Djamena"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of DR Congo?",
+    "say_a": "Kinshasa!"
+   },
+   {
+    "show": [
+     "so"
+    ],
+    "country": "Somalia",
+    "options": [
+     "Gitega",
+     "Mogadishu",
+     "Port Louis",
+     "Nouakchott"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Somalia?",
+    "say_a": "Mogadishu!"
+   },
+   {
+    "show": [
+     "lb"
+    ],
+    "country": "Lebanon",
+    "options": [
+     "Bandar Seri Begawan",
+     "Jerusalem",
+     "Beirut",
+     "Baghdad"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Lebanon?",
+    "say_a": "Beirut!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 57,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "kp",
+     "de"
+    ],
+    "options": [
+     "North Korea",
+     "Germany"
+    ],
+    "answer": 1,
+    "areas": [
+     120538,
+     357114
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Germany, about three times bigger!"
+   },
+   {
+    "show": [
+     "it",
+     "zw"
+    ],
+    "options": [
+     "Italy",
+     "Zimbabwe"
+    ],
+    "answer": 1,
+    "areas": [
+     301336,
+     390757
+    ],
+    "say_q": "And these two?",
+    "say_a": "Zimbabwe, thirty percent bigger!"
+   },
+   {
+    "show": [
+     "ae",
+     "hu"
+    ],
+    "options": [
+     "United Arab Emirates",
+     "Hungary"
+    ],
+    "answer": 1,
+    "areas": [
+     83600,
+     93028
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Hungary, eleven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 58,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ca"
+    ],
+    "options": [
+     "Saint Lucia",
+     "Suriname",
+     "Canada",
+     "Venezuela"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Canada!"
+   },
+   {
+    "show": [
+     "rw"
+    ],
+    "options": [
+     "Rwanda",
+     "Madagascar",
+     "Burkina Faso",
+     "Somalia"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Rwanda!"
+   },
+   {
+    "show": [
+     "dj"
+    ],
+    "options": [
+     "South Sudan",
+     "DR Congo",
+     "Liberia",
+     "Djibouti"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Djibouti!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 59,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ph"
+    ],
+    "country": "Philippines",
+    "options": [
+     "Ashgabat",
+     "Jakarta",
+     "Manila",
+     "Kabul"
+    ],
+    "answer": 2,
+    "say_q": "Name all three capitals. What's the capital of Philippines?",
+    "say_a": "Manila!"
+   },
+   {
+    "show": [
+     "kz"
+    ],
+    "country": "Kazakhstan",
+    "options": [
+     "Hanoi",
+     "Seoul",
+     "Beijing",
+     "Astana"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Kazakhstan?",
+    "say_a": "Astana!"
+   },
+   {
+    "show": [
+     "jm"
+    ],
+    "country": "Jamaica",
+    "options": [
+     "Kingston",
+     "Brasília",
+     "Panama City",
+     "Lima"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Jamaica?",
+    "say_a": "Kingston!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 60,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "td",
+     "mx"
+    ],
+    "options": [
+     "Chad",
+     "Mexico"
+    ],
+    "answer": 1,
+    "areas": [
+     1284000,
+     1964375
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Mexico, fifty-three percent bigger!"
+   },
+   {
+    "show": [
+     "sa",
+     "dz"
+    ],
+    "options": [
+     "Saudi Arabia",
+     "Algeria"
+    ],
+    "answer": 1,
+    "areas": [
+     2149690,
+     2381741
+    ],
+    "say_q": "And these two?",
+    "say_a": "Algeria, eleven percent bigger!"
+   },
+   {
+    "show": [
+     "bh",
+     "sg"
+    ],
+    "options": [
+     "Bahrain",
+     "Singapore"
+    ],
+    "answer": 0,
+    "areas": [
+     765,
+     710
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Bahrain, eight percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 61,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "us"
+    ],
+    "options": [
+     "Peru",
+     "United States",
+     "Suriname",
+     "Uruguay"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's United States!"
+   },
+   {
+    "show": [
+     "kg"
+    ],
+    "options": [
+     "Bhutan",
+     "Brunei",
+     "Kyrgyzstan",
+     "North Korea"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Kyrgyzstan!"
+   },
+   {
+    "show": [
+     "kw"
+    ],
+    "options": [
+     "Myanmar",
+     "Kuwait",
+     "Japan",
+     "Jordan"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Kuwait!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 62,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "mm"
+    ],
+    "country": "Myanmar",
+    "options": [
+     "Vientiane",
+     "Tehran",
+     "Naypyidaw",
+     "New Delhi"
+    ],
+    "answer": 2,
+    "say_q": "Name all three capitals. What's the capital of Myanmar?",
+    "say_a": "Naypyidaw!"
+   },
+   {
+    "show": [
+     "ht"
+    ],
+    "country": "Haiti",
+    "options": [
+     "Ottawa",
+     "Port-au-Prince",
+     "Panama City",
+     "San José"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Haiti?",
+    "say_a": "Port-au-Prince!"
+   },
+   {
+    "show": [
+     "sm"
+    ],
+    "country": "San Marino",
+    "options": [
+     "City of San Marino",
+     "Paris",
+     "Tirana",
+     "Brussels"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of San Marino?",
+    "say_a": "City of San Marino!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 63,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "by",
+     "es"
+    ],
+    "options": [
+     "Belarus",
+     "Spain"
+    ],
+    "answer": 1,
+    "areas": [
+     207600,
+     505992
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Spain, about two times bigger!"
+   },
+   {
+    "show": [
+     "gn",
+     "my"
+    ],
+    "options": [
+     "Guinea",
+     "Malaysia"
+    ],
+    "answer": 1,
+    "areas": [
+     245857,
+     330803
+    ],
+    "say_q": "And these two?",
+    "say_a": "Malaysia, thirty-five percent bigger!"
+   },
+   {
+    "show": [
+     "cr",
+     "hr"
+    ],
+    "options": [
+     "Costa Rica",
+     "Croatia"
+    ],
+    "answer": 1,
+    "areas": [
+     51100,
+     56594
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Croatia, eleven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 64,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ma"
+    ],
+    "options": [
+     "South Sudan",
+     "Namibia",
+     "Somalia",
+     "Morocco"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Morocco!"
+   },
+   {
+    "show": [
+     "pt"
+    ],
+    "options": [
+     "Lithuania",
+     "France",
+     "Estonia",
+     "Portugal"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Portugal!"
+   },
+   {
+    "show": [
+     "bn"
+    ],
+    "options": [
+     "Türkiye",
+     "Turkmenistan",
+     "Brunei",
+     "Afghanistan"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Brunei!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 65,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ye"
+    ],
+    "country": "Yemen",
+    "options": [
+     "Sana'a",
+     "Beirut",
+     "Ankara",
+     "Jerusalem"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Yemen?",
+    "say_a": "Sana'a!"
+   },
+   {
+    "show": [
+     "ly"
+    ],
+    "country": "Libya",
+    "options": [
+     "Djibouti",
+     "Tripoli",
+     "Porto-Novo",
+     "Juba"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Libya?",
+    "say_a": "Tripoli!"
+   },
+   {
+    "show": [
+     "st"
+    ],
+    "country": "São Tomé and Príncipe",
+    "options": [
+     "São Tomé",
+     "Rabat",
+     "Asmara",
+     "Juba"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of São Tomé and Príncipe?",
+    "say_a": "São Tomé!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 66,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "uz",
+     "pl"
+    ],
+    "options": [
+     "Uzbekistan",
+     "Poland"
+    ],
+    "answer": 0,
+    "areas": [
+     447400,
+     312679
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Uzbekistan, forty-three percent bigger!"
+   },
+   {
+    "show": [
+     "zm",
+     "af"
+    ],
+    "options": [
+     "Zambia",
+     "Afghanistan"
+    ],
+    "answer": 0,
+    "areas": [
+     752612,
+     652230
+    ],
+    "say_q": "And these two?",
+    "say_a": "Zambia, fifteen percent bigger!"
+   },
+   {
+    "show": [
+     "sv",
+     "bz"
+    ],
+    "options": [
+     "El Salvador",
+     "Belize"
+    ],
+    "answer": 1,
+    "areas": [
+     21041,
+     22966
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Belize, nine percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 67,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "gh"
+    ],
+    "options": [
+     "Ghana",
+     "Uganda",
+     "Angola",
+     "Mali"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Ghana!"
+   },
+   {
+    "show": [
+     "kh"
+    ],
+    "options": [
+     "Bhutan",
+     "India",
+     "Cambodia",
+     "Kuwait"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Cambodia!"
+   },
+   {
+    "show": [
+     "tt"
+    ],
+    "options": [
+     "Haiti",
+     "Dominica",
+     "Trinidad and Tobago",
+     "Panama"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Trinidad and Tobago!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 68,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "br"
+    ],
+    "country": "Brazil",
+    "options": [
+     "Brasília",
+     "Roseau",
+     "Basseterre",
+     "Lima"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Brazil?",
+    "say_a": "Brasília!"
+   },
+   {
+    "show": [
+     "at"
+    ],
+    "country": "Austria",
+    "options": [
+     "Vienna",
+     "Zagreb",
+     "Vilnius",
+     "Athens"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Austria?",
+    "say_a": "Vienna!"
+   },
+   {
+    "show": [
+     "fm"
+    ],
+    "country": "Micronesia",
+    "options": [
+     "South Tarawa",
+     "Nuku'alofa",
+     "Canberra",
+     "Palikir"
+    ],
+    "answer": 3,
+    "say_q": "Last one. The capital of Micronesia?",
+    "say_a": "Palikir!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 69,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "tn",
+     "lk"
+    ],
+    "options": [
+     "Tunisia",
+     "Sri Lanka"
+    ],
+    "answer": 0,
+    "areas": [
+     163610,
+     65610
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Tunisia, about two times bigger!"
+   },
+   {
+    "show": [
+     "py",
+     "ci"
+    ],
+    "options": [
+     "Paraguay",
+     "Ivory Coast"
+    ],
+    "answer": 0,
+    "areas": [
+     406752,
+     322463
+    ],
+    "say_q": "And these two?",
+    "say_a": "Paraguay, twenty-six percent bigger!"
+   },
+   {
+    "show": [
+     "am",
+     "bi"
+    ],
+    "options": [
+     "Armenia",
+     "Burundi"
+    ],
+    "answer": 0,
+    "areas": [
+     29743,
+     27834
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Armenia, seven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 70,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "sd"
+    ],
+    "options": [
+     "Tunisia",
+     "Sudan",
+     "Liberia",
+     "Chad"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Sudan!"
+   },
+   {
+    "show": [
+     "ne"
+    ],
+    "options": [
+     "Tanzania",
+     "Mauritius",
+     "Mozambique",
+     "Niger"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Niger!"
+   },
+   {
+    "show": [
+     "gq"
+    ],
+    "options": [
+     "South Africa",
+     "Equatorial Guinea",
+     "Somalia",
+     "Mozambique"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Equatorial Guinea!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 71,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "iq"
+    ],
+    "country": "Iraq",
+    "options": [
+     "Colombo",
+     "Baghdad",
+     "New Delhi",
+     "Islamabad"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Iraq?",
+    "say_a": "Baghdad!"
+   },
+   {
+    "show": [
+     "ro"
+    ],
+    "country": "Romania",
+    "options": [
+     "Bucharest",
+     "Andorra la Vella",
+     "Rome",
+     "Bratislava"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Romania?",
+    "say_a": "Bucharest!"
+   },
+   {
+    "show": [
+     "is"
+    ],
+    "country": "Iceland",
+    "options": [
+     "Bratislava",
+     "Vaduz",
+     "Reykjavik",
+     "Andorra la Vella"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Iceland?",
+    "say_a": "Reykjavik!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 72,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "rs",
+     "sy"
+    ],
+    "options": [
+     "Serbia",
+     "Syria"
+    ],
+    "answer": 1,
+    "areas": [
+     88361,
+     185180
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Syria, about two times bigger!"
+   },
+   {
+    "show": [
+     "bj",
+     "az"
+    ],
+    "options": [
+     "Benin",
+     "Azerbaijan"
+    ],
+    "answer": 0,
+    "areas": [
+     112622,
+     86600
+    ],
+    "say_q": "And these two?",
+    "say_a": "Benin, thirty percent bigger!"
+   },
+   {
+    "show": [
+     "pw",
+     "ag"
+    ],
+    "options": [
+     "Palau",
+     "Antigua and Barbuda"
+    ],
+    "answer": 0,
+    "areas": [
+     459,
+     442
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Palau, four percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 73,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cn"
+    ],
+    "options": [
+     "North Korea",
+     "Timor-Leste",
+     "China",
+     "Kuwait"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's China!"
+   },
+   {
+    "show": [
+     "np"
+    ],
+    "options": [
+     "India",
+     "Syria",
+     "Nepal",
+     "Philippines"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Nepal!"
+   },
+   {
+    "show": [
+     "fi"
+    ],
+    "options": [
+     "Belarus",
+     "Finland",
+     "Malta",
+     "Russia"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Finland!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 74,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "mz"
+    ],
+    "country": "Mozambique",
+    "options": [
+     "Asmara",
+     "Maputo",
+     "Gaborone",
+     "Antananarivo"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Mozambique?",
+    "say_a": "Maputo!"
+   },
+   {
+    "show": [
+     "se"
+    ],
+    "country": "Sweden",
+    "options": [
+     "Luxembourg",
+     "Podgorica",
+     "Stockholm",
+     "Copenhagen"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Sweden?",
+    "say_a": "Stockholm!"
+   },
+   {
+    "show": [
+     "gd"
+    ],
+    "country": "Grenada",
+    "options": [
+     "St. George's",
+     "Tegucigalpa",
+     "Brasília",
+     "Santiago"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Grenada?",
+    "say_a": "St. George's!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 75,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "fr",
+     "za"
+    ],
+    "options": [
+     "France",
+     "South Africa"
+    ],
+    "answer": 1,
+    "areas": [
+     551695,
+     1221037
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "South Africa, about two times bigger!"
+   },
+   {
+    "show": [
+     "co",
+     "ng"
+    ],
+    "options": [
+     "Colombia",
+     "Nigeria"
+    ],
+    "answer": 0,
+    "areas": [
+     1141748,
+     923768
+    ],
+    "say_q": "And these two?",
+    "say_a": "Colombia, twenty-four percent bigger!"
+   },
+   {
+    "show": [
+     "eg",
+     "bo"
+    ],
+    "options": [
+     "Egypt",
+     "Bolivia"
+    ],
+    "answer": 1,
+    "areas": [
+     1002450,
+     1098581
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Bolivia, ten percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 76,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "th"
+    ],
+    "options": [
+     "Timor-Leste",
+     "Laos",
+     "Kyrgyzstan",
+     "Thailand"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Thailand!"
+   },
+   {
+    "show": [
+     "cl"
+    ],
+    "options": [
+     "Guatemala",
+     "Chile",
+     "Paraguay",
+     "Grenada"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Chile!"
+   },
+   {
+    "show": [
+     "er"
+    ],
+    "options": [
+     "Eritrea",
+     "Morocco",
+     "Libya",
+     "Mauritania"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Eritrea!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 77,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "mg"
+    ],
+    "country": "Madagascar",
+    "options": [
+     "Juba",
+     "Accra",
+     "Mogadishu",
+     "Antananarivo"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Madagascar?",
+    "say_a": "Antananarivo!"
+   },
+   {
+    "show": [
+     "hu"
+    ],
+    "country": "Hungary",
+    "options": [
+     "Dublin",
+     "Vaduz",
+     "City of San Marino",
+     "Budapest"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Hungary?",
+    "say_a": "Budapest!"
+   },
+   {
+    "show": [
+     "ws"
+    ],
+    "country": "Samoa",
+    "options": [
+     "Apia",
+     "Nuku'alofa",
+     "Yaren",
+     "Port Moresby"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Samoa?",
+    "say_a": "Apia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 78,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "sa",
+     "tz"
+    ],
+    "options": [
+     "Saudi Arabia",
+     "Tanzania"
+    ],
+    "answer": 0,
+    "areas": [
+     2149690,
+     945087
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Saudi Arabia, about two times bigger!"
+   },
+   {
+    "show": [
+     "rw",
+     "il"
+    ],
+    "options": [
+     "Rwanda",
+     "Israel"
+    ],
+    "answer": 0,
+    "areas": [
+     26338,
+     20770
+    ],
+    "say_q": "And these two?",
+    "say_a": "Rwanda, twenty-seven percent bigger!"
+   },
+   {
+    "show": [
+     "jm",
+     "lb"
+    ],
+    "options": [
+     "Jamaica",
+     "Lebanon"
+    ],
+    "answer": 0,
+    "areas": [
+     10991,
+     10452
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Jamaica, five percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 79,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "et"
+    ],
+    "options": [
+     "Algeria",
+     "Rwanda",
+     "Madagascar",
+     "Ethiopia"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Ethiopia!"
+   },
+   {
+    "show": [
+     "tm"
+    ],
+    "options": [
+     "Jordan",
+     "Turkmenistan",
+     "Thailand",
+     "Yemen"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Turkmenistan!"
+   },
+   {
+    "show": [
+     "kn"
+    ],
+    "options": [
+     "Panama",
+     "Argentina",
+     "United States",
+     "Saint Kitts and Nevis"
+    ],
+    "answer": 3,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Saint Kitts and Nevis!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 80,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ao"
+    ],
+    "country": "Angola",
+    "options": [
+     "Port Louis",
+     "Khartoum",
+     "Windhoek",
+     "Luanda"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Angola?",
+    "say_a": "Luanda!"
+   },
+   {
+    "show": [
+     "gt"
+    ],
+    "country": "Guatemala",
+    "options": [
+     "Montevideo",
+     "Guatemala City",
+     "Tegucigalpa",
+     "Ottawa"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Guatemala?",
+    "say_a": "Guatemala City!"
+   },
+   {
+    "show": [
+     "dj"
+    ],
+    "country": "Djibouti",
+    "options": [
+     "Rabat",
+     "Djibouti",
+     "Victoria",
+     "Dodoma"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Djibouti?",
+    "say_a": "Djibouti!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 81,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "hn",
+     "gn"
+    ],
+    "options": [
+     "Honduras",
+     "Guinea"
+    ],
+    "answer": 1,
+    "areas": [
+     112492,
+     245857
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Guinea, about two times bigger!"
+   },
+   {
+    "show": [
+     "bd",
+     "cu"
+    ],
+    "options": [
+     "Bangladesh",
+     "Cuba"
+    ],
+    "answer": 0,
+    "areas": [
+     147570,
+     109884
+    ],
+    "say_q": "And these two?",
+    "say_a": "Bangladesh, thirty-four percent bigger!"
+   },
+   {
+    "show": [
+     "gw",
+     "md"
+    ],
+    "options": [
+     "Guinea-Bissau",
+     "Moldova"
+    ],
+    "answer": 0,
+    "areas": [
+     36125,
+     33846
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Guinea-Bissau, seven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 82,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "id"
+    ],
+    "options": [
+     "Kyrgyzstan",
+     "Iraq",
+     "Indonesia",
+     "North Korea"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Indonesia!"
+   },
+   {
+    "show": [
+     "bf"
+    ],
+    "options": [
+     "Sierra Leone",
+     "Eswatini",
+     "Djibouti",
+     "Burkina Faso"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Burkina Faso!"
+   },
+   {
+    "show": [
+     "mk"
+    ],
+    "options": [
+     "Denmark",
+     "North Macedonia",
+     "Belarus",
+     "Italy"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's North Macedonia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 83,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "my"
+    ],
+    "country": "Malaysia",
+    "options": [
+     "Tokyo",
+     "Kuala Lumpur",
+     "Jakarta",
+     "Colombo"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Malaysia?",
+    "say_a": "Kuala Lumpur!"
+   },
+   {
+    "show": [
+     "so"
+    ],
+    "country": "Somalia",
+    "options": [
+     "Tunis",
+     "Mogadishu",
+     "Banjul",
+     "Antananarivo"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Somalia?",
+    "say_a": "Mogadishu!"
+   },
+   {
+    "show": [
+     "hr"
+    ],
+    "country": "Croatia",
+    "options": [
+     "Moscow",
+     "Zagreb",
+     "Riga",
+     "Athens"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Croatia?",
+    "say_a": "Zagreb!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 84,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "pt",
+     "ni"
+    ],
+    "options": [
+     "Portugal",
+     "Nicaragua"
+    ],
+    "answer": 1,
+    "areas": [
+     92090,
+     130373
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Nicaragua, forty-two percent bigger!"
+   },
+   {
+    "show": [
+     "de",
+     "pl"
+    ],
+    "options": [
+     "Germany",
+     "Poland"
+    ],
+    "answer": 0,
+    "areas": [
+     357114,
+     312679
+    ],
+    "say_q": "And these two?",
+    "say_a": "Germany, fourteen percent bigger!"
+   },
+   {
+    "show": [
+     "ee",
+     "ch"
+    ],
+    "options": [
+     "Estonia",
+     "Switzerland"
+    ],
+    "answer": 0,
+    "areas": [
+     45227,
+     41284
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Estonia, ten percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 85,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ca"
+    ],
+    "options": [
+     "Argentina",
+     "Canada",
+     "Haiti",
+     "Costa Rica"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Canada!"
+   },
+   {
+    "show": [
+     "kh"
+    ],
+    "options": [
+     "Georgia",
+     "Cambodia",
+     "United Arab Emirates",
+     "Yemen"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Cambodia!"
+   },
+   {
+    "show": [
+     "am"
+    ],
+    "options": [
+     "Syria",
+     "Iraq",
+     "Armenia",
+     "Turkmenistan"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Armenia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 86,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ua"
+    ],
+    "country": "Ukraine",
+    "options": [
+     "Warsaw",
+     "City of San Marino",
+     "Sofia",
+     "Kyiv"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Ukraine?",
+    "say_a": "Kyiv!"
+   },
+   {
+    "show": [
+     "zw"
+    ],
+    "country": "Zimbabwe",
+    "options": [
+     "Maputo",
+     "Tripoli",
+     "Libreville",
+     "Harare"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Zimbabwe?",
+    "say_a": "Harare!"
+   },
+   {
+    "show": [
+     "nr"
+    ],
+    "country": "Nauru",
+    "options": [
+     "Yaren",
+     "Nuku'alofa",
+     "Canberra",
+     "Port Vila"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Nauru?",
+    "say_a": "Yaren!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 87,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ne",
+     "iq"
+    ],
+    "options": [
+     "Niger",
+     "Iraq"
+    ],
+    "answer": 0,
+    "areas": [
+     1267000,
+     438317
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Niger, about three times bigger!"
+   },
+   {
+    "show": [
+     "sl",
+     "tg"
+    ],
+    "options": [
+     "Sierra Leone",
+     "Togo"
+    ],
+    "answer": 0,
+    "areas": [
+     71740,
+     56785
+    ],
+    "say_q": "And these two?",
+    "say_a": "Sierra Leone, twenty-six percent bigger!"
+   },
+   {
+    "show": [
+     "gb",
+     "ga"
+    ],
+    "options": [
+     "United Kingdom",
+     "Gabon"
+    ],
+    "answer": 1,
+    "areas": [
+     242900,
+     267668
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Gabon, ten percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 88,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "in"
+    ],
+    "options": [
+     "Timor-Leste",
+     "India",
+     "North Korea",
+     "Nepal"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's India!"
+   },
+   {
+    "show": [
+     "bg"
+    ],
+    "options": [
+     "Bulgaria",
+     "Estonia",
+     "Serbia",
+     "Cyprus"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Bulgaria!"
+   },
+   {
+    "show": [
+     "is"
+    ],
+    "options": [
+     "Iceland",
+     "Croatia",
+     "Malta",
+     "Russia"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Iceland!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 89,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "pk"
+    ],
+    "country": "Pakistan",
+    "options": [
+     "Ankara",
+     "Tokyo",
+     "Ashgabat",
+     "Islamabad"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Pakistan?",
+    "say_a": "Islamabad!"
+   },
+   {
+    "show": [
+     "sn"
+    ],
+    "country": "Senegal",
+    "options": [
+     "Yamoussoukro",
+     "Yaoundé",
+     "Juba",
+     "Dakar"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Senegal?",
+    "say_a": "Dakar!"
+   },
+   {
+    "show": [
+     "bh"
+    ],
+    "country": "Bahrain",
+    "options": [
+     "Pyongyang",
+     "Sana'a",
+     "Manama",
+     "Bandar Seri Begawan"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Bahrain?",
+    "say_a": "Manama!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 90,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "by",
+     "pg"
+    ],
+    "options": [
+     "Belarus",
+     "Papua New Guinea"
+    ],
+    "answer": 1,
+    "areas": [
+     207600,
+     462840
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Papua New Guinea, about two times bigger!"
+   },
+   {
+    "show": [
+     "uz",
+     "jp"
+    ],
+    "options": [
+     "Uzbekistan",
+     "Japan"
+    ],
+    "answer": 0,
+    "areas": [
+     447400,
+     377930
+    ],
+    "say_q": "And these two?",
+    "say_a": "Uzbekistan, eighteen percent bigger!"
+   },
+   {
+    "show": [
+     "si",
+     "bz"
+    ],
+    "options": [
+     "Slovenia",
+     "Belize"
+    ],
+    "answer": 1,
+    "areas": [
+     20273,
+     22966
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Belize, thirteen percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 91,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "vn"
+    ],
+    "options": [
+     "Laos",
+     "Jordan",
+     "Vietnam",
+     "Kazakhstan"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Vietnam!"
+   },
+   {
+    "show": [
+     "sy"
+    ],
+    "options": [
+     "Mongolia",
+     "Azerbaijan",
+     "Vietnam",
+     "Syria"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Syria!"
+   },
+   {
+    "show": [
+     "ie"
+    ],
+    "options": [
+     "Ireland",
+     "Ukraine",
+     "Cyprus",
+     "Denmark"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Ireland!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 92,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "mx"
+    ],
+    "country": "Mexico",
+    "options": [
+     "Mexico City",
+     "Port-au-Prince",
+     "Nassau",
+     "Panama City"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Mexico?",
+    "say_a": "Mexico City!"
+   },
+   {
+    "show": [
+     "az"
+    ],
+    "country": "Azerbaijan",
+    "options": [
+     "Ankara",
+     "Pyongyang",
+     "Baku",
+     "Amman"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Azerbaijan?",
+    "say_a": "Baku!"
+   },
+   {
+    "show": [
+     "sz"
+    ],
+    "country": "Eswatini",
+    "options": [
+     "Conakry",
+     "Gaborone",
+     "Moroni",
+     "Lobamba"
+    ],
+    "answer": 3,
+    "say_q": "Last one. The capital of Eswatini?",
+    "say_a": "Lobamba!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 93,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ec",
+     "cm"
+    ],
+    "options": [
+     "Ecuador",
+     "Cameroon"
+    ],
+    "answer": 1,
+    "areas": [
+     276841,
+     475442
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Cameroon, seventy-two percent bigger!"
+   },
+   {
+    "show": [
+     "np",
+     "kg"
+    ],
+    "options": [
+     "Nepal",
+     "Kyrgyzstan"
+    ],
+    "answer": 1,
+    "areas": [
+     147181,
+     199951
+    ],
+    "say_q": "And these two?",
+    "say_a": "Kyrgyzstan, thirty-six percent bigger!"
+   },
+   {
+    "show": [
+     "hu",
+     "jo"
+    ],
+    "options": [
+     "Hungary",
+     "Jordan"
+    ],
+    "answer": 0,
+    "areas": [
+     93028,
+     89342
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Hungary, four percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 94,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "gh"
+    ],
+    "options": [
+     "Tunisia",
+     "Gambia",
+     "Ghana",
+     "Niger"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Ghana!"
+   },
+   {
+    "show": [
+     "au"
+    ],
+    "options": [
+     "Kiribati",
+     "Australia",
+     "Palau",
+     "Samoa"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Australia!"
+   },
+   {
+    "show": [
+     "vc"
+    ],
+    "options": [
+     "Haiti",
+     "Jamaica",
+     "Saint Vincent and the Grenadines",
+     "Brazil"
+    ],
+    "answer": 2,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Saint Vincent and the Grenadines!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 95,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "th"
+    ],
+    "country": "Thailand",
+    "options": [
+     "Bandar Seri Begawan",
+     "Bangkok",
+     "Astana",
+     "Kuwait City"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Thailand?",
+    "say_a": "Bangkok!"
+   },
+   {
+    "show": [
+     "bi"
+    ],
+    "country": "Burundi",
+    "options": [
+     "Bangui",
+     "Freetown",
+     "Mogadishu",
+     "Gitega"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Burundi?",
+    "say_a": "Gitega!"
+   },
+   {
+    "show": [
+     "bb"
+    ],
+    "country": "Barbados",
+    "options": [
+     "Nassau",
+     "Buenos Aires",
+     "Bridgetown",
+     "Havana"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Barbados?",
+    "say_a": "Bridgetown!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 96,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ph",
+     "eg"
+    ],
+    "options": [
+     "Philippines",
+     "Egypt"
+    ],
+    "answer": 1,
+    "areas": [
+     342353,
+     1002450
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Egypt, about three times bigger!"
+   },
+   {
+    "show": [
+     "mm",
+     "fr"
+    ],
+    "options": [
+     "Myanmar",
+     "France"
+    ],
+    "answer": 0,
+    "areas": [
+     676578,
+     551695
+    ],
+    "say_q": "And these two?",
+    "say_a": "Myanmar, twenty-three percent bigger!"
+   },
+   {
+    "show": [
+     "ao",
+     "za"
+    ],
+    "options": [
+     "Angola",
+     "South Africa"
+    ],
+    "answer": 0,
+    "areas": [
+     1246700,
+     1221037
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Angola, two percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 97,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "cn"
+    ],
+    "options": [
+     "Yemen",
+     "Pakistan",
+     "Iran",
+     "China"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's China!"
+   },
+   {
+    "show": [
+     "zm"
+    ],
+    "options": [
+     "Zambia",
+     "Mozambique",
+     "Ethiopia",
+     "Morocco"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Zambia!"
+   },
+   {
+    "show": [
+     "qa"
+    ],
+    "options": [
+     "Qatar",
+     "Indonesia",
+     "Bangladesh",
+     "South Korea"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Qatar!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 98,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "co"
+    ],
+    "country": "Colombia",
+    "options": [
+     "Asunción",
+     "Bogotá",
+     "Havana",
+     "Port of Spain"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Colombia?",
+    "say_a": "Bogotá!"
+   },
+   {
+    "show": [
+     "gt"
+    ],
+    "country": "Guatemala",
+    "options": [
+     "Guatemala City",
+     "Buenos Aires",
+     "Caracas",
+     "Roseau"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Guatemala?",
+    "say_a": "Guatemala City!"
+   },
+   {
+    "show": [
+     "ws"
+    ],
+    "country": "Samoa",
+    "options": [
+     "Apia",
+     "Honiara",
+     "Wellington",
+     "Majuro"
+    ],
+    "answer": 0,
+    "say_q": "Last one. The capital of Samoa?",
+    "say_a": "Apia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 99,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "kp",
+     "ci"
+    ],
+    "options": [
+     "North Korea",
+     "Ivory Coast"
+    ],
+    "answer": 1,
+    "areas": [
+     120538,
+     322463
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Ivory Coast, about three times bigger!"
+   },
+   {
+    "show": [
+     "ae",
+     "kr"
+    ],
+    "options": [
+     "United Arab Emirates",
+     "South Korea"
+    ],
+    "answer": 1,
+    "areas": [
+     83600,
+     100210
+    ],
+    "say_q": "And these two?",
+    "say_a": "South Korea, twenty percent bigger!"
+   },
+   {
+    "show": [
+     "bw",
+     "ye"
+    ],
+    "options": [
+     "Botswana",
+     "Yemen"
+    ],
+    "answer": 0,
+    "areas": [
+     582000,
+     527968
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Botswana, ten percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 100,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "tr"
+    ],
+    "options": [
+     "Kuwait",
+     "Pakistan",
+     "Iraq",
+     "Türkiye"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Türkiye!"
+   },
+   {
+    "show": [
+     "ly"
+    ],
+    "options": [
+     "Sierra Leone",
+     "Uganda",
+     "Libya",
+     "Lesotho"
+    ],
+    "answer": 2,
+    "say_q": "Second flag.",
+    "say_a": "It's Libya!"
+   },
+   {
+    "show": [
+     "gd"
+    ],
+    "options": [
+     "Grenada",
+     "Antigua and Barbuda",
+     "Nicaragua",
+     "Venezuela"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Grenada!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 101,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "pe"
+    ],
+    "country": "Peru",
+    "options": [
+     "Georgetown",
+     "Lima",
+     "San Salvador",
+     "St. George's"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Peru?",
+    "say_a": "Lima!"
+   },
+   {
+    "show": [
+     "tj"
+    ],
+    "country": "Tajikistan",
+    "options": [
+     "Thimphu",
+     "Dushanbe",
+     "Malé",
+     "Muscat"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Tajikistan?",
+    "say_a": "Dushanbe!"
+   },
+   {
+    "show": [
+     "tl"
+    ],
+    "country": "Timor-Leste",
+    "options": [
+     "Bangkok",
+     "Vientiane",
+     "Dili",
+     "New Delhi"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Timor-Leste?",
+    "say_a": "Dili!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 102,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cl",
+     "de"
+    ],
+    "options": [
+     "Chile",
+     "Germany"
+    ],
+    "answer": 0,
+    "areas": [
+     756102,
+     357114
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Chile, about two times bigger!"
+   },
+   {
+    "show": [
+     "mg",
+     "af"
+    ],
+    "options": [
+     "Madagascar",
+     "Afghanistan"
+    ],
+    "answer": 1,
+    "areas": [
+     587041,
+     652230
+    ],
+    "say_q": "And these two?",
+    "say_a": "Afghanistan, eleven percent bigger!"
+   },
+   {
+    "show": [
+     "ro",
+     "nz"
+    ],
+    "options": [
+     "Romania",
+     "New Zealand"
+    ],
+    "answer": 1,
+    "areas": [
+     238391,
+     270467
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "New Zealand, thirteen percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 103,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "sd"
+    ],
+    "options": [
+     "Sudan",
+     "Kenya",
+     "Equatorial Guinea",
+     "Libya"
+    ],
+    "answer": 0,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Sudan!"
+   },
+   {
+    "show": [
+     "kh"
+    ],
+    "options": [
+     "Myanmar",
+     "Cambodia",
+     "Japan",
+     "Syria"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Cambodia!"
+   },
+   {
+    "show": [
+     "lr"
+    ],
+    "options": [
+     "Seychelles",
+     "Liberia",
+     "Namibia",
+     "Sudan"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Liberia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 104,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ir"
+    ],
+    "country": "Iran",
+    "options": [
+     "Dhaka",
+     "Beirut",
+     "Sana'a",
+     "Tehran"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Iran?",
+    "say_a": "Tehran!"
+   },
+   {
+    "show": [
+     "ht"
+    ],
+    "country": "Haiti",
+    "options": [
+     "Santiago",
+     "San José",
+     "Bogotá",
+     "Port-au-Prince"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Haiti?",
+    "say_a": "Port-au-Prince!"
+   },
+   {
+    "show": [
+     "al"
+    ],
+    "country": "Albania",
+    "options": [
+     "Amsterdam",
+     "Dublin",
+     "Madrid",
+     "Tirana"
+    ],
+    "answer": 3,
+    "say_q": "Last one. The capital of Albania?",
+    "say_a": "Tirana!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 105,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "cd",
+     "bo"
+    ],
+    "options": [
+     "DR Congo",
+     "Bolivia"
+    ],
+    "answer": 0,
+    "areas": [
+     2344858,
+     1098581
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "DR Congo, about two times bigger!"
+   },
+   {
+    "show": [
+     "se",
+     "py"
+    ],
+    "options": [
+     "Sweden",
+     "Paraguay"
+    ],
+    "answer": 0,
+    "areas": [
+     450295,
+     406752
+    ],
+    "say_q": "And these two?",
+    "say_a": "Sweden, eleven percent bigger!"
+   },
+   {
+    "show": [
+     "pl",
+     "my"
+    ],
+    "options": [
+     "Poland",
+     "Malaysia"
+    ],
+    "answer": 1,
+    "areas": [
+     312679,
+     330803
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Malaysia, six percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 106,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "tz"
+    ],
+    "options": [
+     "Burkina Faso",
+     "São Tomé and Príncipe",
+     "Benin",
+     "Tanzania"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Tanzania!"
+   },
+   {
+    "show": [
+     "cu"
+    ],
+    "options": [
+     "Bolivia",
+     "Panama",
+     "Canada",
+     "Cuba"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Cuba!"
+   },
+   {
+    "show": [
+     "lc"
+    ],
+    "options": [
+     "Grenada",
+     "Saint Lucia",
+     "United States",
+     "Trinidad and Tobago"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Saint Lucia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 107,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "es"
+    ],
+    "country": "Spain",
+    "options": [
+     "Minsk",
+     "Madrid",
+     "Sarajevo",
+     "Skopje"
+    ],
+    "answer": 1,
+    "say_q": "Name all three capitals. What's the capital of Spain?",
+    "say_a": "Madrid!"
+   },
+   {
+    "show": [
+     "il"
+    ],
+    "country": "Israel",
+    "options": [
+     "Damascus",
+     "Naypyidaw",
+     "Jerusalem",
+     "Jakarta"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Israel?",
+    "say_a": "Jerusalem!"
+   },
+   {
+    "show": [
+     "lt"
+    ],
+    "country": "Lithuania",
+    "options": [
+     "Warsaw",
+     "Tirana",
+     "Vilnius",
+     "Brussels"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Lithuania?",
+    "say_a": "Vilnius!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 108,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "ve",
+     "uz"
+    ],
+    "options": [
+     "Venezuela",
+     "Uzbekistan"
+    ],
+    "answer": 0,
+    "areas": [
+     916445,
+     447400
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Venezuela, about two times bigger!"
+   },
+   {
+    "show": [
+     "bf",
+     "vn"
+    ],
+    "options": [
+     "Burkina Faso",
+     "Vietnam"
+    ],
+    "answer": 1,
+    "areas": [
+     272967,
+     331212
+    ],
+    "say_q": "And these two?",
+    "say_a": "Vietnam, twenty-one percent bigger!"
+   },
+   {
+    "show": [
+     "ke",
+     "so"
+    ],
+    "options": [
+     "Kenya",
+     "Somalia"
+    ],
+    "answer": 1,
+    "areas": [
+     580367,
+     637657
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Somalia, ten percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 109,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "pk"
+    ],
+    "options": [
+     "Singapore",
+     "Turkmenistan",
+     "Bahrain",
+     "Pakistan"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Pakistan!"
+   },
+   {
+    "show": [
+     "sn"
+    ],
+    "options": [
+     "Senegal",
+     "Lesotho",
+     "Chad",
+     "Nigeria"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Senegal!"
+   },
+   {
+    "show": [
+     "gm"
+    ],
+    "options": [
+     "Lesotho",
+     "Gambia",
+     "Uganda",
+     "Equatorial Guinea"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Gambia!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 110,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "id"
+    ],
+    "country": "Indonesia",
+    "options": [
+     "Jakarta",
+     "Phnom Penh",
+     "Islamabad",
+     "Kathmandu"
+    ],
+    "answer": 0,
+    "say_q": "Name all three capitals. What's the capital of Indonesia?",
+    "say_a": "Jakarta!"
+   },
+   {
+    "show": [
+     "by"
+    ],
+    "country": "Belarus",
+    "options": [
+     "Vienna",
+     "Zagreb",
+     "Minsk",
+     "Andorra la Vella"
+    ],
+    "answer": 2,
+    "say_q": "The capital of Belarus?",
+    "say_a": "Minsk!"
+   },
+   {
+    "show": [
+     "is"
+    ],
+    "country": "Iceland",
+    "options": [
+     "Belgrade",
+     "Reykjavik",
+     "Oslo",
+     "Tirana"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Iceland?",
+    "say_a": "Reykjavik!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 111,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "bd",
+     "pt"
+    ],
+    "options": [
+     "Bangladesh",
+     "Portugal"
+    ],
+    "answer": 0,
+    "areas": [
+     147570,
+     92090
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Bangladesh, sixty percent bigger!"
+   },
+   {
+    "show": [
+     "cz",
+     "tg"
+    ],
+    "options": [
+     "Czechia",
+     "Togo"
+    ],
+    "answer": 0,
+    "areas": [
+     78865,
+     56785
+    ],
+    "say_q": "And these two?",
+    "say_a": "Czechia, thirty-nine percent bigger!"
+   },
+   {
+    "show": [
+     "uy",
+     "tn"
+    ],
+    "options": [
+     "Uruguay",
+     "Tunisia"
+    ],
+    "answer": 0,
+    "areas": [
+     181034,
+     163610
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Uruguay, eleven percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 112,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "sa"
+    ],
+    "options": [
+     "Sri Lanka",
+     "Afghanistan",
+     "Saudi Arabia",
+     "Singapore"
+    ],
+    "answer": 2,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Saudi Arabia!"
+   },
+   {
+    "show": [
+     "be"
+    ],
+    "options": [
+     "Lithuania",
+     "Norway",
+     "Denmark",
+     "Belgium"
+    ],
+    "answer": 3,
+    "say_q": "Second flag.",
+    "say_a": "It's Belgium!"
+   },
+   {
+    "show": [
+     "vc"
+    ],
+    "options": [
+     "Cuba",
+     "Saint Vincent and the Grenadines",
+     "Colombia",
+     "Haiti"
+    ],
+    "answer": 1,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Saint Vincent and the Grenadines!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 113,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "ua"
+    ],
+    "country": "Ukraine",
+    "options": [
+     "Zagreb",
+     "Athens",
+     "Kyiv",
+     "Madrid"
+    ],
+    "answer": 2,
+    "say_q": "Name all three capitals. What's the capital of Ukraine?",
+    "say_a": "Kyiv!"
+   },
+   {
+    "show": [
+     "sl"
+    ],
+    "country": "Sierra Leone",
+    "options": [
+     "Harare",
+     "Bissau",
+     "Lomé",
+     "Freetown"
+    ],
+    "answer": 3,
+    "say_q": "The capital of Sierra Leone?",
+    "say_a": "Freetown!"
+   },
+   {
+    "show": [
+     "gq"
+    ],
+    "country": "Equatorial Guinea",
+    "options": [
+     "Ouagadougou",
+     "Ciudad de la Paz",
+     "São Tomé",
+     "Harare"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Equatorial Guinea?",
+    "say_a": "Ciudad de la Paz!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 114,
+  "title_idx": 1,
+  "questions": [
+   {
+    "show": [
+     "gn",
+     "pg"
+    ],
+    "options": [
+     "Guinea",
+     "Papua New Guinea"
+    ],
+    "answer": 1,
+    "areas": [
+     245857,
+     462840
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Papua New Guinea, eighty-eight percent bigger!"
+   },
+   {
+    "show": [
+     "th",
+     "ma"
+    ],
+    "options": [
+     "Thailand",
+     "Morocco"
+    ],
+    "answer": 0,
+    "areas": [
+     513120,
+     446550
+    ],
+    "say_q": "And these two?",
+    "say_a": "Thailand, fifteen percent bigger!"
+   },
+   {
+    "show": [
+     "co",
+     "td"
+    ],
+    "options": [
+     "Colombia",
+     "Chad"
+    ],
+    "answer": 1,
+    "areas": [
+     1141748,
+     1284000
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Chad, twelve percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 115,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "in"
+    ],
+    "options": [
+     "Iraq",
+     "India",
+     "Japan",
+     "Syria"
+    ],
+    "answer": 1,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's India!"
+   },
+   {
+    "show": [
+     "rw"
+    ],
+    "options": [
+     "Rwanda",
+     "Somalia",
+     "Ivory Coast",
+     "Malawi"
+    ],
+    "answer": 0,
+    "say_q": "Second flag.",
+    "say_a": "It's Rwanda!"
+   },
+   {
+    "show": [
+     "sc"
+    ],
+    "options": [
+     "Seychelles",
+     "Uganda",
+     "Burkina Faso",
+     "Ghana"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Seychelles!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 116,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "eg"
+    ],
+    "country": "Egypt",
+    "options": [
+     "Yamoussoukro",
+     "Nouakchott",
+     "Lusaka",
+     "Cairo"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Egypt?",
+    "say_a": "Cairo!"
+   },
+   {
+    "show": [
+     "lk"
+    ],
+    "country": "Sri Lanka",
+    "options": [
+     "Kuwait City",
+     "Colombo",
+     "New Delhi",
+     "Vientiane"
+    ],
+    "answer": 1,
+    "say_q": "The capital of Sri Lanka?",
+    "say_a": "Colombo!"
+   },
+   {
+    "show": [
+     "to"
+    ],
+    "country": "Tonga",
+    "options": [
+     "Canberra",
+     "Honiara",
+     "Nuku'alofa",
+     "Yaren"
+    ],
+    "answer": 2,
+    "say_q": "Last one. The capital of Tonga?",
+    "say_a": "Nuku'alofa!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 117,
+  "title_idx": 2,
+  "questions": [
+   {
+    "show": [
+     "la",
+     "kp"
+    ],
+    "options": [
+     "Laos",
+     "North Korea"
+    ],
+    "answer": 0,
+    "areas": [
+     236800,
+     120538
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Laos, about two times bigger!"
+   },
+   {
+    "show": [
+     "ae",
+     "bg"
+    ],
+    "options": [
+     "United Arab Emirates",
+     "Bulgaria"
+    ],
+    "answer": 1,
+    "areas": [
+     83600,
+     110879
+    ],
+    "say_q": "And these two?",
+    "say_a": "Bulgaria, thirty-three percent bigger!"
+   },
+   {
+    "show": [
+     "hu",
+     "jo"
+    ],
+    "options": [
+     "Hungary",
+     "Jordan"
+    ],
+    "answer": 0,
+    "areas": [
+     93028,
+     89342
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Hungary, four percent bigger!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "flag",
+  "id": 118,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "ng"
+    ],
+    "options": [
+     "Libya",
+     "Algeria",
+     "DR Congo",
+     "Nigeria"
+    ],
+    "answer": 3,
+    "say_q": "Can you name all three flags? First one.",
+    "say_a": "It's Nigeria!"
+   },
+   {
+    "show": [
+     "gr"
+    ],
+    "options": [
+     "Malta",
+     "Greece",
+     "United Kingdom",
+     "Slovakia"
+    ],
+    "answer": 1,
+    "say_q": "Second flag.",
+    "say_a": "It's Greece!"
+   },
+   {
+    "show": [
+     "sr"
+    ],
+    "options": [
+     "Suriname",
+     "Chile",
+     "Trinidad and Tobago",
+     "Grenada"
+    ],
+    "answer": 0,
+    "say_q": "Last one. This one is hard.",
+    "say_a": "It's Suriname!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "capital",
+  "id": 119,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "et"
+    ],
+    "country": "Ethiopia",
+    "options": [
+     "Ciudad de la Paz",
+     "Yaoundé",
+     "Brazzaville",
+     "Addis Ababa"
+    ],
+    "answer": 3,
+    "say_q": "Name all three capitals. What's the capital of Ethiopia?",
+    "say_a": "Addis Ababa!"
+   },
+   {
+    "show": [
+     "bi"
+    ],
+    "country": "Burundi",
+    "options": [
+     "Gitega",
+     "Tunis",
+     "Windhoek",
+     "Gaborone"
+    ],
+    "answer": 0,
+    "say_q": "The capital of Burundi?",
+    "say_a": "Gitega!"
+   },
+   {
+    "show": [
+     "bb"
+    ],
+    "country": "Barbados",
+    "options": [
+     "San Salvador",
+     "Bridgetown",
+     "Panama City",
+     "Tegucigalpa"
+    ],
+    "answer": 1,
+    "say_q": "Last one. The capital of Barbados?",
+    "say_a": "Bridgetown!"
+   }
+  ]
+ },
+ {
+  "format": "quiz",
+  "kind": "bigger",
+  "id": 120,
+  "title_idx": 0,
+  "questions": [
+   {
+    "show": [
+     "cg",
+     "gh"
+    ],
+    "options": [
+     "Congo",
+     "Ghana"
+    ],
+    "answer": 0,
+    "areas": [
+     342000,
+     238533
+    ],
+    "say_q": "Which country is bigger?",
+    "say_a": "Congo, forty-three percent bigger!"
+   },
+   {
+    "show": [
+     "hn",
+     "tj"
+    ],
+    "options": [
+     "Honduras",
+     "Tajikistan"
+    ],
+    "answer": 1,
+    "areas": [
+     112492,
+     143100
+    ],
+    "say_q": "And these two?",
+    "say_a": "Tajikistan, twenty-seven percent bigger!"
+   },
+   {
+    "show": [
+     "ee",
+     "ch"
+    ],
+    "options": [
+     "Estonia",
+     "Switzerland"
+    ],
+    "answer": 0,
+    "areas": [
+     45227,
+     41284
+    ],
+    "say_q": "Last one. Which is bigger?",
+    "say_a": "Estonia, ten percent bigger!"
+   }
+  ]
+ }
+]

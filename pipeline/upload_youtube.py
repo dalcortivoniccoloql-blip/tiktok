@@ -342,6 +342,16 @@ def upload_script_video(
     Carica il video di uno script su YouTube.
     Ritorna l'ID del video.
     """
+    if script.get("format") == "quiz":   # nuovi format: metadati neutri, tag propri
+        from formats import quiz
+        return upload_video(
+            video_path  = video_path,
+            title       = quiz.title(script),
+            description = quiz.description(script),
+            publish_at  = publish_at,
+            tags        = quiz.TAGS,
+        )
+
     title       = build_title(script)
     description = build_description(script)
 

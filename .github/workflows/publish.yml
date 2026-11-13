@@ -67,6 +67,9 @@ jobs:
           # Interruttore di pubblicazione. Se non e' "true" il run e' un semplice
           # controllo di salute: non pubblica e non muove state.json.
           PUBLISH_ENABLED: ${{ vars.PUBLISH_ENABLED }}
+          # Rotazione nuovi format (quiz alle 07 UTC). Spenta se non e' "true":
+          # in quel caso si pubblicano solo absurd facts, come prima.
+          FORMAT_ROTATION: ${{ vars.FORMAT_ROTATION }}
           # Instagram Reels (opzionali: senza questi secret l'upload IG viene saltato)
           IG_USER_ID:      ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}

@@ -42,6 +42,63 @@ def publishing_enabled() -> bool:
     return os.environ.get("PUBLISH_ENABLED", "").strip().lower() in _TRUTHY
 
 
+# ── rotazione dei nuovi format (piano 2026-11-13) ─────────────────────────────
+# Variabile di repository FORMAT_ROTATION (come PUBLISH_ENABLED). Se NON e' "true"
+# il run pubblica solo absurd facts, esattamente come prima.
+# Se e' accesa, il formato dipende dalla FASCIA oraria UTC, non dall'ora esatta:
+# il cron di GitHub parte spesso 30-60+ minuti in ritardo.
+#   < 10 UTC -> quiz      (cron delle 07)
+#   10-14    -> dati      (cron delle 12; non ancora costruito -> absurd)
+#   >= 15    -> absurd    (cron delle 17)
+# Una coda vuota o un formato non ancora pronto ricadono sempre su absurd.
+def rotation_enabled() -> bool:
+    return os.environ.get("FORMAT_ROTATION", "").strip().lower() in _TRUTHY
+
+
+def slot_format(hour_utc: int | None = None) -> str:
+    if hour_utc is None:
+        from datetime import datetime, timezone
+        hour_utc = datetime.now(timezone.utc).hour
+    if hour_utc < 10:
+        return "quiz"
+    if hour_utc < 15:
+        return "data"
+    return "absurd"
+
+
+def publish_quiz(state: dict) -> int | None:
+    """Pubblica il prossimo quiz. None = niente da pubblicare (si ricade su absurd)."""
+    from formats import quiz
+    fmt_state = state.setdefault("formats", {}).setdefault("quiz", {"next": 1})
+    qn = int(fmt_state.get("next", 1))
+    item = next((i for i in quiz.load_queue() if i["id"] == qn), None)
+    if item is None:
+        print(f"ATTENZIONE: coda quiz finita (#{qn}): pubblico un absurd fact al suo posto.")
+        print("Rimedio: py pipeline/formats/quiz.py build con piu' video, poi commit.")
+        return None
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    video_p = OUTPUT_DIR / f"quiz_{qn}.mp4"
+    print(f"=== Pubblicazione QUIZ #{qn} ({item['kind']}) ===")
+    quiz.render(item, video_p)
+
+    from upload_youtube import upload_script_video
+    video_id = upload_script_video(item, video_p, publish_at=None)
+    print(f"PUBBLICATO: https://youtu.be/{video_id}")
+    try:
+        from upload_instagram import upload_script_reel
+        media_id = upload_script_reel(item, video_p)
+        if media_id:
+            print(f"PUBBLICATO SU INSTAGRAM: media {media_id}")
+    except Exception as e:  # noqa: BLE001
+        print(f"ATTENZIONE: upload Instagram fallito (YouTube ok): {e}")
+
+    fmt_state["next"] = qn + 1
+    save_state(state)
+    print(f"Prossimo quiz: #{fmt_state['next']}")
+    return 0
+
+
 def load_state() -> dict:
     if STATE_PATH.exists():
         return json.loads(STATE_PATH.read_text(encoding="utf-8"))
@@ -86,6 +143,14 @@ def main() -> int:
         print("Nessun commit e nessun push necessari.")
         return 0
 
+    if rotation_enabled():
+        fmt = slot_format()
+        print(f"Rotazione format ACCESA: slot '{fmt}'")
+        if fmt == "quiz":
+            rc = publish_quiz(state)
+            if rc is not None:
+                return rc
+
     # ── coda esaurita: il run FALLISCE, non esce verde ───────────────────────────
     # Fino al 2026-08-31 qui c'era un "return 0  # uscita pulita, non un errore".
     # Conseguenza reale: il 26/08 e' finito lo script #209, l'ultimo, e da allora il
@@ -100,7 +165,7 @@ def main() -> int:
         print("")
         print("Rimedio: aggiungere un nuovo pipeline/english_scripts_N.json nel formato")
         print("single (schema in docs/FORMATO-SINGLE.md, sezione 3). Il numero degli")
-        print("script e' posizionale: i file si concatenano in ordine alfabetico, quindi")
+        print("script e' posizionale: i file si concatenano in ordine di numero, quindi")
         print("il nuovo file si accoda da solo dopo l'ultimo esistente.")
         print("Il rifornimento automatico e' il job 'Genera nuove curiosita'' e chiede")
         print("il secret ANTHROPIC_API_KEY: se non e' impostato, non genera niente.")

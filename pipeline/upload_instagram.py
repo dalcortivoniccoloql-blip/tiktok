@@ -102,6 +102,10 @@ def build_caption(script: dict) -> str:
     "and 4 more ABSURD facts" sotto un video che ne contiene uno solo e' una
     promessa non mantenuta — esattamente il modo documentato di far crollare
     la ritenzione, oltre che una riga falsa."""
+    if script.get("format") == "quiz":   # nuovi format: caption neutra (niente "absurd facts")
+        from formats import quiz
+        return quiz.description(script).replace("#shorts", "#reels")
+
     if is_single(script):
         return (
             f"{(script.get('hook') or '').strip()} \U0001F92F\n\n"
