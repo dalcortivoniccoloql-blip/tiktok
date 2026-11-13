@@ -444,6 +444,44 @@ def _text_c(draw, cx, cy, text, size, fill=WHITE, stroke=6, stroke_fill=(0, 0, 0
               fill=fill, stroke_width=stroke, stroke_fill=stroke_fill)
 
 
+def _fit(draw, text, size, max_w, min_size):
+    """Righe e font per far stare `text` in max_w: una riga se ci sta, altrimenti DUE
+    righe bilanciate, rimpicciolendo al massimo fino a min_size. Il font del runner
+    (DejaVu) e' ~15% piu' largo di Arial: col solo rimpicciolimento "DOMINICAN
+    REPUBLIC" diventava illeggibile (render del 13/11/2026 sul runner)."""
+    f = _font(size)
+    if draw.textlength(text, font=f) <= max_w:
+        return [text], f, size
+    words = text.split()
+    splits = [(" ".join(words[:i]), " ".join(words[i:])) for i in range(1, len(words))]
+    for s in range(size, min_size - 1, -2):
+        f = _font(s)
+        best = None
+        for a, b in splits:
+            w = max(draw.textlength(a, font=f), draw.textlength(b, font=f))
+            if w <= max_w and (best is None or w < best[0]):
+                best = (w, [a, b])
+        if best:
+            return best[1], f, s
+    s = size                                   # parola singola lunghissima: rimpicciolisci
+    while draw.textlength(text, font=_font(s)) > max_w and s > 24:
+        s -= 2
+    return [text], _font(s), s
+
+
+def _text_fit(draw, cx, cy, text, size, max_w, min_size, fill=WHITE, stroke=6, stroke_fill=(0, 0, 0)):
+    """Come _text_c ma va a capo invece di rimpicciolire troppo. Ritorna il n. di righe."""
+    lines, f, s = _fit(draw, text, size, max_w, min_size)
+    lh = s * 1.12
+    y0 = cy - lh * (len(lines) - 1) / 2
+    for i, line in enumerate(lines):
+        bb = draw.textbbox((0, 0), line, font=f, stroke_width=stroke)
+        y = y0 + i * lh
+        draw.text((cx - (bb[0] + bb[2]) / 2, y - (bb[1] + bb[3]) / 2), line, font=f,
+                  fill=fill, stroke_width=stroke, stroke_fill=stroke_fill)
+    return len(lines)
+
+
 def _flag(code, max_w, max_h):
     im = Image.open(FLAGS / f"{code}.png").convert("RGBA")
     s = min(max_w / im.width, max_h / im.height)
@@ -470,7 +508,7 @@ def _option_box(draw, box, letter, text, state):
     cy = (y0 + y1) / 2
     draw.ellipse((x0 + 18, cy - 30, x0 + 78, cy + 30), fill=INK if state != "right" else WHITE)
     _text_c(draw, x0 + 48, cy, letter, 36, fill=WHITE if state != "right" else GREEN, stroke=0)
-    _text_c(draw, (x0 + 90 + x1 - 16) / 2, cy, text, 46, fill=tcol, stroke=0, max_w=x1 - x0 - 120)
+    _text_fit(draw, (x0 + 90 + x1 - 16) / 2, cy, text, 46, x1 - x0 - 120, 34, fill=tcol, stroke=0)
 
 
 def _base(item, qi, mode):
@@ -493,7 +531,9 @@ def _base(item, qi, mode):
         _paste_flag(img, q["show"][0], WIDTH / 2, 640, 860, 500)
     elif kind == "capital":
         _paste_flag(img, q["show"][0], WIDTH / 2, 590, 640, 380)
-        _text_c(d, WIDTH / 2, 870, q["country"].upper(), 84, stroke=8, max_w=980)
+        cname = q["country"].upper()
+        two = len(_fit(d, cname, 84, 980, 60)[0]) == 2
+        _text_fit(d, WIDTH / 2, 915 if two else 870, cname, 84, 980, 60, stroke=8)
     if kind in ("flag", "capital"):
         boxes = [(70, 1060, 520, 1200), (560, 1060, 1010, 1200),
                  (70, 1230, 520, 1370), (560, 1230, 1010, 1370)]
@@ -506,10 +546,13 @@ def _base(item, qi, mode):
             win = revealed and k == q["answer"]
             border = (GREEN, 16) if win else ((WHITE, 8) if not revealed else ((75, 85, 99), 8))
             _, _, _, yb = _paste_flag(img, code, cx, 660, 380, 290, border)
-            _text_c(d, cx, yb + 70, q["options"][k].upper(), 56, stroke=6, max_w=440)
+            name = q["options"][k].upper()
+            two = len(_fit(d, name, 56, 440, 42)[0]) == 2
+            _text_fit(d, cx, yb + (100 if two else 70), name, 56, 440, 42, stroke=6)
             if revealed:
                 area = f"{q['areas'][k]:,} km²"
-                _text_c(d, cx, yb + 145, area, 48, fill=(253, 224, 71) if win else (209, 213, 219), stroke=5)
+                _text_c(d, cx, yb + (205 if two else 145), area, 48,
+                        fill=(253, 224, 71) if win else (209, 213, 219), stroke=5)
         _text_c(d, WIDTH / 2, 660, "VS", 72, fill=(253, 224, 71), stroke=8)
     if mode == "end":
         _text_c(d, WIDTH / 2, 1560, "COMMENT YOUR SCORE!", 70, fill=(253, 224, 71), stroke=8, max_w=980)
