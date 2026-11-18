@@ -2,7 +2,6 @@
 import json
 import re
 from pathlib import Path
-from docx import Document
 
 
 def script_file_key(path) -> int:
@@ -45,6 +44,9 @@ def extract_scripts_from_docx(docx_path: Path) -> list[dict]:
     Legge un docx e ritorna lista di {'number': int, 'facts': [str, ...]}.
     Funziona sia con fatti numerati ('1. testo') che non numerati.
     """
+    # import locale: generate_scripts.py importa questo modulo per script_file_key
+    # e topup.yml installa solo anthropic, non python-docx
+    from docx import Document
     doc = Document(str(docx_path))
     paragraphs = [p.text.strip() for p in doc.paragraphs if p.text.strip()]
 
