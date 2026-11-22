@@ -67,6 +67,11 @@ real_slot = cp.slot_format
 try:
     for h, exp in [(7, "quiz"), (9, "quiz"), (12, "data"), (14, "data"), (17, "absurd"), (19, "absurd"), (23, "absurd")]:
         check(real_slot(h) == exp, f"ora {h} UTC -> {exp}")
+    for cron, h, exp in [("0 7 * * *", 15, "quiz"), ("0 12 * * *", 20, "data"), ("0 17 * * *", 23, "absurd")]:
+        check(real_slot(cron=cron) == exp, f"cron {cron} (partito alle {h}) -> {exp}")
+    os.environ["CRON_SCHEDULE"] = "0 7 * * *"
+    check(real_slot() == "quiz", "CRON_SCHEDULE dall'ambiente -> quiz")
+    os.environ.pop("CRON_SCHEDULE")
 
     rc, st = run({"next": 430}, rotation=False, slot="quiz")
     check(rc == 0 and st == {"next": 431} and "absurd_video" in CALLS and not any("quiz" in c for c in CALLS),

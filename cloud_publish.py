@@ -55,7 +55,18 @@ def rotation_enabled() -> bool:
     return os.environ.get("FORMAT_ROTATION", "").strip().lower() in _TRUTHY
 
 
-def slot_format(hour_utc: int | None = None) -> str:
+# Il cron di GitHub puo' partire con ORE di ritardo (a novembre 2026 ~8 h: il cron
+# delle 07 partiva verso le 15). Quindi il formato si decide dal cron che ha
+# avviato il run (github.event.schedule -> env CRON_SCHEDULE), non dall'ora reale.
+# L'ora resta solo come ripiego per gli avvii manuali (workflow_dispatch).
+CRON_FORMATS = {"0 7 * * *": "quiz", "0 12 * * *": "data", "0 17 * * *": "absurd"}
+
+
+def slot_format(hour_utc: int | None = None, cron: str | None = None) -> str:
+    if cron is None and hour_utc is None:
+        cron = os.environ.get("CRON_SCHEDULE", "")
+    if cron and cron.strip() in CRON_FORMATS:
+        return CRON_FORMATS[cron.strip()]
     if hour_utc is None:
         from datetime import datetime, timezone
         hour_utc = datetime.now(timezone.utc).hour
