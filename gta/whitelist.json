@@ -2,10 +2,34 @@
   "_come_si_usa": "Una voce per streamer. 'login' = nome Twitch (quello nell'URL). 'prova_permesso' = link pubblico dove lo streamer dichiara che il clipping/riuso e' permesso (pannello, bio, tweet). 'confermato' va messo a true SOLO dopo aver verificato la prova di persona: fetch scarica solo dalle voci confermate.",
   "streamer": [
     {
-      "login": "esempio_streamer",
-      "prova_permesso": "https://www.twitch.tv/esempio_streamer/about",
+      "login": "bendadonnn",
+      "prova_permesso": "https://www.clyper.io/clipping-programs",
       "confermato": false,
-      "note": "voce di esempio, sostituiscila"
+      "note": "Candidato 2026-11-22. Content Rewards, $1/1K, GTA 6 esplicito su Clyper. DA FARE: verificare login Twitch, sostituire prova con link ufficiale Content Rewards, leggere termini (tag/watermark, formato ammesso)."
+    },
+    {
+      "login": "kaicenat",
+      "prova_permesso": "https://www.clyper.io/clipping-programs",
+      "confermato": false,
+      "note": "Candidato 2026-11-22. Content Rewards, pool $10K GTA 6 (solo da lettura parziale di Clyper; Lumina dice di non aver trovato programmi di Kai stesso). DA FARE: verificare che il programma esista davvero e chi lo gestisce, link ufficiale, termini."
+    },
+    {
+      "login": "lacy",
+      "prova_permesso": "https://www.clyper.io/clipping-programs",
+      "confermato": false,
+      "note": "Candidato 2026-11-22. Reach, pool $12.5K GTA 6 (solo da lettura parziale di Clyper). DA FARE: verificare login Twitch, link ufficiale Reach, termini."
+    },
+    {
+      "login": "diegoloveless",
+      "prova_permesso": "https://www.clyper.io/clipping-programs",
+      "confermato": false,
+      "note": "Candidato 2026-11-22. Content Rewards, $1/1K, GTA 6 esplicito su Clyper. DA FARE: verificare login Twitch e che streammi in inglese, link ufficiale, termini."
+    },
+    {
+      "login": "parkerr",
+      "prova_permesso": "https://www.clyper.io/clipping-programs",
+      "confermato": false,
+      "note": "Candidato 2026-11-22. Content Rewards, $0.60/1K, GTA 6 esplicito su Clyper; streamma su YouTube e Twitch. DA FARE: verificare login Twitch, link ufficiale, termini."
     }
   ]
 }
