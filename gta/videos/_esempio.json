@@ -1,0 +1,16 @@
+{
+  "id": "_esempio",
+  "hook": "Nobody noticed this in GTA 6.",
+  "facts": [
+    "If you follow a cop car for a full minute, the officers start talking about you.",
+    "They read your wanted history out loud, even crimes from hours ago.",
+    "And if you wave at them, they wave back."
+  ],
+  "fonte": "https://esempio.invalid/link-alla-fonte-verificata",
+  "title": "GTA 6 cops remember EVERYTHING you did",
+  "clips": [
+    {"file": "alpha_A1.mp4", "start": 5.0},
+    {"file": "beta_B1.mp4"},
+    {"file": "alpha_C1.mp4"}
+  ]
+}

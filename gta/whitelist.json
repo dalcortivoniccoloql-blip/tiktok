@@ -1,0 +1,11 @@
+{
+  "_come_si_usa": "Una voce per streamer. 'login' = nome Twitch (quello nell'URL). 'prova_permesso' = link pubblico dove lo streamer dichiara che il clipping/riuso e' permesso (pannello, bio, tweet). 'confermato' va messo a true SOLO dopo aver verificato la prova di persona: fetch scarica solo dalle voci confermate.",
+  "streamer": [
+    {
+      "login": "esempio_streamer",
+      "prova_permesso": "https://www.twitch.tv/esempio_streamer/about",
+      "confermato": false,
+      "note": "voce di esempio, sostituiscila"
+    }
+  ]
+}
