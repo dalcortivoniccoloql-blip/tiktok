@@ -1,3 +1,8 @@
 {
-  "next": 460
+  "next": 460,
+  "formats": {
+    "quiz": {
+      "next": 2
+    }
+  }
 }
